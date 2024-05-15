@@ -5,13 +5,13 @@ import { VscUnmute } from 'react-icons/vsc';
 function Intro() {
     const [isMuted, setIsMuted] = useState(true);
     return (
-        <div className="mt-5 container-fluid bg-body-secondary intro">
+        <div className="mt-3 container-fluid bg-body-secondary intro">
             <ReactPlayer
                 playing={true}
                 loop={true}
                 width="100%"
                 controls={false}
-                height="100%"
+                height="70%"
                 volume={1}
                 muted={isMuted}
                 url="https://www.youtube.com/watch?v=RmZPRz6iC6E"
@@ -27,7 +27,6 @@ function Intro() {
             ) : (
                 <VscUnmute className="btnVolume" color="white" z={20} onClick={() => setIsMuted(!isMuted)} />
             )}
-            <div className="fadeBottom"></div>
         </div>
     );
 }
