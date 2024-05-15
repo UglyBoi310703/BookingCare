@@ -5,7 +5,7 @@ import { VscUnmute } from 'react-icons/vsc';
 function Intro() {
     const [isMuted, setIsMuted] = useState(true);
     return (
-        <div className="container-fluid bg-body-secondary intro">
+        <div className="mt-5 container-fluid bg-body-secondary intro">
             <ReactPlayer
                 playing={true}
                 loop={true}
