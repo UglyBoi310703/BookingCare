@@ -3,7 +3,7 @@ import config from '~/config';
 
 
 // Pages
-import Home from '~/pages/Home';
+import Home from '~/pages/HomePage';
 import Doctors from '~/pages/Doctors';
 
 import Facility from '~/pages/Facility';
