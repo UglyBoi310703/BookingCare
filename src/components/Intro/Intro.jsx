@@ -10,6 +10,7 @@ function Intro() {
                 playing={true}
                 loop={true}
                 width="100%"
+                controls={false}
                 height="100%"
                 volume={1}
                 muted={isMuted}

@@ -1,5 +1,8 @@
+import Doctor from '~/components/Doctors/Doctor';
+import Doctors from '../Doctors';
+
 function Home() {
-    return <h2>Home page</h2>;
+    <Doctors />;
 }
 
 export default Home;
