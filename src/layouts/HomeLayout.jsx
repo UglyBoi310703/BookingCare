@@ -3,6 +3,7 @@ import classNames from 'classnames/bind';
 import Header from '../Header';
 import Sidebar from '../Sidebar';
 import styles from './Home.module.scss';
+import Footer from '~/components/Footer/Footer';
 
 const cx = classNames.bind(styles);
 
