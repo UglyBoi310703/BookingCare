@@ -1,24 +1,21 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import Header from '../Header';
-import Sidebar from '../Sidebar';
-import styles from './Home.module.scss';
+import Sidebar from '~/components/Sidebar';
 import Footer from '~/components/Footer/Footer';
+import Header from '~/components/Header';
 
-const cx = classNames.bind(styles);
-
-function Home({ children }) {
+function HomeLayout({ children }) {
     return (
         <>
-            <Sidebar/>
+            <Header />
             {children}
-            <Footer/>
+            <Footer />
         </>
     );
 }
 
-Home.propTypes = {
+HomeLayout.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
-export default Home;
+export default HomeLayout;
