@@ -35,10 +35,10 @@ function Header() {
     };
 
     return (
-        <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+        <Navbar collapseOnSelect expand="lg" className="bbg-body-tertiary">
             <Container>
                 <Navbar.Brand href="#home">
-                    <img style={{width: "10rem"}} src="https://medlatec.vn/media/115/content/logo-pc.png" />
+                    <img style={{ width: '10rem' }} src="https://medlatec.vn/media/115/content/logo-pc.png" />
                 </Navbar.Brand>
                 <Search />
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />

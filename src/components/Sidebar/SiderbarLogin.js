@@ -16,11 +16,11 @@ const cx = classNames.bind(styles);
 
 function SidebarLogin() {
     return (
-        <Nav>
-              <Nav.Link href="#deets">Đăng ký</Nav.Link>
-              <Nav.Link eventKey={2} href="#memes">
+        <Nav className="navbar-nav">
+            <Nav.Link href="#deets">Đăng ký</Nav.Link>
+            <Nav.Link eventKey={2} href="#memes">
                 Đăng nhập
-              </Nav.Link>
+            </Nav.Link>
         </Nav>
     );
 }
