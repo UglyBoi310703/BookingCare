@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import Sidebar from '~/components/Sidebar';
+import Sidebar from '~/components/NavBar';
 import Footer from '~/components/Footer/Footer';
 import Header from '~/components/Header';
 

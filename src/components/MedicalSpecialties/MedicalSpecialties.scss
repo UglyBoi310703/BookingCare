@@ -1,0 +1,23 @@
+.CardGroup {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .card {
+        border: solid 2px #1d93e3;
+        padding-top: 2rem;
+        align-items: center;
+        .imgHover {
+            display: none;
+        }
+    }
+    :hover {
+        background-color: #1d93e3;
+        color: #fff;
+        .imgMain {
+            display: none;
+        }
+        .imgHover {
+            display: block;
+        }
+    }
+}
