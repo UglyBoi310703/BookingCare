@@ -1,8 +1,5 @@
 import React from 'react';
 import { FaCartArrowDown, FaStar } from 'react-icons/fa';
-import { useDispatch } from 'react-redux';
-import cartSlice from '../../slices/cartSlice';
-import { toast } from 'react-toastify';
 
 function Doctor({ product }) {
     return (
