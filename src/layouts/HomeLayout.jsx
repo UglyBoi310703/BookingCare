@@ -10,11 +10,7 @@ function HomeLayout({ children }) {
         <>
             <Header />
             {children}
-<<<<<<< HEAD
-            <Doctors />
-=======
             <Footer />
->>>>>>> 3905ede64c66edecf47880c51e20e4e6dda16a80
         </>
     );
 }
