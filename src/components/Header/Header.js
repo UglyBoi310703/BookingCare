@@ -8,8 +8,8 @@ import config from '~/config';
 import styles from './Header.module.scss';
 
 import Search from '../Search';
-import Sidebar from '../Sidebar';
-import SidebarLogin from '../Sidebar/SiderbarLogin';
+import Sidebar from '../NavBar';
+import SidebarLogin from '../NavBar/NavbarLogin';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -19,6 +19,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import routes from '~/config/routes';
+import NavBar from '../NavBar';
 const cx = classNames.bind(styles);
 
 function Header() {

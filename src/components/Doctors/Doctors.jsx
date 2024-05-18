@@ -102,11 +102,13 @@ function Doctors() {
                     <div
                         key={index}
                         className="movieItem"
-                        style={{ padding: '30px' }}
+                        style={{ padding: '50px' }}
                         ref={movieRef}
                         onClick={() => handleShowDetail()}
                     >
+                        <span className="circle"></span>
                         <img src={`${doctor.img}`} alt="" />
+                        <p className="doctor-name">{doctor.name}</p>
                     </div>
                 ))}
             </div>
