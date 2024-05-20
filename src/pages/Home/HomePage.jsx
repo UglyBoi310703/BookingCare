@@ -3,6 +3,7 @@ import Doctors from '~/components/Doctors/Doctors';
 import Intro from '~/components/Intro/Intro';
 import HomeLayout from '~/layouts/HomeLayout';
 import MenuMedicalSpecialties from '~/components/MedicalSpecialties/MenuMedicalSpecialties';
+import FacilityHome from '~/components/Facility/FacilityHome';
 
 function Home() {
     return (
@@ -10,6 +11,7 @@ function Home() {
             <HomeLayout>
                 <Intro />
                 <Doctors />
+                <FacilityHome />
                 <MenuMedicalSpecialties />
             </HomeLayout>
         </>

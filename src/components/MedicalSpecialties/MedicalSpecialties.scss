@@ -1,3 +1,17 @@
+.MedicalSpecial {
+    padding: 0px 25px;
+    .MedicalSpecial-title {
+        h2 {
+            font-size: 35px;
+            span {
+                color: #1d93e3;
+            }
+            @media (max-width: 570px) {
+                font-size: 20px;
+            }
+        }
+    }
+}
 .CardGroup {
     display: flex;
     justify-content: space-around;

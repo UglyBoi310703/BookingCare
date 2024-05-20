@@ -43,16 +43,23 @@ const menuMedicalSpecialties = [
 
 function MenuMedicalSpecialties() {
     return (
-        <MDBCardGroup className="CardGroup">
-            {menuMedicalSpecialties.map((items) => (
-                <MedicalSpecialtiesItem
-                    key={items.id}
-                    srcImgMain={items.imgSrcMain}
-                    srcImgHover={items.imgSrcHover}
-                    title={items.titile}
-                />
-            ))}
-        </MDBCardGroup>
+        <div className='MedicalSpecial'>
+            <div className="MedicalSpecial-title">
+                <h2>
+                    Các chuyên khoa y tế tại <span>MEDLATEC</span>
+                </h2>
+            </div>
+            <MDBCardGroup className="CardGroup">
+                {menuMedicalSpecialties.map((items) => (
+                    <MedicalSpecialtiesItem
+                        key={items.id}
+                        srcImgMain={items.imgSrcMain}
+                        srcImgHover={items.imgSrcHover}
+                        title={items.titile}
+                    />
+                ))}
+            </MDBCardGroup>
+        </div>
     );
 }
 

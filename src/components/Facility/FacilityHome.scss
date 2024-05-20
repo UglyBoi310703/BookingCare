@@ -1,0 +1,33 @@
+.Facilities {
+    padding: 0px 25px;
+    .Facilities-title {
+        h2 {
+            font-size: 35px;
+            span {
+                color: #1d93e3;
+            }
+            @media (max-width: 570px) {
+                font-size: 20px;
+            }
+        }
+    }
+    .FacilitiesContent {
+        .slick-slider {
+            .slick-list {
+                .slick-track {
+                    .slick-slide {
+                        .card {
+                            .card-title {
+                                height: 3rem;
+                            }
+                        }
+                        img {
+                            height: 220px;
+                            width: 370px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
