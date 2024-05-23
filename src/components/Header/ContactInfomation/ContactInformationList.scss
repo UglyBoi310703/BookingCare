@@ -1,0 +1,14 @@
+.ContactInformationList{
+    display: flex;
+    justify-content: center;
+    .ContactInformation-Item{
+        padding-left: 0px;
+        flex-basis: 40%;
+        p{
+            font-size: 14px;
+        }
+        .text-muted{
+            text-transform: lowercase;
+        }
+    }
+}

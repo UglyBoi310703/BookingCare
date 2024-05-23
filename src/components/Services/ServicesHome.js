@@ -1,17 +1,16 @@
 import React from 'react';
-import { MDBCarousel, MDBCarouselItem } from 'mdb-react-ui-kit';
-import FacilitiesData from './facilityData';
-import FacilityItem from './FacilityItem';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import styles from './FacilityHome.scss';
+import styles from './ServicesHome.scss';
+import ServicesData from './ServicesData';
+import ServicesItem from './ServicesItem';
 
-export default function FacilityHome() {
+export default function ServicesHome() {
     const settings = {
         centerMode: true,
         centerPadding: '10px',
-        slidesToShow: 4,
+        slidesToShow: 3,
         speed: 500,
         slidesToScroll: 1,
         arrows: true,
@@ -25,7 +24,7 @@ export default function FacilityHome() {
                 },
             },
             {
-                breakpoint: 480,
+                breakpoint: 540,
                 settings: {
                     arrows: false,
                     slidesToShow: 1,
@@ -35,16 +34,24 @@ export default function FacilityHome() {
     };
 
     return (
-        <div className="Facilities">
-            <div className="Facilities-title">
+        <div className="ServicesHome">
+            <div className="Services-title">
                 <h2>
-                    Cơ sở vật chất tại <span>MEDLATEC</span>
+                    Các gói khám sức khỏe tại <span>MEDLATEC</span>
                 </h2>
             </div>
-            <section className="FacilitiesContent">
+            <section className="ServicesContent">
                 <Slider {...settings}>
-                    {FacilitiesData.map((item) => (
-                        <FacilityItem {...settings} imgSrc={item.img} name={item.name} />
+                    {ServicesData.map((item) => (
+                        <ServicesItem
+                            {...settings}
+                            img={item.img}
+                            name={item.name}
+                            price={item.price}
+                            location={item.location}
+                            gender={item.gender}
+                            age={item.age}
+                        />
                     ))}
                 </Slider>
             </section>

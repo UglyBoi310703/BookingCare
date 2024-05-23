@@ -8,7 +8,7 @@ function Intro() {
         <div className="mt-3 container-fluid  intro">
             <ReactPlayer
                 playing={true}
-                loop={true}
+                loop={false}
                 width="100%"
                 controls={false}
                 height="70%"

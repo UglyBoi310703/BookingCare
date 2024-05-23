@@ -1,18 +1,12 @@
 import React from "react"
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Offcanvas from 'react-bootstrap/Offcanvas';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import styles from "./Footer.scss"
 
-export default function Footer() {
+ function Footer() {
+  console.log("Re-render")
     return (
       <MDBFooter  className='footer text-center text-lg-start text-muted'>
         {/* <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
@@ -132,3 +126,4 @@ export default function Footer() {
       </MDBFooter>
     );
   }
+  export default React.memo(Footer)

@@ -1,0 +1,16 @@
+
+.Header{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   .Logo{
+      img{
+       width: 15rem;
+      }
+   }
+   .collapse-content{
+      width: 100%;
+      display: flex;
+   }
+   
+}

@@ -1,0 +1,16 @@
+.NavbarLogin{
+    box-shadow: none;
+    
+    .NavbarLogin-Item{
+        :hover{
+           box-shadow: none;
+        }
+    }
+    :hover{
+      
+        box-shadow: none;
+    }
+}
+.btn-group, .btn-group-vertical {
+    --mdb-btn-hover-box-shadow: none;
+}
