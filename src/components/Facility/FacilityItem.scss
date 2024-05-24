@@ -1,0 +1,37 @@
+.Facilities-Item{
+    .Facilities-Item-Body{
+        background-color: lavender;
+        border-radius: 4px;
+        padding: 20px 10px;
+        -webkit-box-shadow: -3px 6px 28px rgba(0, 0, 0, 0.08);
+        box-shadow: -3px 6px 28px rgba(0, 0, 0, 0.08);
+        position: relative;
+        z-index: 5;
+        margin: -24px 24px 0;
+        @media (max-width: 570px) {
+            margin: -24px 15px 0;
+        }
+    }
+    .Btn-Order{
+        background: #1d93e3;
+        border-radius: 4px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 28px;
+        padding: 8px 24px;
+        color: #fff;
+        display: inline-block;
+     
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,12 +1,13 @@
 import React from 'react';
+import { MDBCarousel, MDBCarouselItem } from 'mdb-react-ui-kit';
+import FacilitiesData from '../FacilityData';
+import FacilityItem from '../FacilityItem';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import styles from './ServicesHome.scss';
-import ServicesData from './ServicesData';
-import ServicesItem from './ServicesItem';
+import styles from './FacilityHome.scss';
 
-export default function ServicesHome() {
+export default function FacilityHome() {
     const settings = {
         centerMode: true,
         centerPadding: '10px',
@@ -24,7 +25,7 @@ export default function ServicesHome() {
                 },
             },
             {
-                breakpoint: 540,
+                breakpoint: 480,
                 settings: {
                     arrows: false,
                     slidesToShow: 1,
@@ -34,24 +35,16 @@ export default function ServicesHome() {
     };
 
     return (
-        <div className="ServicesHome">
-            <div className="Services-title">
+        <div className="Facilities">
+            <div className="Facilities-title">
                 <h2>
-                    Các gói khám sức khỏe tại <span>MEDLATEC</span>
+                    Cơ sở vật chất tại <span>MEDLATEC</span>
                 </h2>
             </div>
-            <section className="ServicesContent">
+            <section className="FacilitiesContent">
                 <Slider {...settings}>
-                    {ServicesData.map((item) => (
-                        <ServicesItem
-                            {...settings}
-                            img={item.img}
-                            name={item.name}
-                            price={item.price}
-                            location={item.location}
-                            gender={item.gender}
-                            age={item.age}
-                        />
+                    {FacilitiesData.map((item) => (
+                        <FacilityItem {...settings} img={item.img} name={item.name} />
                     ))}
                 </Slider>
             </section>

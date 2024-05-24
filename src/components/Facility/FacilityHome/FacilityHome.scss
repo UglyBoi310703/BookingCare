@@ -17,13 +17,15 @@
                 .slick-track {
                     .slick-slide {
                         .card {
+                            padding: 0 20px;
                             .card-title {
                                 height: 3rem;
                             }
+                          
                         }
                         img {
-                            height: 220px;
-                            width: 370px;
+                            height: 250px;
+                            width: 100%;
                         }
                     }
                 }
