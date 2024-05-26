@@ -1,15 +1,15 @@
 import React from 'react';
 import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn, MDBRipple } from 'mdb-react-ui-kit';
-
-export default function FacilityItem({ imgSrc, name }) {
+import styles from "./FacilityItem.scss"
+export default function FacilityItem({ img, name }) {
     return (
-        <MDBCard alignment="center">
+        <MDBCard className='Facilities-Item' alignment="center">
             <MDBRipple rippleColor="light" rippleTag="div" className="bg-image hover-zoom hover-overlay">
-                <MDBCardImage className="img-thumbnail img-fluid" src={imgSrc} position="top" alt="..." />
+                <MDBCardImage className="" src={img} position="top" alt="..." />
             </MDBRipple>
-            <MDBCardBody>
+            <MDBCardBody className='Facilities-Item-Body'>
                 <MDBCardTitle>{name}</MDBCardTitle>
-                <MDBBtn href="#">Đặt lịch khám</MDBBtn>
+                <MDBBtn className='Btn-Order' href="#">Đặt lịch khám</MDBBtn>
             </MDBCardBody>
         </MDBCard>
     );

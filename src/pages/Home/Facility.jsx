@@ -1,14 +1,14 @@
 import React from 'react';
 import Intro from '~/components/Intro/Intro';
 import HomeLayout from '~/layouts/HomeLayout';
-import ServicesPage from '~/components/Services/ServicesPage/ServicesPage';
-function Services() {
+import FacilityPage from '~/components/Facility/FacilityPage/FacilityPage';
+function Facility() {
     return (
         <>
             <HomeLayout>
-                <ServicesPage itemsPerPage={6} />
+                <FacilityPage itemsPerPage={6} />
             </HomeLayout>
         </>
     );
 }
-export default Services;
+export default Facility;
