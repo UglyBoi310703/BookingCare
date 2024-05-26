@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
 import { GoMute } from 'react-icons/go';
 import { VscUnmute } from 'react-icons/vsc';
-function Intro() {
+function Intro({ url }) {
     const [isMuted, setIsMuted] = useState(true);
     return (
         <div className="mt-3 container-fluid  intro">
@@ -14,7 +14,7 @@ function Intro() {
                 height="70%"
                 volume={1}
                 muted={isMuted}
-                url="https://www.youtube.com/watch?v=RmZPRz6iC6E"
+                url={url}
                 className="videoIntro"
             />
 

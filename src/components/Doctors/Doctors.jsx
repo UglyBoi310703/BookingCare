@@ -3,7 +3,6 @@ import { SmoothHorizontalScrolling } from '../../utils';
 import doctorData from '~/assets/data/DoctorData';
 import { FaChevronLeft } from 'react-icons/fa';
 import { FaChevronRight } from 'react-icons/fa';
-import styles from './Doctor.scss'
 function Doctors() {
     const sliderRef = useRef();
     const movieRef = useRef();
@@ -33,12 +32,8 @@ function Doctors() {
     };
 
     return doctorData.length > 0 ? (
-        <div className="Doctors ContentsSection bg-white">
-            <div className="Doctors-title">
-                <h2>
-                    Đội ngũ y bác sĩ tại <span>MEDLATEC</span>
-                </h2>
-            </div>
+        <div className="ContentsSection bg-white">
+            <h1 className="heading">Đội ngũ y bác sĩ</h1>
             <div
                 className="MoviesSlider"
                 ref={sliderRef}
