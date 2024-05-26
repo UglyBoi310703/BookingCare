@@ -12,7 +12,7 @@ let doctorData = [
         vote: 5,
     },
     {
-        img: '	https://medlatec.vn/media/1599/catalog/20210311_avt-BS+Ngh%e1%bb%8b.png?size=256',
+        img: 'https://medlatec.vn/media/41018/catalog/Th%e1%ba%a7y+%c3%81nh.png?size=256',
         name: 'PGS.TS Lê Chính Đại',
         role: 'Chuyên khoa - Ung bướu',
         vote: 5,
@@ -50,12 +50,6 @@ let doctorData = [
     {
         img: 'https://medlatec.vn/media/1594/catalog/20200718_PGS.TS+Nguy%e1%bb%85n+Mai+H%e1%bb%93ng.png?size=256',
         name: 'PGS.TS Hoàng Thị Phượng',
-        role: 'Chuyên khoa - Huyết học',
-        vote: 5,
-    },
-    {
-        img: 'https://medlatec.vn/media/1597/catalog/20230307__anh-pho-giao-su-dang-thi-minh-nguyet.png?size=256',
-        name: 'TTND.GS.AHLĐ Nguyễn Anh Trí',
         role: 'Chuyên khoa - Huyết học',
         vote: 5,
     },

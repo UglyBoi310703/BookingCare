@@ -12,9 +12,10 @@ function Home() {
     return (
         <>
             <HomeLayout>
+                <Intro url={'https://www.youtube.com/watch?v=RmZPRz6iC6E'} />
                 <FacilityHome />
                 <ServicesHome />
-                <MenuMedicalSpecialties/>
+                <MenuMedicalSpecialties />
             </HomeLayout>
         </>
     );
