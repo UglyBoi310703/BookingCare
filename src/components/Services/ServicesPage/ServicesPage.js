@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { MDBCard, MDBCardBody, MDBCol, MDBListGroup, MDBCardGroup, MDBListGroupItem, MDBRow } from 'mdb-react-ui-kit';
 import ServicesData from '../ServicesData';
-import ServicesItem from '../ServicesItem';
+import ServicesItem from '../ServicesItem/ServicesItem';
 import styles from './ServicesPage.scss';
 
 import ServicesPaginationItems from '../ServicesPagination/ServicesPaginatedItems';
@@ -38,7 +38,7 @@ export default function ServicesPage({ itemsPerPage }) {
         const newOffset = ((value - 1) * itemsPerPage) % ServicesData.length;
         // const newOffset = (value - 1) * itemsPerPage;
         const Check = value * itemsPerPage;
-
+        window.scrollTo(0, 0);
         setItemOffset(newOffset);
     };
     return (

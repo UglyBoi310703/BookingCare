@@ -10,7 +10,7 @@ import FacilityItem from '../FacilityItem';
 
 function FacilityPaginationItem({ currentItems }) {
     return (
-        <MDBRow className=" ServicesPage row-cols-1 row-cols-md-3 g-4">
+        <MDBRow className=" FacilityPage row-cols-1 row-cols-md-3 g-4">
             {currentItems &&
                 currentItems.map((item) => (
                     <FacilityItem

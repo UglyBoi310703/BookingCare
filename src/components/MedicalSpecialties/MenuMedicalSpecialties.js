@@ -1,6 +1,15 @@
 import React from 'react';
 import MedicalSpecialtiesItem from './MedicalSpecialtiesItem';
-import { MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardGroup } from 'mdb-react-ui-kit';
+import {
+    MDBCard,
+    MDBCardImage,
+    MDBCardBody,
+    MDBCardTitle,
+    MDBCardText,
+    MDBCardGroup,
+    MDBCol,
+    MDBRow,
+} from 'mdb-react-ui-kit';
 import styles from './MedicalSpecialties.scss';
 const menuMedicalSpecialties = [
     {
@@ -43,22 +52,24 @@ const menuMedicalSpecialties = [
 
 function MenuMedicalSpecialties() {
     return (
-        <div className='MedicalSpecial'>
+        <div className="MedicalSpecial">
             <div className="MedicalSpecial-title">
                 <h2>
                     Các chuyên khoa y tế tại <span>MEDLATEC</span>
                 </h2>
             </div>
-            <MDBCardGroup className="CardGroup">
-                {menuMedicalSpecialties.map((items) => (
-                    <MedicalSpecialtiesItem
-                        key={items.id}
-                        srcImgMain={items.imgSrcMain}
-                        srcImgHover={items.imgSrcHover}
-                        title={items.titile}
-                    />
-                ))}
-            </MDBCardGroup>
+            <div className='MedicalSpecial-Group'>
+
+                    {menuMedicalSpecialties.map((items) => (
+                        <MedicalSpecialtiesItem
+                            key={items.id}
+                            srcImgMain={items.imgSrcMain}
+                            srcImgHover={items.imgSrcHover}
+                            title={items.titile}
+                        />
+                    ))}
+                
+            </div>
         </div>
     );
 }

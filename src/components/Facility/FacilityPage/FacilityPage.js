@@ -5,6 +5,7 @@ import FacilitiesData from '../FacilityData';
 import FacilityPaginationItem from '../FacilityPagination/FacilityPaginationItem';
 
 import Paginated from '../../Pagination/Paginated';
+import styles from "./FacilityPage.scss"
 
 export default function FacilityPage({ itemsPerPage }) {
     console.log(FacilitiesData);
@@ -24,7 +25,7 @@ export default function FacilityPage({ itemsPerPage }) {
         // const newOffset = ((value - 1) * itemsPerPage) % ServicesData.length;
         const newOffset = (value - 1) * itemsPerPage;
         const Check = value * itemsPerPage;
-
+        window.scrollTo(0, 0);
         setItemOffset(newOffset);
     };
     return (

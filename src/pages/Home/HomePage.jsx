@@ -8,12 +8,15 @@ import ServicesHome from '~/components/Services/ServicesHome/ServicesHome';
 import ServicesPage from '~/components/Services/ServicesPage/ServicesPage';
 import Header from '~/components/Header';
 import ContactInformationList from '~/components/Header/ContactInfomation/ContactInformationList';
+import ServicesHomeTest from '~/components/Services/ServicesHome/ServicesHomeTest';
 function Home() {
     return (
         <>
             <HomeLayout>
+                
                 <FacilityHome />
-                <ServicesHome />
+            
+                <ServicesHomeTest />
                 <MenuMedicalSpecialties />
             </HomeLayout>
         </>
