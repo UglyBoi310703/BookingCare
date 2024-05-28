@@ -33,9 +33,9 @@ function Doctors() {
 
     return doctorData.length > 0 ? (
         <div className="ContentsSection bg-white">
-            <h1 className="heading">Đội ngũ y bác sĩ</h1>
+            <h1 className="Doctorheading">Đội ngũ y bác sĩ</h1>
             <div
-                className="MoviesSlider"
+                className="DoctorSlider"
                 ref={sliderRef}
                 style={{ gridTemplateColumns: `repeat(${doctorData.length}, 460px)` }}
             >

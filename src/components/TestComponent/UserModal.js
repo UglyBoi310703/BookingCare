@@ -10,7 +10,7 @@ import {
   MDBInput,
   MDBCol,
 } from 'mdb-react-ui-kit';
-
+import UserInformationForm from '../Form/UserInformation/UserInformationForm';
 function UserModal() {
   const [modalOpen, setModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('personalInfo');
@@ -157,7 +157,7 @@ function UserModal() {
                 </MDBBtn>
               </MDBCol>
               <MDBCol className="col-9">
-                {activeTab === 'personalInfo' && renderForm()}
+                {activeTab === 'personalInfo' && <UserInformationForm/>}
                 {activeTab === 'securitySettings' && (
                   <div>
                     <h5>Cài đặt mật khẩu và bảo mật</h5>
