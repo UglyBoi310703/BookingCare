@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form, Row, Col } from 'react-bootstrap';
-
+import AvatarChanger from './AvatarChange';
 const UserInformationForm = () => {
     return (
         <>
+        <AvatarChanger/>
             <Form className="bg-light">
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="fullName">
