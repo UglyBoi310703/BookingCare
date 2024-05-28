@@ -34,102 +34,10 @@ function UserModal() {
     // Add more provinces as needed
   ];
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+
 
   const toggleModal = () => setModalOpen(!modalOpen);
 
-  const renderForm = () => (
-    <form>
-      <div className="mb-3">
-        <label>Ảnh đại diện:</label>
-        <MDBInput
-          type="file"
-          name="avatar"
-          disabled={editableField !== 'avatar'}
-          onChange={handleInputChange}
-        />
-        <MDBBtn onClick={() => setEditableField('avatar')}>Sửa</MDBBtn>
-      </div>
-      <div className="mb-3">
-        <label>Họ và tên:</label>
-        <MDBInput
-          type="text"
-          name="fullName"
-          value={formData.fullName}
-          disabled={editableField !== 'fullName'}
-          onChange={handleInputChange}
-        />
-        <MDBBtn onClick={() => setEditableField('fullName')}>Sửa</MDBBtn>
-      </div>
-      <div className="mb-3">
-        <label>Ngày sinh:</label>
-        <MDBInput
-          type="date"
-          name="dob"
-          value={formData.dob}
-          disabled={editableField !== 'dob'}
-          onChange={handleInputChange}
-        />
-        <MDBBtn onClick={() => setEditableField('dob')}>Sửa</MDBBtn>
-      </div>
-      <div className="mb-3">
-        <label>Tỉnh thành:</label>
-        <select
-          name="province"
-          value={formData.province}
-          disabled={editableField !== 'province'}
-          onChange={handleInputChange}
-          className="form-control"
-        >
-          {provinces.map((province) => (
-            <option key={province} value={province}>
-              {province}
-            </option>
-          ))}
-        </select>
-        <MDBBtn onClick={() => setEditableField('province')}>Sửa</MDBBtn>
-      </div>
-      <div className="mb-3">
-        <label>Quận huyện:</label>
-        <MDBInput
-          type="text"
-          name="district"
-          value={formData.district}
-          disabled={editableField !== 'district'}
-          onChange={handleInputChange}
-        />
-        <MDBBtn onClick={() => setEditableField('district')}>Sửa</MDBBtn>
-      </div>
-      <div className="mb-3">
-        <label>Số điện thoại:</label>
-        <MDBInput
-          type="text"
-          name="phone"
-          value={formData.phone}
-          disabled={editableField !== 'phone'}
-          onChange={handleInputChange}
-        />
-        <MDBBtn onClick={() => setEditableField('phone')}>Sửa</MDBBtn>
-        </div>
-      <div className="mb-3">
-        <label>Email:</label>
-        <MDBInput
-          type="email"
-          name="email"
-          value={formData.email}
-        
-          onChange={handleInputChange}
-        />
-        
-      </div>
-      <div className="text-end">
-        <MDBBtn onClick={() => setEditableField(null)}>Lưu thông tin</MDBBtn>
-      </div>
-    </form>
-  );
 
   return (
     <>
