@@ -6,7 +6,8 @@ import Search from '../Search';
 
 import Navbar from '../NavBar/Navbar';
 import NavbarInformation from '../NavBar/NavbarInformation';
-
+import User from '../TestComponent/UserComponent';
+import { useAuth } from '../NavBar/AuthContext';
 import {
     MDBContainer,
     MDBNavbar,
@@ -20,12 +21,10 @@ import {
 } from 'mdb-react-ui-kit';
 import { useLocation } from 'react-router-dom';
 
-
 function Header() {
-    const [openNavLogin, setOpenNavLogin] = React.useState(false);
+    const { isLoggedIn, login, logout } = useAuth();
     const [openNav, setOpenNav] = React.useState(false);
     const link = useLocation();
-
     useEffect(() => {
         let index = 1;
         if (link.pathname == '/Services') {
@@ -65,101 +64,22 @@ function Header() {
                     <MDBIcon icon="bars" fas />
                 </MDBNavbarToggler>
                 <MDBCollapse navbar open={openNav} id="navbarExample">
-                    {openNavLogin ? (
-                        <Navbar/>
+                    {!isLoggedIn ? (
+                        <>
+                            <NavbarInformation />
+                            <NavbarLogin handleLogin={login} />
+                        </>
                     ) : (
                         <>
                             <NavbarInformation />
-                            <NavbarLogin />
+                            <User logout={logout} />
                         </>
                     )}
                 </MDBCollapse>
-                <>
-                    {/* <Menu items={currentUser } onChange={handleMenuChange}>
-                                {currentUser ? (
-                                    <Image
-                                        className={cx('user-avatar')}
-                                        src="https://files.fullstack.edu.vn/f8-prod/user_avatars/1/623d4b2d95cec.png"
-                                        alt="Nguyen Van A"
-                                    />
-                                ) : (
-                                    <button className={cx('more-btn')}>
-                                        <FontAwesomeIcon icon={faEllipsisVertical} />
-                                    </button>
-                                )}
-                            </Menu> */}
-                </>
+               
             </MDBContainer>
-            <Navbar />
+            <Navbar openNav={openNav}/>
         </MDBNavbar>
     );
 }
 export default React.memo(Header);
-// <Navbar collapseOnSelect expand="lg" className="bbg-body-tertiary">
-//     <Container>
-//         <Navbar.Brand href="#home">
-//             <img style={{ width: '10rem' }} src="https://medlatec.vn/media/115/content/logo-pc.png" />
-//         </Navbar.Brand>
-//         <Search />
-//         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-//         <Navbar.Collapse id="responsive-navbar-nav">
-//             <>
-//                 {currentUser ? (
-//                     <NavBarTest/>
-//                 ) : (
-//                     <>
-//                         <NavBarTest/>
-//                         <SidebarLogin />
-//                     </>
-//                 )}
-//                 {/* <Menu items={currentUser } onChange={handleMenuChange}>
-//                         {currentUser ? (
-//                             <Image
-//                                 className={cx('user-avatar')}
-//                                 src="https://files.fullstack.edu.vn/f8-prod/user_avatars/1/623d4b2d95cec.png"
-//                                 alt="Nguyen Van A"
-//                             />
-//                         ) : (
-//                             <button className={cx('more-btn')}>
-//                                 <FontAwesomeIcon icon={faEllipsisVertical} />
-//                             </button>
-//                         )}
-//                     </Menu> */}
-//             </>
-//         </Navbar.Collapse>
-//     </Container>
-// </Navbar>
-
-// <header className={cx('wrapper')}>
-//     <div className={cx('inner')}>
-//         <Link to={config.routes.home} className={cx('logo-link')}>
-//             <img src="https://medlatec.vn/media/115/content/logo-pc.png" alt="Bệnh viện đa khoa MEDLATEC" />
-//         </Link>
-//         <Search />
-// <div className={cx('actions')}>
-//     {currentUser ? (
-//         <Sidebar />
-//     ) : (
-//         <>
-//             <Sidebar />
-//             <Button text>Đăng nhập</Button>
-//             <Button primary>Đăng ký</Button>
-//         </>
-//     )}
-
-//     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
-//         {currentUser ? (
-//             <Image
-//                 className={cx('user-avatar')}
-//                 src="https://files.fullstack.edu.vn/f8-prod/user_avatars/1/623d4b2d95cec.png"
-//                 alt="Nguyen Van A"
-//             />
-//         ) : (
-//             <button className={cx('more-btn')}>
-//                 <FontAwesomeIcon icon={faEllipsisVertical} />
-//             </button>
-//         )}
-//     </Menu>
-// </div>
-//     </div>
-// </header>

@@ -27,7 +27,7 @@ export default function RegisterModal() {
               <MDBBtn className='btn-close' color='none' onClick={toggleOpen}></MDBBtn>
             </MDBModalHeader>
             <MDBModalBody style={{display:'flex',backgroundColor:"floralwhite"}}>
-            <img src='https://medlatec.vn/media/38331/content/_sinh-nhat-banner.png' style={{height:"500px", width:"650x"}}/>
+            <img src='https://medlatec.vn/media/38331/content/_sinh-nhat-banner.png' style={{height:"400px", width:"500x"}}/>
            
             <RegisterForm/>
             </MDBModalBody>

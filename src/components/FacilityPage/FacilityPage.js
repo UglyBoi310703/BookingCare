@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-import FacilitiesData from '../facilityData';
+import FacilitiesData from './FacilityData';
+import FacilityPaginationItem from './FacilityPagination/FacilityPaginationItem';
 
-import FacilityPaginationItem from '../FacilityPagination/FacilityPaginationItem';
-
-import Paginated from '../../Pagination/Paginated';
+import Paginated from '../Pagination/Paginated';
 import styles from './FacilityPage.scss';
 
 export default function FacilityPage({ itemsPerPage }) {
@@ -30,6 +29,11 @@ export default function FacilityPage({ itemsPerPage }) {
     };
     return (
         <div className="Facility">
+            <div className="FacilityTitle">
+                <h1>
+                    Cơ sở vật chất tại <span>Medlatec</span>
+                </h1>
+            </div>
             <FacilityPaginationItem currentItems={CurrentItems} />
             <Paginated itemsPerPage={itemsPerPage} Data={FacilitiesData} handlePageClick={handlePageClick} />
         </div>

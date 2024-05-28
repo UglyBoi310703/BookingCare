@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
-import FacilitiesData from '../facilityData';
+import FacilitiesData from '../FacilityData';
 import { MDBRow } from 'mdb-react-ui-kit';
-import FacilityItem from '../FacilityItem';
+import FacilityItem from '../FacilityItem/FacilityItem';
 // Example items, to simulate fetching from another resources.
 
 function FacilityPaginationItem({ currentItems }) {

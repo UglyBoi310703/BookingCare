@@ -1,7 +1,7 @@
 import React from 'react';
 import { MDBCarousel, MDBCarouselItem } from 'mdb-react-ui-kit';
-import FacilitiesData from '../facilityData';
-import FacilityItem from '../FacilityItem';
+import FacilitiesData from '../../FacilityPage/FacilityData';
+import FacilityItem from '../../FacilityPage/FacilityItem/FacilityItem';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';

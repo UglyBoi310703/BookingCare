@@ -1,25 +1,24 @@
 import React from 'react';
-import Doctors from '~/components/Doctors/Doctors';
+import Doctors from '~/components/HomePage/DoctorsHome/Doctors';
 import Intro from '~/components/Intro/Intro';
 import HomeLayout from '~/layouts/HomeLayout';
-import MenuMedicalSpecialties from '~/components/MedicalSpecialties/MenuMedicalSpecialties';
-import FacilityHome from '~/components/Facility/FacilityHome/FacilityHome';
-import ServicesHome from '~/components/Services/ServicesHome/ServicesHome';
-import ServicesPage from '~/components/Services/ServicesPage/ServicesPage';
+import MenuMedicalSpecialties from '~/components/HomePage/MedicalSpecialties/MenuMedicalSpecialties';
+import FacilityHome from '~/components/HomePage/FacilityHome/FacilityHome';
+import ServicesHome from '~/components/HomePage/ServicesHome/ServicesHome';
+import ServicesPage from '~/components/ServicesPage/ServicesPage';
 import Header from '~/components/Header';
 import ContactInformationList from '~/components/Header/ContactInfomation/ContactInformationList';
-import ServicesHomeTest from '~/components/Services/ServicesHome/ServicesHomeTest';
+import ServicesHomeTest from '~/components/HomePage/ServicesHome/ServicesHomeTest';
 function Home() {
     return (
         <>
             <HomeLayout>
-          
-
                 <Intro url={'https://www.youtube.com/watch?v=RmZPRz6iC6E'} />
-                <FacilityHome />
-            
+                <Doctors/>
                 <ServicesHomeTest />
                 <MenuMedicalSpecialties />
+                <FacilityHome />
+               
             </HomeLayout>
         </>
     );

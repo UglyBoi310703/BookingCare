@@ -34,15 +34,7 @@ function Doctors() {
                         <option value="hoc-ham-3">Học hàm 3</option>
                     </select>
                 </div>
-                <div className="filter-item">
-                    <label htmlFor="chon-hoc-vi">Chọn học vị</label>
-                    <select id="chon-hoc-vi" name="chon-hoc-vi">
-                        <option value="">Chọn học vị</option>
-                        <option value="hoc-vi-1">Học vị 1</option>
-                        <option value="hoc-vi-2">Học vị 2</option>
-                        <option value="hoc-vi-3">Học vị 3</option>
-                    </select>
-                </div>
+
                 <button className="search-button">Tìm kiếm bác sĩ</button>
             </div>
             <div className="py-2 d-flex flex-column justify-content-center">
