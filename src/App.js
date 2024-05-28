@@ -11,6 +11,7 @@ import Test from './components/TestComponent/ServicesModal';
 import ModalTest from './components/TestComponent/UserComponent';
 import Register from './components/Form/Register/Register';
 import UserModal from './components/TestComponent/UserModal';
+import Paper from './components/PaperBase/HeaderPaper';
 function App() {
     return (
         <>

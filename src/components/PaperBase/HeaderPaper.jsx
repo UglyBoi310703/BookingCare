@@ -17,7 +17,7 @@ import Typography from '@mui/material/Typography';
 
 const lightColor = 'rgba(255, 255, 255, 0.7)';
 
-function Header(props) {
+function Paper(props) {
   const { onDrawerToggle } = props;
 
   return (
@@ -114,8 +114,8 @@ function Header(props) {
   );
 }
 
-Header.propTypes = {
+Paper.propTypes = {
   onDrawerToggle: PropTypes.func.isRequired,
 };
 
-export default Header;
+export default Paper;
