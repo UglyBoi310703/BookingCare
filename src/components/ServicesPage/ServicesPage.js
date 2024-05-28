@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { MDBCard, MDBCardBody, MDBCol, MDBListGroup, MDBCardGroup, MDBListGroupItem, MDBRow } from 'mdb-react-ui-kit';
-import ServicesData from '../ServicesData';
-import ServicesItem from '../ServicesItem/ServicesItem';
+import ServicesData from './ServicesData';
+import ServicesItem from './ServicesItem/ServicesItem';
 import styles from './ServicesPage.scss';
 
-import ServicesPaginationItems from '../ServicesPagination/ServicesPaginatedItems';
+import ServicesPaginationItems from './ServicesPagination/ServicesPaginatedItems';
 
-import Paginated, { CurrentItems } from '../../Pagination/Paginated';
+import Paginated, { CurrentItems } from '../Pagination/Paginated';
 // function Items({ currentItems }) {
 //     return (
 //         <MDBRow className=" ServicesPage row-cols-1 row-cols-md-2  row-cols-lg-3 g-4">
@@ -43,9 +43,11 @@ export default function ServicesPage({ itemsPerPage }) {
     };
     return (
         <div className="Services">
-        <div className='ServicesTitle'>
-            <h1>Các gói khám sức khỏe tại <span>Medlatec</span></h1>
-        </div>
+            <div className="ServicesTitle">
+                <h1>
+                    Các gói khám sức khỏe tại <span>Medlatec</span>
+                </h1>
+            </div>
             <ServicesPaginationItems currentItems={CurrentItems} />
             <Paginated itemsPerPage={itemsPerPage} Data={ServicesData} handlePageClick={handlePageClick} />
         </div>

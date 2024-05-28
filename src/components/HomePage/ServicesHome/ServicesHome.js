@@ -3,8 +3,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styles from './ServicesHome.scss';
-import ServicesData from '../ServicesData';
-import ServicesItem from '../ServicesItem/ServicesItem';
+import ServicesData from '../../ServicesPage/ServicesData';
+import ServicesItem from '../../ServicesPage/ServicesItem/ServicesItem';
 
 export default function ServicesHome() {
     // React.useEffect(() => {
@@ -39,7 +39,6 @@ export default function ServicesHome() {
 
     return (
         <div className="ServicesHome">
-           
             <section className="ServicesContent">
                 <Slider {...settings}>
                     {ServicesData.map((item) => (

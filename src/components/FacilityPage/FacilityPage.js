@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-import FacilitiesData from '../FacilityData';
+import FacilitiesData from './FacilityData';
+import FacilityPaginationItem from './FacilityPagination/FacilityPaginationItem';
 
-import FacilityPaginationItem from '../FacilityPagination/FacilityPaginationItem';
-
-import Paginated from '../../Pagination/Paginated';
+import Paginated from '../Pagination/Paginated';
 import styles from './FacilityPage.scss';
 
 export default function FacilityPage({ itemsPerPage }) {
