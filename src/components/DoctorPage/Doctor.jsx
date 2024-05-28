@@ -41,7 +41,7 @@ function Doctor({ doctor }) {
                             <button
                                 variant="outline-primary"
                                 onClick={handleShow}
-                                className="btn btn-outline-primary"
+                                className="order_btn btn-outline-primary"
                                 type="button"
                                 data-toggle="modal"
                                 data-target="#exampleModal"

@@ -5,7 +5,7 @@ import FacilitiesData from '../facilityData';
 import FacilityPaginationItem from '../FacilityPagination/FacilityPaginationItem';
 
 import Paginated from '../../Pagination/Paginated';
-import styles from "./FacilityPage.scss"
+import styles from './FacilityPage.scss';
 
 export default function FacilityPage({ itemsPerPage }) {
     console.log(FacilitiesData);
