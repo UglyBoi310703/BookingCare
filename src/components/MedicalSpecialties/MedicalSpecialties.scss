@@ -12,12 +12,14 @@
         }
     }
 }
-.CardGroup {
+.MedicalSpecial-Group {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     .card {
-        border: solid 2px #1d93e3;
+        cursor: pointer;
+       flex-basis: 15%;
+        border: solid 1px #1d93e3;
         padding-top: 2rem;
         align-items: center;
         .imgHover {

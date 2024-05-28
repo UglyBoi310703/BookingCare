@@ -14,7 +14,7 @@ let CurrentItems = [];
   
     return (
            
-            <Stack className='Services-Pagination' spacing={2}>
+            <Stack className='Pagination' spacing={2}>
                 <Pagination
                     count={Data.length / itemsPerPage}
                     color="primary"

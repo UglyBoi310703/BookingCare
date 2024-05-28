@@ -1,3 +1,11 @@
 .Search{
     box-shadow: none;
+    input:focus {
+        border: 0.5px solid white;
+        color: white;
+        padding-left: 26px;
+        cursor: text;
+        opacity: 1;
+        border-radius: 4px;
+    }
 }

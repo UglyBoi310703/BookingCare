@@ -3,7 +3,7 @@ import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn, 
 
 export default function MedicalSpecialtiesItem({ srcImgMain, srcImgHover, title }) {
     return (
-        <MDBCard className="col-5">
+        <MDBCard className="">
             <MDBRipple rippleTag="div" className="bg-image">
                 <MDBCardImage className="imgMain" src={srcImgMain} fluid alt="..." />
                 <MDBCardImage className="imgHover" src={srcImgHover} fluid alt="..." />

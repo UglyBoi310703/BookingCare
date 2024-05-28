@@ -2,8 +2,22 @@
     box-shadow: none;
     
     .NavbarLogin-Item{
+        height:50px;
         :hover{
            box-shadow: none;
+        }
+    }
+    .Btn-Login{
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    .Btn-Register{
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+    .form-outline{
+        .form-control{
+            background-color: white;
         }
     }
     :hover{
@@ -11,6 +25,4 @@
         box-shadow: none;
     }
 }
-.btn-group, .btn-group-vertical {
-    --mdb-btn-hover-box-shadow: none;
-}
+

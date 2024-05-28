@@ -17,7 +17,7 @@ import {
     MDBCardGroup,
     MDBRow,
 } from 'mdb-react-ui-kit';
-import ServicesItem from '../ServicesItem';
+import ServicesItem from '../ServicesItem/ServicesItem';
 // Example items, to simulate fetching from another resources.
 
 export default function ServicesPaginationItems({ currentItems }) {
@@ -32,12 +32,11 @@ export default function ServicesPaginationItems({ currentItems }) {
                         location={item.location}
                         gender={item.gender}
                         age={item.age}
+                        Description={item.Description()}
                     />
                 ))}
         </MDBRow>
     );
 }
-
-
 
 // Add a <div id="container"> to your HTML to see the component rendered.

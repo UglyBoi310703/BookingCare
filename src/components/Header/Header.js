@@ -50,7 +50,7 @@ function Header() {
     return (
         <MDBNavbar className="Header" expand="lg" fixed="top" sticky light bgColor="light">
             <MDBContainer fluid>
-                <MDBNavbarBrand className="Logo" href="#">
+                <MDBNavbarBrand className="Logo" href="/">
                     <img src="https://medlatec.vn/media/115/content/logo-pc.png" />
                 </MDBNavbarBrand>
                 <Search />

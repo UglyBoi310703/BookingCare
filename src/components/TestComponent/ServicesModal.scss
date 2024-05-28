@@ -1,0 +1,34 @@
+.modal-content{
+    background-color: white;
+    .ServicesModal-Item{
+        padding: 0 50px;
+ 
+        img{
+            width: 100%;
+            height: 580px;
+        }
+        .ServicesModal-Item-Cotent{
+            height: 150px;
+            bottom: 50px;
+        }
+        .ServicesModal-Item-Cotent-price{
+            font-size: 24px !important;
+        }
+        .ServicesModal-Item-Cotent-name{
+            font-size: 24px !important;
+        }
+        .ServicesModal-Item-Cotent-information{
+            font-size: 18px !important;
+        }
+    }
+    .ServicesModal-Description{
+        display: flex;
+        table{
+          margin-bottom: 30px;
+            th{
+                width: 35%;
+                font-weight: 700;
+            }
+        }
+    }
+}

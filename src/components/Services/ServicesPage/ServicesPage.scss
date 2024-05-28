@@ -2,7 +2,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        .Services-Pagination{
+        .Pagination{
             margin-top: 35px;
         }
     .ServicesPage {
@@ -15,8 +15,8 @@
         .Services-Item {
             box-shadow: none;
             img {
-                width: 455px;
-                height: 335px;
+              
+          
                 @media (max-width: 570px) {
                     width: 100%;
                     height: 250px;
@@ -48,7 +48,7 @@
                 -webkit-box-shadow: -3px 6px 28px rgba(0, 0, 0, 0.08);
                 box-shadow: -3px 6px 28px rgba(0, 0, 0, 0.08);
                 position: relative;
-                z-index: 5;
+      
                 margin: -24px 24px 0;
                 .Services-Item-Cotent-price {
                     background: #1d93e3;

@@ -4,9 +4,13 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styles from './ServicesHome.scss';
 import ServicesData from '../ServicesData';
-import ServicesItem from '../ServicesItem';
+import ServicesItem from '../ServicesItem/ServicesItem';
 
 export default function ServicesHome() {
+    // React.useEffect(() => {
+    //         const SlickSlide = document.getElementsByClassName("slick-slide");
+
+    // })
     const settings = {
         centerMode: true,
         centerPadding: '10px',
@@ -35,11 +39,7 @@ export default function ServicesHome() {
 
     return (
         <div className="ServicesHome">
-            <div className="Services-title">
-                <h2>
-                    Các gói khám sức khỏe tại <span>MEDLATEC</span>
-                </h2>
-            </div>
+           
             <section className="ServicesContent">
                 <Slider {...settings}>
                     {ServicesData.map((item) => (
