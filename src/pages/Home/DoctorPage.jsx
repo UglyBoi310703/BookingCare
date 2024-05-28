@@ -7,7 +7,9 @@ import TestHeader from '~/components/Header/TestHeader';
 function DoctorsPage() {
     return (
         <>
-            <HomeLayout></HomeLayout>
+            <HomeLayout>
+               
+            </HomeLayout>
         </>
     );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import Doctors from '~/components/Doctors/Doctors';
+import Doctors from '~/components/Doctors/DoctorsHome/Doctors';
 import Intro from '~/components/Intro/Intro';
 import HomeLayout from '~/layouts/HomeLayout';
 import MenuMedicalSpecialties from '~/components/MedicalSpecialties/MenuMedicalSpecialties';
@@ -13,8 +13,6 @@ function Home() {
     return (
         <>
             <HomeLayout>
-          
-
                 <Intro url={'https://www.youtube.com/watch?v=RmZPRz6iC6E'} />
                 <FacilityHome />
             

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MDBNavbarNav, MDBNavbarLink } from 'mdb-react-ui-kit';
+import { MDBNavbarNav, MDBNavbarLink,MDBCollapse } from 'mdb-react-ui-kit';
 
 import styles from './Navbar.scss';
 import { useLocation } from 'react-router-dom';
@@ -10,14 +10,14 @@ function handleMouseOver(event) {
     NewLinkActive.setAttribute('id', 'LinkActive');
 }
 
-export default function Navbar() {
+ function Navbar({openNav}) {
+   
     const link = useLocation();
     function handleMouseOut() {
         let index = 1;
         if (link.pathname == '/Services') {
             index = 2;
         } else if (link.pathname == '/Doctors') {
-            console.log('Hi');
             index = 3;
         } else if (link.pathname == '/Facility') {
             index = 4;
@@ -29,8 +29,8 @@ export default function Navbar() {
         NewLinkActive[0].setAttribute('id', 'LinkActive');
     }
     return (
-        <>
-            <MDBNavbarNav onMouseLeave={handleMouseOut} fullWidth={false} className="NavBarMain col mb-2 mb-lg-0">
+        <MDBCollapse navbar open={openNav} className='NavCollapse'>
+             <MDBNavbarNav onMouseLeave={handleMouseOut} fullWidth={false} className="NavBarMain col mb-2 mb-lg-0">
                 <div className="NavBarMain-List">
                     <MDBNavbarLink onMouseOver={handleMouseOver} className="Nav-Link1" id="LinkActive" href="/">
                         Trang chủ
@@ -50,6 +50,8 @@ export default function Navbar() {
                     <div className="animation1 start-home" id="BlockActive"></div>
                 </div>
             </MDBNavbarNav>
-        </>
+        </MDBCollapse>
+           
     );
 }
+export default React.memo(Navbar)

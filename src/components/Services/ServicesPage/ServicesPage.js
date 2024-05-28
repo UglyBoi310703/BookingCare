@@ -43,6 +43,9 @@ export default function ServicesPage({ itemsPerPage }) {
     };
     return (
         <div className="Services">
+        <div className='ServicesTitle'>
+            <h1>Các gói khám sức khỏe tại <span>Medlatec</span></h1>
+        </div>
             <ServicesPaginationItems currentItems={CurrentItems} />
             <Paginated itemsPerPage={itemsPerPage} Data={ServicesData} handlePageClick={handlePageClick} />
         </div>

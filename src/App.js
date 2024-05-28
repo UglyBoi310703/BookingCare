@@ -6,10 +6,11 @@ import Intro from './components/Intro/Intro';
 import Facility from './pages/Home/Facility';
 import Doctors from './pages/Home/DoctorPage';
 import TestComponent from './components/TestComponent/TestComponent';
-import ScrollTest from './components/TestComponent/ModalTest';
+import ScrollTest from './components/TestComponent/UserComponent';
 import Test from './components/TestComponent/ServicesModal';
-import ModalTest from './components/TestComponent/ModalTest';
+import ModalTest from './components/TestComponent/UserComponent';
 import Register from './components/Form/Register/Register';
+import UserModal from './components/TestComponent/UserModal';
 function App() {
     return (
         <>
@@ -18,7 +19,7 @@ function App() {
                 <Route path="/Services" element={<Services />} />
                 <Route path="/Doctors" element={<Doctors />} />
                 <Route path="/Facility" element={<Facility />} />
-                <Route path="/Test" element={<Register />} />
+                <Route path="/Test" element={<UserModal />} />
             </Routes>
         </>
     );

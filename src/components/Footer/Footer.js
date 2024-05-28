@@ -6,7 +6,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import styles from "./Footer.scss"
 
  function Footer() {
-  console.log("Re-render")
+  console.log("Re-render-Footer")
     return (
       <MDBFooter  className='footer text-center text-lg-start text-muted'>
         {/* <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>

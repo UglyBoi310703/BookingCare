@@ -11,18 +11,18 @@ import {
 } from 'mdb-react-ui-kit';
 import styles from "./LoginForm.scss"
 
-function LoginForm() {
+function LoginForm({handleLogin}) {
   const [emailOrPhone, setEmailOrPhone] = useState('');
   const [password, setPassword] = useState('');
   const [saveInfo, setSaveInfo] = useState(false);
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    // Xử lý logic đăng nhập tại đây
-    console.log('Email/Số điện thoại:', emailOrPhone);
-    console.log('Mật khẩu:', password);
-    console.log('Lưu thông tin:', saveInfo);
-  };
+  // const handleLogin = (e) => {
+  //   e.preventDefault();
+  //   // Xử lý logic đăng nhập tại đây
+  //   console.log('Email/Số điện thoại:', emailOrPhone);
+  //   console.log('Mật khẩu:', password);
+  //   console.log('Lưu thông tin:', saveInfo);
+  // };
 
   const handleForgotPassword = () => {
     // Xử lý logic quên mật khẩu tại đây
@@ -76,7 +76,7 @@ function LoginForm() {
               <a href="#" onClick={handleForgotPassword}>Quên mật khẩu?</a>
             </div>
             <div className="text-center py-4 mt-3">
-              <MDBBtn color="primary" type="submit">
+              <MDBBtn color="primary">
                 Đăng nhập
               </MDBBtn>
             </div>
