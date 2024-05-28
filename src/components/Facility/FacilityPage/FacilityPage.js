@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import FacilitiesData from '../FacilityData';
+import FacilitiesData from '../facilityData';
 
 import FacilityPaginationItem from '../FacilityPagination/FacilityPaginationItem';
 
