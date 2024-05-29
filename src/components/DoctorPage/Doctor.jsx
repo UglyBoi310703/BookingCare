@@ -12,7 +12,7 @@ function Doctor({ doctor }) {
         <>
             <AppointmentForm show={show} handleClose={handleClose} />
             <div className="col-md-3 mb-4">
-                <div className="card d-flex align-items-center pt-2" style={{ height: '100%' }}>
+                <div className="card d-flex align-items-center justify-content-center pt-2" style={{ height: '100%' }}>
                     <div
                         className="d-flex align-items-center justify-content-center"
                         style={{ width: '100%', minHeight: '210px', height: '210px' }}
@@ -37,7 +37,7 @@ function Doctor({ doctor }) {
                                 </div>
                             </div>
                         </div>
-                        <div className="d-flex align-items-center justify-content-between mt-auto">
+                        <div className="d-flex align-items-center justify-content-center mt-auto">
                             <button
                                 variant="outline-primary"
                                 onClick={handleShow}
