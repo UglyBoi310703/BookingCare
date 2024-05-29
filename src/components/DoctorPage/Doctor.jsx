@@ -28,7 +28,7 @@ function Doctor({ doctor }) {
                     <div className="card-body d-flex flex-column justify-content-between" style={{ height: '100%' }}>
                         <div>
                             <p className="fw-bolder">{name}</p>
-                            <div className="fs-10">{role}</div>
+                            <div className="fs-10 text-center">{role}</div>
                             <div className="d-flex justify-content-center align-items-center mb-2">
                                 <div className="me-1">
                                     {new Array(vote ? vote : 5).fill(1).map((value, index) => (

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import doctorData from '~/assets/data/DoctorData';
 import Doctor from './Doctor';
 import AppointmentForm from './AppointmentForm';
+import './index.css';
 function Doctors() {
     const doctorList = doctorData;
     return (

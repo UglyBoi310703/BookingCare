@@ -19,8 +19,6 @@
     }
 }
 
-
-
 .nav-search {
     input {
         font-size: 14px;
@@ -36,7 +34,6 @@
         opacity: 0;
     }
 }
-
 
 .intro {
     position: relative;
@@ -157,16 +154,14 @@
     z-index: 1;
 }
 .btnLeft {
-  
     position: absolute;
-        border-radius: 15px;
-        left: 5px;
-        top: 30%;
-        background-color: #1d93e3;
-        z-index: 2;
-       cursor: pointer;
-       font-size: 30px;
-    
+    border-radius: 15px;
+    left: 5px;
+    top: 30%;
+    background-color: #1d93e3;
+    z-index: 2;
+    cursor: pointer;
+    font-size: 30px;
 }
 .btnLeft svg {
     opacity: 0.7;
@@ -191,7 +186,6 @@
     background-color: #1d93e3;
     z-index: 2;
     cursor: pointer;
-   
 }
 .btnRight svg {
     opacity: 0.7;
@@ -202,7 +196,6 @@
         transform: scale(1.2);
     }
 }
-
 
 .MenusPane {
     position: fixed;
@@ -249,7 +242,6 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 .modal-content {
-   
 }
 .row-detail {
     width: 70%;
@@ -311,5 +303,3 @@
     color: #000;
     transform: 0.5s;
 }
-
-
