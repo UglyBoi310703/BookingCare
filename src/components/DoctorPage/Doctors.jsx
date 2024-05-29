@@ -12,15 +12,12 @@ function Doctors() {
 
     function handleSearchDoctor() {
         let remainDoctor = [...doctorList];
-        console.log(academicRank, degree, role);
         if (role) {
             remainDoctor = remainDoctor.filter((p) => p.role.toLowerCase() === role.toLowerCase());
         }
-        console.log(remainDoctor);
         if (degree) {
             remainDoctor = remainDoctor.filter((p) => p.degree.toLowerCase() === degree.toLowerCase());
         }
-        console.log(remainDoctor);
         if (academicRank) {
             remainDoctor = remainDoctor.filter((p) => p.academic_rank.toLowerCase() === academicRank.toLowerCase());
         }
