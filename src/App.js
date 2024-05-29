@@ -11,7 +11,7 @@ import Test from './components/TestComponent/ServicesModal';
 import ModalTest from './components/TestComponent/UserComponent';
 import Register from './components/Form/Register/Register';
 import UserModal from './components/TestComponent/UserModal';
-
+import DoctorItem from './components/DoctorPage/DoctorItem/DoctorItem';
 function App() {
     return (
         <>
@@ -20,7 +20,7 @@ function App() {
                 <Route path="/Services" element={<Services />} />
                 <Route path="/Doctors" element={<Doctors />} />
                 <Route path="/Facility" element={<Facility />} />
-                <Route path="/Test" element={<UserModal />} />
+                <Route path="/Test" element={<DoctorItem />} />
             </Routes>
         </>
     );

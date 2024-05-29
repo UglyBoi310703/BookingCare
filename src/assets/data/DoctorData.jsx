@@ -280,9 +280,6 @@ let doctorData = [
                     <ul>
                         <ul><li>Năm 2013: Huân chương lao động hạng hai.</li><li>Năm 2010: Thầy thuốc nhân dân.</li><li>Phó giáo sư đã có nhiều công trình nghiên cứu khoa học được công bố trong và ngoài nước về Phẫu thuật và Ung thư</li></ul><p>- Thành viên đề tài nghiên cứu Dịch tễ học, chẩn đoán, điều trị phòng chống một số bệnh Ung thư ở Việt Nam (vú, gan, dạ dày, phổi, máu) do Nhà nước quản lý</p><p>- Đồng chủ nhiệm đề tài nghiên cứu thử lâm sàng giai đoạn III thuốc ức chế u Panacrin dùng trong điều trị bổ trợ ung thư trên người do Nhà nước quản lý&nbsp;</p>
                     </ul>
-
-
-
                 <br/>
                 <p><span style="color: #F3262D;">Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy theo tình hình thực tế mà không báo trước. Cảm ơn Quý khách đã thông cảm.</p>
                 <br/>

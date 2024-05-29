@@ -1,0 +1,59 @@
+.DoctorItem{
+    align-items: center;
+    box-shadow: none !important;
+ 
+    .circle::before {
+        content: 'adadasd';
+        background: #dfe9f1;
+        width: 100%;
+        padding: 0px 30px;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        border-radius: 100%;
+        padding-top: 100%;
+    }
+
+    .DoctorImg{
+        &::before{
+            content: "";
+            -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+            clip-path: polygon(0 0, 0% 100%, 100% 0);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1D93E3;
+            border-radius: 4px;
+            background-image: url("https://medlatec.vn/med/images/logo-mobile.png");
+            background-repeat: no-repeat;
+        }
+      
+    }
+    img{
+        position: relative;
+        width: 300px;
+        height: 300px;
+        @media (max-width: 570px) {
+            width: 100%;
+            height: 250px;
+        }
+    }
+    .Doctor-Item-Cotent {
+        background-color: lavender;
+        border-radius: 4px;
+        padding: 20px 10px;
+        -webkit-box-shadow: -3px 6px 28px rgba(0, 0, 0, 0.08);
+        box-shadow: -3px 6px 28px rgba(0, 0, 0, 0.08);
+        position: relative;
+        margin: -24px 24px 0;
+        width: 90%;
+        @media (max-width: 570px) {
+            margin: -24px 15px 0;
+        }
+    }
+        
+}
+   

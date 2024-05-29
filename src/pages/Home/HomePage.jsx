@@ -9,12 +9,13 @@ import ServicesPage from '~/components/ServicesPage/ServicesPage';
 import Header from '~/components/Header';
 import ContactInformationList from '~/components/Header/ContactInfomation/ContactInformationList';
 import ServicesHomeTest from '~/components/HomePage/ServicesHome/ServicesHomeTest';
+import DoctorHome from '~/components/HomePage/DoctorsHome/DoctorsHome';
 function Home() {
     return (
         <>
             <HomeLayout>
                 <Intro url={'https://www.youtube.com/watch?v=RmZPRz6iC6E'} />
-                <Doctors />
+                <DoctorHome />
                 <ServicesHomeTest />
                 <MenuMedicalSpecialties />
                 <FacilityHome />
