@@ -12,7 +12,7 @@ function Doctor({ doctor }) {
         <>
             <AppointmentForm show={show} handleClose={handleClose} />
             <div className="col-md-3 mb-4">
-                <div className="card d-flex align-items-center pt-2" style={{ height: '100%' }}>
+                <div className="card d-flex align-items-center justify-content-center pt-2" style={{ height: '100%' }}>
                     <div
                         className="d-flex align-items-center justify-content-center"
                         style={{ width: '100%', minHeight: '210px', height: '210px' }}
@@ -28,7 +28,7 @@ function Doctor({ doctor }) {
                     <div className="card-body d-flex flex-column justify-content-between" style={{ height: '100%' }}>
                         <div>
                             <p className="fw-bolder">{name}</p>
-                            <div className="fs-10">{role}</div>
+                            <div className="fs-10 text-center">{role}</div>
                             <div className="d-flex justify-content-center align-items-center mb-2">
                                 <div className="me-1">
                                     {new Array(vote ? vote : 5).fill(1).map((value, index) => (
@@ -37,11 +37,11 @@ function Doctor({ doctor }) {
                                 </div>
                             </div>
                         </div>
-                        <div className="d-flex align-items-center justify-content-between mt-auto">
+                        <div className="d-flex align-items-center justify-content-center mt-auto">
                             <button
                                 variant="outline-primary"
                                 onClick={handleShow}
-                                className="btn btn-outline-primary"
+                                className="order_btn btn-outline-primary"
                                 type="button"
                                 data-toggle="modal"
                                 data-target="#exampleModal"

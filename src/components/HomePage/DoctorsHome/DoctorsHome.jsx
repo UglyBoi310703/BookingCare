@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { SmoothHorizontalScrolling } from '../../../utils';
 import doctorData from '~/assets/data/DoctorData';
+import './Doctor.scss';
 import { FaChevronLeft } from 'react-icons/fa';
 import { FaChevronRight } from 'react-icons/fa';
 import styles from "./DoctorsHome.scss"
@@ -36,14 +37,14 @@ function Doctors() {
         <div className="ContentsSection bg-white">
             <h1 className="heading">Đội ngũ y bác sĩ</h1>
             <div
-                className="MoviesSlider"
+                className="DoctorsSlider"
                 ref={sliderRef}
                 style={{ gridTemplateColumns: `repeat(${doctorData.length}, 460px)` }}
             >
                 {doctorData.map((doctor, index) => (
                     <div
                         key={index}
-                        className="movieItem"
+                        className="doctorItem"
                         style={{ padding: '50px' }}
                         ref={movieRef}
                         onClick={() => handleShowDetail()}

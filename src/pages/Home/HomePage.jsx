@@ -14,11 +14,10 @@ function Home() {
         <>
             <HomeLayout>
                 <Intro url={'https://www.youtube.com/watch?v=RmZPRz6iC6E'} />
-                <Doctors/>
+                <Doctors />
                 <ServicesHomeTest />
                 <MenuMedicalSpecialties />
                 <FacilityHome />
-               
             </HomeLayout>
         </>
     );
