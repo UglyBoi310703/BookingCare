@@ -6,6 +6,7 @@ function Facility() {
     return (
         <>
             <HomeLayout>
+            <Intro url={"https://www.youtube.com/watch?v=D0wcBgoDgq0"}/>
                 <FacilityPage itemsPerPage={6} />
             </HomeLayout>
         </>

@@ -12,6 +12,7 @@ import {
   MDBModalBody,
   MDBModalFooter,
 } from 'mdb-react-ui-kit';
+import styles from "./AvatarChange.scss"
 
 const AvatarChanger = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -42,7 +43,7 @@ const AvatarChanger = () => {
   };
 
   return (
-    <MDBContainer>
+    <MDBContainer className='AvatarChange'>
       <MDBRow>
         <MDBCol className="d-flex flex-column align-items-center">
           <img src={currentAvatar} alt="Current Avatar" className="img-thumbnail mb-3" style={{ width: '150px', height: '150px' }} />
@@ -58,15 +59,22 @@ const AvatarChanger = () => {
               <MDBBtn className="btn-close" color="none" onClick={toggleModal}></MDBBtn>
             </MDBModalHeader>
             <MDBModalBody className="text-center">
-              <h5>Avatar hiện tại</h5>
+             <div className='AvatarGroup'>
+            <div className='CurrentAvatar'>
+            <h5>Avatar hiện tại</h5>
               <img src={currentAvatar} alt="Current Avatar" className="img-thumbnail mb-3" style={{ width: '150px', height: '150px' }} />
-              <input type="file" accept="image/*" onChange={handleFileChange} />
+            </div>
               {newAvatar && (
-                <>
-                  <h5 className="mt-3">Avatar mới</h5>
-                  <img src={newAvatar} alt="New Avatar" className="img-thumbnail" style={{ width: '150px', height: '150px' }} />
-                </>
+                <div className='NewAvatar'>
+                  <h5 className="">Avatar mới</h5>
+                  <img src={newAvatar} alt="New Avatar" className="img-thumbnail mb-3" style={{ width: '150px', height: '150px' }} />
+                </div>
               )}
+             </div>
+            <div>
+            <input type="file"  accept="image/*" onChange={handleFileChange} />
+             
+            </div>
             </MDBModalBody>
             <MDBModalFooter>
               <MDBBtn color="secondary" onClick={toggleModal}>Đóng</MDBBtn>

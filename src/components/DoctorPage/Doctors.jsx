@@ -12,7 +12,7 @@ function Doctors() {
                         <Doctor key={doctor.id} doctor={doctor} />
                     ))}
                 </div>
-                )
+                
             </div>
         </>
     );

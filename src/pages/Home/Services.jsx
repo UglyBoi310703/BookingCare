@@ -6,6 +6,7 @@ function Services() {
     return (
         <>
             <HomeLayout>
+            <Intro url={"https://www.youtube.com/watch?v=Krqs03DVRCo"}/>
                 <ServicesPage itemsPerPage={6} />
             </HomeLayout>
         </>

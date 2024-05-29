@@ -14,7 +14,12 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { MDBBtn } from 'mdb-react-ui-kit';
 import { MDBBadge, MDBIcon } from 'mdb-react-ui-kit';
-import styles from "./User.scss"
+
+import UserModal from './UserModal';
+import UserNotifications from '../NavBar/NavbarUser/UserNotifications/UserNotifications';
+import UserOrderListModal from './UserOrderListModal';
+import UserOrderHistoryModal from './UserOrderHistoryModal';
+import styles from './User.scss';
 function UserName() {
     return (
         <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -44,14 +49,13 @@ function User({ logout }) {
     };
 
     return (
-        <Box  className="UserContainer" sx={{ flexGrow: 0 }}>
-         <a href='#!'>
-         <MDBIcon fas icon="bell" size='2x' />
-        <MDBBadge color='danger' dot />
-      </a>
+        <Box className="UserContainer" sx={{ flexGrow: 0 }}>
+            <UserNotifications />
             <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                    <Avatar className='UserAvatarButton' style={{ width: '50px', height: '40px' }}
+                    <Avatar
+                        className="UserAvatarButton"
+                        style={{ width: '50px', height: '40px' }}
                         alt="Remy Sharp"
                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCJAeyBzqfVWLePmpprAvbv4p1qv9WCWwfbjRqTzglqQ&s"
                     />
@@ -73,32 +77,36 @@ function User({ logout }) {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
             >
-                <MenuItem style={{ padding:"10px" }} onClick={handleCloseUserMenu}>
-                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                <div className="UserMenu">
+                    <div className='UserMenu-Item' style={{ display: 'flex', alignItems: 'center' }}>
                         <Avatar
                             alt="Remy Sharp"
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCJAeyBzqfVWLePmpprAvbv4p1qv9WCWwfbjRqTzglqQ&s"
-                           
                         />
                         <div>
                             <span>Đỗ Văn Vương</span>
                         </div>
                     </div>
-                </MenuItem>
-                <MenuItem onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">Thông tin cá nhân</Typography>
-                </MenuItem>
-                <MenuItem onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">Danh sách lịch khám</Typography>
-                </MenuItem>
-                <MenuItem onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">Lịch sử khám bệnh</Typography>
-                </MenuItem>
-                <MenuItem  onClick={handleCloseUserMenu}>
-                    <MDBBtn style={{ width: '90%' }} textAlign="center" onClick={logout} rounded className="mx-2" color="danger">
-                        Đăng xuất
-                    </MDBBtn>
-                </MenuItem>
+
+                    <UserModal className='UserMenu-Item'/>
+
+                    <UserOrderListModal  className='UserMenu-Item'/>
+
+                    <UserOrderHistoryModal className='UserMenu-Item' />
+
+                    <MenuItem className='UserMenu-Item' onClick={handleCloseUserMenu}>
+                        <MDBBtn
+                            style={{ width: '90%' }}
+                            textAlign="center"
+                            onClick={logout}
+                            rounded
+                            className="mx-2"
+                            color="danger"
+                        >
+                            Đăng xuất
+                        </MDBBtn>
+                    </MenuItem>
+                </div>
 
                 {/* {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>

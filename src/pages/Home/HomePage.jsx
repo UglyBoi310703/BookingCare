@@ -1,5 +1,5 @@
 import React from 'react';
-import Doctors from '~/components/HomePage/DoctorsHome/Doctors';
+import Doctors from '~/components/HomePage/DoctorsHome/DoctorsHome';
 import Intro from '~/components/Intro/Intro';
 import HomeLayout from '~/layouts/HomeLayout';
 import MenuMedicalSpecialties from '~/components/HomePage/MedicalSpecialties/MenuMedicalSpecialties';

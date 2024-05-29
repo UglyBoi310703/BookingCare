@@ -3,6 +3,7 @@ import { SmoothHorizontalScrolling } from '../../../utils';
 import doctorData from '~/assets/data/DoctorData';
 import { FaChevronLeft } from 'react-icons/fa';
 import { FaChevronRight } from 'react-icons/fa';
+import styles from "./DoctorsHome.scss"
 function Doctors() {
     const sliderRef = useRef();
     const movieRef = useRef();
