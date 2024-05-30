@@ -103,7 +103,7 @@ function DoctorHome() {
                             <DoctorItem
                                 img={item.img}
                                 name={item.name}
-                                rate={item.rate}
+                                vote={item.vote}
                                 role={item.role}
                                 Description={item.Description()}
                             />

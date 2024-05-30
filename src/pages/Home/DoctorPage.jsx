@@ -9,6 +9,7 @@ function DoctorsPage() {
     return (
         <>
             <HomeLayout>
+            <Intro url={"https://www.youtube.com/watch?v=WxTv-dCKiHM"}/>
                 <Doctors />
             </HomeLayout>
         </>

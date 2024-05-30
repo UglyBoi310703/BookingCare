@@ -17,28 +17,55 @@
        .ServicesSlider{
          
        }
-       .btnLeft{  
-           position: absolute;
-           border-radius: 15px;
-           left: 5px;
-           top: 30%;
-          
-           z-index: 2;
-          cursor: pointer;
-       }
-       svg{
-           font-size: 35px ;
-           color: white;
-          
-       }
-       .btnRight{
-           position: absolute;
-           border-radius: 15px;
-           right: 2px;
-           top: 30%;
-          
-           z-index: 2;
+       .btnLeft {
+        font-size: 30px;
+        position: absolute;
+        top: 35%;
+        left: -10px;
+        transform: translateY(100%);
+        z-index: 20;
+        transform-origin: center;
+        cursor: pointer;
+    
+    }
+    .btnLeft svg {
+        opacity: 0.7;
+        font-size: 50px;
        
-       }
+        transition: all 0.3s ease-out;
+        &:hover {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+    }
+    
+    .btnLeft:hover svg {
+        color: #1d93e3;
+    }
+    .btnRight {
+        font-size: 30px;
+        position: absolute;
+        top: 35%;
+        right: -10px;
+        transform: translateY(100%);
+        z-index: 20;
+        transform-origin: center;
+        cursor: pointer;
+       
+    }
+    .btnRight svg {
+        opacity: 0.7;
+        font-size: 50px;
+        transition: all 0.3s ease-out;
+        &:hover {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+    }
+    
+    .btnRight:hover svg {
+        color: #1d93e3;
+    }
+    
    }
 }

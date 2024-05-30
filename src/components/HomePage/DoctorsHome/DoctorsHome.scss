@@ -1,6 +1,6 @@
 
 .DoctorSlider-Item{
-    padding: 0 25px;
+    padding: 0 30px;
 }
 .ContentsSection {
     background-color: var(--color-background);
@@ -74,17 +74,18 @@
 .btnLeft {
     font-size: 30px;
     position: absolute;
-    top: 50%;
-    left: 12px;
+    top: 35%;
+    left: 0px;
     transform: translateY(100%);
     z-index: 20;
     transform-origin: center;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.4);
+
 }
 .btnLeft svg {
     opacity: 0.7;
     font-size: 50px;
+   
     transition: all 0.3s ease-out;
     &:hover {
         opacity: 1;
@@ -93,18 +94,18 @@
 }
 
 .btnLeft:hover svg {
-    color: white;
+    color: #1d93e3;
 }
 .btnRight {
     font-size: 30px;
     position: absolute;
-    top: 50%;
-    right: 12px;
+    top: 35%;
+    right: 0px;
     transform: translateY(100%);
     z-index: 20;
     transform-origin: center;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.4);
+   
 }
 .btnRight svg {
     opacity: 0.7;
@@ -117,7 +118,7 @@
 }
 
 .btnRight:hover svg {
-    color: white;
+    color: #1d93e3;
 }
 
 .MenusPane {

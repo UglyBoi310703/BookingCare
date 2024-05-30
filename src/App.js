@@ -5,13 +5,14 @@ import Services from './pages/Home/Services';
 import Intro from './components/Intro/Intro';
 import Facility from './pages/Home/Facility';
 import Doctors from './pages/Home/DoctorPage';
-import TestComponent from './components/TestComponent/TestComponent';
-import ScrollTest from './components/TestComponent/UserComponent';
-import Test from './components/TestComponent/ServicesModal';
-import ModalTest from './components/TestComponent/UserComponent';
+import TestComponent from './components/Modal/TestComponent';
+import ScrollTest from './components/Modal/UserComponent';
+import Test from './components/Modal/ServicesInformation/ServicesModal';
+import ModalTest from './components/Modal/UserComponent';
 import Register from './components/Form/Register/Register';
-import UserModal from './components/TestComponent/UserModal';
+import UserModal from './components/Modal/UserModal';
 import DoctorItem from './components/DoctorPage/DoctorItem/DoctorItem';
+import MainApp from './components/ServicesPage/TestFilter';
 function App() {
     return (
         <>
@@ -20,7 +21,7 @@ function App() {
                 <Route path="/Services" element={<Services />} />
                 <Route path="/Doctors" element={<Doctors />} />
                 <Route path="/Facility" element={<Facility />} />
-                <Route path="/Test" element={<DoctorItem />} />
+                <Route path="/Test" element={<MainApp />} />
             </Routes>
         </>
     );

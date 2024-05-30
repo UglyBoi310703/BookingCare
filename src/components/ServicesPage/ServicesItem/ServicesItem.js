@@ -12,8 +12,8 @@ import {
 } from 'mdb-react-ui-kit';
 import styles from './ServicesItem.scss';
 
-import TestComponent from '../../TestComponent/TestComponent';
-import ServicesModal from '~/components/TestComponent/ServicesModal';
+import TestComponent from '../../Modal/TestComponent';
+import ServicesModal from '~/components/Modal/ServicesInformation/ServicesModal';
 import Services from '~/pages/Home/Services';
 export default function ServicesItem({ name, img, price, gender, age, location, Description }) {
     return (

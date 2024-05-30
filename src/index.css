@@ -1,12 +1,5 @@
 
-input:focus {
-    border: 0.5px solid white;
-    padding-left: 26px;
-    width: 300px;
-    cursor: text;
-    opacity: 1;
-    border-radius: 4px;
-}
+
 .intro {
     position: relative;
     padding-top: 53%;

@@ -50,10 +50,25 @@
         position: relative;
         margin: -24px 24px 0;
         width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         @media (max-width: 570px) {
             margin: -24px 15px 0;
         }
     }
-        
+    
+    
+      .DoctorInfomationModal{
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        height: 40px;
+      }
+      .OrderDoctor{
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        margin-right: 5px;
+        height: 40px;
+      }
 }
    
