@@ -1,4 +1,4 @@
-import { Description } from '@mui/icons-material';
+
 
 let doctorData = [
     {
@@ -10,18 +10,18 @@ let doctorData = [
         vote: 5,
         Description() {
             return (
-                <div class="doctor-single-content">
+                <div className="doctor-single-content">
                     <h2>Hoạt động chuyên ngành</h2>
                     <p>
-                        <strong style="color: #1D93E3;">Trình độ:</strong> Phó giáo sư
+                        <strong >Trình độ:</strong> Phó giáo sư
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Chuyên khoa:</strong> Ung bướu
+                        <strong >Chuyên khoa:</strong> Ung bướu
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Số năm kinh nghiệm:</strong> 40 năm
+                        <strong >Số năm kinh nghiệm:</strong> 40 năm
                     </p>
-                    <h3 style="color: #1D93E3;">Quá trình công tác</h3>
+                    <h3 >Quá trình công tác</h3>
                     <ul>
                         <ul>
                             <li>
@@ -41,7 +41,7 @@ let doctorData = [
                                 <b>1997 - nay:</b> Phó chủ tịch hội Ung thư Hà Nội.
                             </li>
                             <li>
-                                <span style="font-size: 0.875rem;">
+                                <span >
                                     <b>1975 - 1979:</b>{' '}
                                 </span>
                                 Bác sĩ nội trú, Bệnh viện Việt Đức.
@@ -49,7 +49,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Quá trình học tập</strong>
                     </h3>
                     <ul>
@@ -71,7 +71,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Danh hiệu, phần thưởng, công trình nghiên cứu khoa học</strong>
                     </h3>
                     <ul>
@@ -95,7 +95,7 @@ let doctorData = [
 
                     <br />
                     <p>
-                        <span style="color: #F3262D;">Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
+                        <span >Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
                         theo tình hình thực tế mà không báo trước. Cảm ơn Quý khách đã thông cảm.
                     </p>
                     <br />
@@ -112,18 +112,18 @@ let doctorData = [
         vote: 5,
         Description() {
             return (
-                <div class="doctor-single-content">
+                <div className="doctor-single-content">
                     <h2>Hoạt động chuyên ngành</h2>
                     <p>
-                        <strong style="color: #1D93E3;">Trình độ:</strong> Phó giáo sư
+                        <strong >Trình độ:</strong> Phó giáo sư
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Chuyên khoa:</strong> Ung bướu
+                        <strong >Chuyên khoa:</strong> Ung bướu
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Số năm kinh nghiệm:</strong> 40 năm
+                        <strong >Số năm kinh nghiệm:</strong> 40 năm
                     </p>
-                    <h3 style="color: #1D93E3;">Quá trình công tác</h3>
+                    <h3 >Quá trình công tác</h3>
                     <ul>
                         <ul>
                             <li>
@@ -143,7 +143,7 @@ let doctorData = [
                                 <b>1997 - nay:</b> Phó chủ tịch hội Ung thư Hà Nội.
                             </li>
                             <li>
-                                <span style="font-size: 0.875rem;">
+                                <span >
                                     <b>1975 - 1979:</b>{' '}
                                 </span>
                                 Bác sĩ nội trú, Bệnh viện Việt Đức.
@@ -151,7 +151,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Quá trình học tập</strong>
                     </h3>
                     <ul>
@@ -173,7 +173,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Danh hiệu, phần thưởng, công trình nghiên cứu khoa học</strong>
                     </h3>
                     <ul>
@@ -197,7 +197,7 @@ let doctorData = [
 
                     <br />
                     <p>
-                        <span style="color: #F3262D;">Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
+                        <span >Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
                         theo tình hình thực tế mà không báo trước. Cảm ơn Quý khách đã thông cảm.
                     </p>
                     <br />
@@ -206,7 +206,7 @@ let doctorData = [
         },
     },
     {
-        img: 'https://medlatec.vn/media/41018/catalog/Th%e1%ba%a7y+%c3%81nh.png?size=256',
+        img: 'https://medlatec.vn/media/28692/catalog/pgs-ts-le-chinh-dai.png?size=256',
         name: 'PGS.TS Lê Chính Đại',
         role: 'Chuyên khoa - Xét nghiệm',
         degree: 'Bác sĩ nội trú',
@@ -214,18 +214,18 @@ let doctorData = [
         vote: 5,
         Description() {
             return (
-                <div class="doctor-single-content">
+                <div className="doctor-single-content">
                     <h2>Hoạt động chuyên ngành</h2>
                     <p>
-                        <strong style="color: #1D93E3;">Trình độ:</strong> Phó giáo sư
+                        <strong >Trình độ:</strong> Phó giáo sư
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Chuyên khoa:</strong> Ung bướu
+                        <strong >Chuyên khoa:</strong> Ung bướu
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Số năm kinh nghiệm:</strong> 40 năm
+                        <strong >Số năm kinh nghiệm:</strong> 40 năm
                     </p>
-                    <h3 style="color: #1D93E3;">Quá trình công tác</h3>
+                    <h3 >Quá trình công tác</h3>
                     <ul>
                         <ul>
                             <li>
@@ -245,7 +245,7 @@ let doctorData = [
                                 <b>1997 - nay:</b> Phó chủ tịch hội Ung thư Hà Nội.
                             </li>
                             <li>
-                                <span style="font-size: 0.875rem;">
+                                <span >
                                     <b>1975 - 1979:</b>{' '}
                                 </span>
                                 Bác sĩ nội trú, Bệnh viện Việt Đức.
@@ -253,7 +253,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Quá trình học tập</strong>
                     </h3>
                     <ul>
@@ -275,7 +275,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Danh hiệu, phần thưởng, công trình nghiên cứu khoa học</strong>
                     </h3>
                     <ul>
@@ -299,7 +299,7 @@ let doctorData = [
 
                     <br />
                     <p>
-                        <span style="color: #F3262D;">Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
+                        <span >Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
                         theo tình hình thực tế mà không báo trước. Cảm ơn Quý khách đã thông cảm.
                     </p>
                     <br />
@@ -316,18 +316,18 @@ let doctorData = [
         vote: 5,
         Description() {
             return (
-                <div class="doctor-single-content">
+                <div className="doctor-single-content">
                     <h2>Hoạt động chuyên ngành</h2>
                     <p>
-                        <strong style="color: #1D93E3;">Trình độ:</strong> Phó giáo sư
+                        <strong >Trình độ:</strong> Phó giáo sư
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Chuyên khoa:</strong> Ung bướu
+                        <strong >Chuyên khoa:</strong> Ung bướu
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Số năm kinh nghiệm:</strong> 40 năm
+                        <strong >Số năm kinh nghiệm:</strong> 40 năm
                     </p>
-                    <h3 style="color: #1D93E3;">Quá trình công tác</h3>
+                    <h3 >Quá trình công tác</h3>
                     <ul>
                         <ul>
                             <li>
@@ -347,7 +347,7 @@ let doctorData = [
                                 <b>1997 - nay:</b> Phó chủ tịch hội Ung thư Hà Nội.
                             </li>
                             <li>
-                                <span style="font-size: 0.875rem;">
+                                <span >
                                     <b>1975 - 1979:</b>{' '}
                                 </span>
                                 Bác sĩ nội trú, Bệnh viện Việt Đức.
@@ -355,7 +355,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Quá trình học tập</strong>
                     </h3>
                     <ul>
@@ -377,7 +377,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Danh hiệu, phần thưởng, công trình nghiên cứu khoa học</strong>
                     </h3>
                     <ul>
@@ -401,7 +401,7 @@ let doctorData = [
 
                     <br />
                     <p>
-                        <span style="color: #F3262D;">Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
+                        <span >Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
                         theo tình hình thực tế mà không báo trước. Cảm ơn Quý khách đã thông cảm.
                     </p>
                     <br />
@@ -418,18 +418,18 @@ let doctorData = [
         vote: 5,
         Description() {
             return (
-                <div class="doctor-single-content">
+                <div className="doctor-single-content">
                     <h2>Hoạt động chuyên ngành</h2>
                     <p>
-                        <strong style="color: #1D93E3;">Trình độ:</strong> Phó giáo sư
+                        <strong >Trình độ:</strong> Phó giáo sư
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Chuyên khoa:</strong> Ung bướu
+                        <strong >Chuyên khoa:</strong> Ung bướu
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Số năm kinh nghiệm:</strong> 40 năm
+                        <strong >Số năm kinh nghiệm:</strong> 40 năm
                     </p>
-                    <h3 style="color: #1D93E3;">Quá trình công tác</h3>
+                    <h3 >Quá trình công tác</h3>
                     <ul>
                         <ul>
                             <li>
@@ -449,7 +449,7 @@ let doctorData = [
                                 <b>1997 - nay:</b> Phó chủ tịch hội Ung thư Hà Nội.
                             </li>
                             <li>
-                                <span style="font-size: 0.875rem;">
+                                <span >
                                     <b>1975 - 1979:</b>{' '}
                                 </span>
                                 Bác sĩ nội trú, Bệnh viện Việt Đức.
@@ -457,7 +457,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Quá trình học tập</strong>
                     </h3>
                     <ul>
@@ -479,7 +479,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Danh hiệu, phần thưởng, công trình nghiên cứu khoa học</strong>
                     </h3>
                     <ul>
@@ -503,7 +503,7 @@ let doctorData = [
 
                     <br />
                     <p>
-                        <span style="color: #F3262D;">Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
+                        <span >Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
                         theo tình hình thực tế mà không báo trước. Cảm ơn Quý khách đã thông cảm.
                     </p>
                     <br />
@@ -520,18 +520,18 @@ let doctorData = [
         vote: 5,
         Description() {
             return (
-                <div class="doctor-single-content">
+                <div className="doctor-single-content">
                     <h2>Hoạt động chuyên ngành</h2>
                     <p>
-                        <strong style="color: #1D93E3;">Trình độ:</strong> Phó giáo sư
+                        <strong >Trình độ:</strong> Phó giáo sư
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Chuyên khoa:</strong> Ung bướu
+                        <strong >Chuyên khoa:</strong> Ung bướu
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Số năm kinh nghiệm:</strong> 40 năm
+                        <strong >Số năm kinh nghiệm:</strong> 40 năm
                     </p>
-                    <h3 style="color: #1D93E3;">Quá trình công tác</h3>
+                    <h3 >Quá trình công tác</h3>
                     <ul>
                         <ul>
                             <li>
@@ -551,7 +551,7 @@ let doctorData = [
                                 <b>1997 - nay:</b> Phó chủ tịch hội Ung thư Hà Nội.
                             </li>
                             <li>
-                                <span style="font-size: 0.875rem;">
+                                <span >
                                     <b>1975 - 1979:</b>{' '}
                                 </span>
                                 Bác sĩ nội trú, Bệnh viện Việt Đức.
@@ -559,7 +559,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Quá trình học tập</strong>
                     </h3>
                     <ul>
@@ -581,7 +581,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Danh hiệu, phần thưởng, công trình nghiên cứu khoa học</strong>
                     </h3>
                     <ul>
@@ -605,7 +605,7 @@ let doctorData = [
 
                     <br />
                     <p>
-                        <span style="color: #F3262D;">Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
+                        <span >Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
                         theo tình hình thực tế mà không báo trước. Cảm ơn Quý khách đã thông cảm.
                     </p>
                     <br />
@@ -622,18 +622,18 @@ let doctorData = [
         vote: 5,
         Description() {
             return (
-                <div class="doctor-single-content">
+                <div className="doctor-single-content">
                     <h2>Hoạt động chuyên ngành</h2>
                     <p>
-                        <strong style="color: #1D93E3;">Trình độ:</strong> Phó giáo sư
+                        <strong >Trình độ:</strong> Phó giáo sư
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Chuyên khoa:</strong> Ung bướu
+                        <strong >Chuyên khoa:</strong> Ung bướu
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Số năm kinh nghiệm:</strong> 40 năm
+                        <strong >Số năm kinh nghiệm:</strong> 40 năm
                     </p>
-                    <h3 style="color: #1D93E3;">Quá trình công tác</h3>
+                    <h3 >Quá trình công tác</h3>
                     <ul>
                         <ul>
                             <li>
@@ -653,7 +653,7 @@ let doctorData = [
                                 <b>1997 - nay:</b> Phó chủ tịch hội Ung thư Hà Nội.
                             </li>
                             <li>
-                                <span style="font-size: 0.875rem;">
+                                <span >
                                     <b>1975 - 1979:</b>{' '}
                                 </span>
                                 Bác sĩ nội trú, Bệnh viện Việt Đức.
@@ -661,7 +661,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Quá trình học tập</strong>
                     </h3>
                     <ul>
@@ -683,7 +683,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Danh hiệu, phần thưởng, công trình nghiên cứu khoa học</strong>
                     </h3>
                     <ul>
@@ -707,7 +707,7 @@ let doctorData = [
 
                     <br />
                     <p>
-                        <span style="color: #F3262D;">Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
+                        <span >Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
                         theo tình hình thực tế mà không báo trước. Cảm ơn Quý khách đã thông cảm.
                     </p>
                     <br />
@@ -724,18 +724,18 @@ let doctorData = [
         vote: 5,
         Description() {
             return (
-                <div class="doctor-single-content">
+                <div className="doctor-single-content">
                     <h2>Hoạt động chuyên ngành</h2>
                     <p>
-                        <strong style="color: #1D93E3;">Trình độ:</strong> Phó giáo sư
+                        <strong >Trình độ:</strong> Phó giáo sư
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Chuyên khoa:</strong> Ung bướu
+                        <strong >Chuyên khoa:</strong> Ung bướu
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Số năm kinh nghiệm:</strong> 40 năm
+                        <strong >Số năm kinh nghiệm:</strong> 40 năm
                     </p>
-                    <h3 style="color: #1D93E3;">Quá trình công tác</h3>
+                    <h3 >Quá trình công tác</h3>
                     <ul>
                         <ul>
                             <li>
@@ -755,7 +755,7 @@ let doctorData = [
                                 <b>1997 - nay:</b> Phó chủ tịch hội Ung thư Hà Nội.
                             </li>
                             <li>
-                                <span style="font-size: 0.875rem;">
+                                <span >
                                     <b>1975 - 1979:</b>{' '}
                                 </span>
                                 Bác sĩ nội trú, Bệnh viện Việt Đức.
@@ -763,7 +763,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Quá trình học tập</strong>
                     </h3>
                     <ul>
@@ -785,7 +785,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Danh hiệu, phần thưởng, công trình nghiên cứu khoa học</strong>
                     </h3>
                     <ul>
@@ -809,7 +809,7 @@ let doctorData = [
 
                     <br />
                     <p>
-                        <span style="color: #F3262D;">Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
+                        <span >Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
                         theo tình hình thực tế mà không báo trước. Cảm ơn Quý khách đã thông cảm.
                     </p>
                     <br />
@@ -826,18 +826,18 @@ let doctorData = [
         vote: 5,
         Description() {
             return (
-                <div class="doctor-single-content">
+                <div className="doctor-single-content">
                     <h2>Hoạt động chuyên ngành</h2>
                     <p>
-                        <strong style="color: #1D93E3;">Trình độ:</strong> Phó giáo sư
+                        <strong >Trình độ:</strong> Phó giáo sư
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Chuyên khoa:</strong> Ung bướu
+                        <strong >Chuyên khoa:</strong> Ung bướu
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Số năm kinh nghiệm:</strong> 40 năm
+                        <strong >Số năm kinh nghiệm:</strong> 40 năm
                     </p>
-                    <h3 style="color: #1D93E3;">Quá trình công tác</h3>
+                    <h3 >Quá trình công tác</h3>
                     <ul>
                         <ul>
                             <li>
@@ -857,7 +857,7 @@ let doctorData = [
                                 <b>1997 - nay:</b> Phó chủ tịch hội Ung thư Hà Nội.
                             </li>
                             <li>
-                                <span style="font-size: 0.875rem;">
+                                <span >
                                     <b>1975 - 1979:</b>{' '}
                                 </span>
                                 Bác sĩ nội trú, Bệnh viện Việt Đức.
@@ -865,7 +865,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Quá trình học tập</strong>
                     </h3>
                     <ul>
@@ -887,7 +887,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Danh hiệu, phần thưởng, công trình nghiên cứu khoa học</strong>
                     </h3>
                     <ul>
@@ -911,7 +911,7 @@ let doctorData = [
 
                     <br />
                     <p>
-                        <span style="color: #F3262D;">Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
+                        <span >Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
                         theo tình hình thực tế mà không báo trước. Cảm ơn Quý khách đã thông cảm.
                     </p>
                     <br />
@@ -928,18 +928,18 @@ let doctorData = [
         vote: 5,
         Description() {
             return (
-                <div class="doctor-single-content">
+                <div className="doctor-single-content">
                     <h2>Hoạt động chuyên ngành</h2>
                     <p>
-                        <strong style="color: #1D93E3;">Trình độ:</strong> Phó giáo sư
+                        <strong >Trình độ:</strong> Phó giáo sư
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Chuyên khoa:</strong> Ung bướu
+                        <strong >Chuyên khoa:</strong> Ung bướu
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Số năm kinh nghiệm:</strong> 40 năm
+                        <strong >Số năm kinh nghiệm:</strong> 40 năm
                     </p>
-                    <h3 style="color: #1D93E3;">Quá trình công tác</h3>
+                    <h3 >Quá trình công tác</h3>
                     <ul>
                         <ul>
                             <li>
@@ -959,7 +959,7 @@ let doctorData = [
                                 <b>1997 - nay:</b> Phó chủ tịch hội Ung thư Hà Nội.
                             </li>
                             <li>
-                                <span style="font-size: 0.875rem;">
+                                <span >
                                     <b>1975 - 1979:</b>{' '}
                                 </span>
                                 Bác sĩ nội trú, Bệnh viện Việt Đức.
@@ -967,7 +967,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Quá trình học tập</strong>
                     </h3>
                     <ul>
@@ -989,7 +989,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Danh hiệu, phần thưởng, công trình nghiên cứu khoa học</strong>
                     </h3>
                     <ul>
@@ -1013,7 +1013,7 @@ let doctorData = [
 
                     <br />
                     <p>
-                        <span style="color: #F3262D;">Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
+                        <span >Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
                         theo tình hình thực tế mà không báo trước. Cảm ơn Quý khách đã thông cảm.
                     </p>
                     <br />
@@ -1030,18 +1030,18 @@ let doctorData = [
         vote: 5,
         Description() {
             return (
-                <div class="doctor-single-content">
+                <div className="doctor-single-content">
                     <h2>Hoạt động chuyên ngành</h2>
                     <p>
-                        <strong style="color: #1D93E3;">Trình độ:</strong> Phó giáo sư
+                        <strong >Trình độ:</strong> Phó giáo sư
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Chuyên khoa:</strong> Ung bướu
+                        <strong >Chuyên khoa:</strong> Ung bướu
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Số năm kinh nghiệm:</strong> 40 năm
+                        <strong >Số năm kinh nghiệm:</strong> 40 năm
                     </p>
-                    <h3 style="color: #1D93E3;">Quá trình công tác</h3>
+                    <h3 >Quá trình công tác</h3>
                     <ul>
                         <ul>
                             <li>
@@ -1061,7 +1061,7 @@ let doctorData = [
                                 <b>1997 - nay:</b> Phó chủ tịch hội Ung thư Hà Nội.
                             </li>
                             <li>
-                                <span style="font-size: 0.875rem;">
+                                <span >
                                     <b>1975 - 1979:</b>{' '}
                                 </span>
                                 Bác sĩ nội trú, Bệnh viện Việt Đức.
@@ -1069,7 +1069,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Quá trình học tập</strong>
                     </h3>
                     <ul>
@@ -1091,7 +1091,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Danh hiệu, phần thưởng, công trình nghiên cứu khoa học</strong>
                     </h3>
                     <ul>
@@ -1115,7 +1115,7 @@ let doctorData = [
 
                     <br />
                     <p>
-                        <span style="color: #F3262D;">Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
+                        <span >Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
                         theo tình hình thực tế mà không báo trước. Cảm ơn Quý khách đã thông cảm.
                     </p>
                     <br />
@@ -1132,18 +1132,18 @@ let doctorData = [
         vote: 5,
         Description() {
             return (
-                <div class="doctor-single-content">
+                <div className="doctor-single-content">
                     <h2>Hoạt động chuyên ngành</h2>
                     <p>
-                        <strong style="color: #1D93E3;">Trình độ:</strong> Phó giáo sư
+                        <strong >Trình độ:</strong> Phó giáo sư
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Chuyên khoa:</strong> Ung bướu
+                        <strong >Chuyên khoa:</strong> Ung bướu
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Số năm kinh nghiệm:</strong> 40 năm
+                        <strong >Số năm kinh nghiệm:</strong> 40 năm
                     </p>
-                    <h3 style="color: #1D93E3;">Quá trình công tác</h3>
+                    <h3 >Quá trình công tác</h3>
                     <ul>
                         <ul>
                             <li>
@@ -1163,7 +1163,7 @@ let doctorData = [
                                 <b>1997 - nay:</b> Phó chủ tịch hội Ung thư Hà Nội.
                             </li>
                             <li>
-                                <span style="font-size: 0.875rem;">
+                                <span >
                                     <b>1975 - 1979:</b>{' '}
                                 </span>
                                 Bác sĩ nội trú, Bệnh viện Việt Đức.
@@ -1171,7 +1171,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Quá trình học tập</strong>
                     </h3>
                     <ul>
@@ -1193,7 +1193,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Danh hiệu, phần thưởng, công trình nghiên cứu khoa học</strong>
                     </h3>
                     <ul>
@@ -1217,7 +1217,7 @@ let doctorData = [
 
                     <br />
                     <p>
-                        <span style="color: #F3262D;">Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
+                        <span >Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
                         theo tình hình thực tế mà không báo trước. Cảm ơn Quý khách đã thông cảm.
                     </p>
                     <br />
@@ -1234,18 +1234,18 @@ let doctorData = [
         vote: 5,
         Description() {
             return (
-                <div class="doctor-single-content">
+                <div className="doctor-single-content">
                     <h2>Hoạt động chuyên ngành</h2>
                     <p>
-                        <strong style="color: #1D93E3;">Trình độ:</strong> Phó giáo sư
+                        <strong >Trình độ:</strong> Phó giáo sư
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Chuyên khoa:</strong> Ung bướu
+                        <strong >Chuyên khoa:</strong> Ung bướu
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Số năm kinh nghiệm:</strong> 40 năm
+                        <strong >Số năm kinh nghiệm:</strong> 40 năm
                     </p>
-                    <h3 style="color: #1D93E3;">Quá trình công tác</h3>
+                    <h3 >Quá trình công tác</h3>
                     <ul>
                         <ul>
                             <li>
@@ -1265,7 +1265,7 @@ let doctorData = [
                                 <b>1997 - nay:</b> Phó chủ tịch hội Ung thư Hà Nội.
                             </li>
                             <li>
-                                <span style="font-size: 0.875rem;">
+                                <span >
                                     <b>1975 - 1979:</b>{' '}
                                 </span>
                                 Bác sĩ nội trú, Bệnh viện Việt Đức.
@@ -1273,7 +1273,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Quá trình học tập</strong>
                     </h3>
                     <ul>
@@ -1295,7 +1295,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Danh hiệu, phần thưởng, công trình nghiên cứu khoa học</strong>
                     </h3>
                     <ul>
@@ -1319,7 +1319,7 @@ let doctorData = [
 
                     <br />
                     <p>
-                        <span style="color: #F3262D;">Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
+                        <span >Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
                         theo tình hình thực tế mà không báo trước. Cảm ơn Quý khách đã thông cảm.
                     </p>
                     <br />
@@ -1336,18 +1336,18 @@ let doctorData = [
         vote: 5,
         Description() {
             return (
-                <div class="doctor-single-content">
+                <div className="doctor-single-content">
                     <h2>Hoạt động chuyên ngành</h2>
                     <p>
-                        <strong style="color: #1D93E3;">Trình độ:</strong> Phó giáo sư
+                        <strong >Trình độ:</strong> Phó giáo sư
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Chuyên khoa:</strong> Ung bướu
+                        <strong >Chuyên khoa:</strong> Ung bướu
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Số năm kinh nghiệm:</strong> 40 năm
+                        <strong >Số năm kinh nghiệm:</strong> 40 năm
                     </p>
-                    <h3 style="color: #1D93E3;">Quá trình công tác</h3>
+                    <h3 >Quá trình công tác</h3>
                     <ul>
                         <ul>
                             <li>
@@ -1367,7 +1367,7 @@ let doctorData = [
                                 <b>1997 - nay:</b> Phó chủ tịch hội Ung thư Hà Nội.
                             </li>
                             <li>
-                                <span style="font-size: 0.875rem;">
+                                <span >
                                     <b>1975 - 1979:</b>{' '}
                                 </span>
                                 Bác sĩ nội trú, Bệnh viện Việt Đức.
@@ -1375,7 +1375,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Quá trình học tập</strong>
                     </h3>
                     <ul>
@@ -1397,7 +1397,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Danh hiệu, phần thưởng, công trình nghiên cứu khoa học</strong>
                     </h3>
                     <ul>
@@ -1421,7 +1421,7 @@ let doctorData = [
 
                     <br />
                     <p>
-                        <span style="color: #F3262D;">Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
+                        <span >Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
                         theo tình hình thực tế mà không báo trước. Cảm ơn Quý khách đã thông cảm.
                     </p>
                     <br />
@@ -1438,18 +1438,18 @@ let doctorData = [
         vote: 5,
         Description() {
             return (
-                <div class="doctor-single-content">
+                <div className="doctor-single-content">
                     <h2>Hoạt động chuyên ngành</h2>
                     <p>
-                        <strong style="color: #1D93E3;">Trình độ:</strong> Phó giáo sư
+                        <strong >Trình độ:</strong> Phó giáo sư
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Chuyên khoa:</strong> Ung bướu
+                        <strong >Chuyên khoa:</strong> Ung bướu
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Số năm kinh nghiệm:</strong> 40 năm
+                        <strong >Số năm kinh nghiệm:</strong> 40 năm
                     </p>
-                    <h3 style="color: #1D93E3;">Quá trình công tác</h3>
+                    <h3 >Quá trình công tác</h3>
                     <ul>
                         <ul>
                             <li>
@@ -1469,7 +1469,7 @@ let doctorData = [
                                 <b>1997 - nay:</b> Phó chủ tịch hội Ung thư Hà Nội.
                             </li>
                             <li>
-                                <span style="font-size: 0.875rem;">
+                                <span >
                                     <b>1975 - 1979:</b>{' '}
                                 </span>
                                 Bác sĩ nội trú, Bệnh viện Việt Đức.
@@ -1477,7 +1477,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Quá trình học tập</strong>
                     </h3>
                     <ul>
@@ -1499,7 +1499,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Danh hiệu, phần thưởng, công trình nghiên cứu khoa học</strong>
                     </h3>
                     <ul>
@@ -1523,7 +1523,7 @@ let doctorData = [
 
                     <br />
                     <p>
-                        <span style="color: #F3262D;">Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
+                        <span >Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
                         theo tình hình thực tế mà không báo trước. Cảm ơn Quý khách đã thông cảm.
                     </p>
                     <br />
@@ -1540,18 +1540,18 @@ let doctorData = [
         vote: 5,
         Description() {
             return (
-                <div class="doctor-single-content">
+                <div className="doctor-single-content">
                     <h2>Hoạt động chuyên ngành</h2>
                     <p>
-                        <strong style="color: #1D93E3;">Trình độ:</strong> Phó giáo sư
+                        <strong >Trình độ:</strong> Phó giáo sư
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Chuyên khoa:</strong> Ung bướu
+                        <strong >Chuyên khoa:</strong> Ung bướu
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Số năm kinh nghiệm:</strong> 40 năm
+                        <strong >Số năm kinh nghiệm:</strong> 40 năm
                     </p>
-                    <h3 style="color: #1D93E3;">Quá trình công tác</h3>
+                    <h3 >Quá trình công tác</h3>
                     <ul>
                         <ul>
                             <li>
@@ -1571,7 +1571,7 @@ let doctorData = [
                                 <b>1997 - nay:</b> Phó chủ tịch hội Ung thư Hà Nội.
                             </li>
                             <li>
-                                <span style="font-size: 0.875rem;">
+                                <span >
                                     <b>1975 - 1979:</b>{' '}
                                 </span>
                                 Bác sĩ nội trú, Bệnh viện Việt Đức.
@@ -1579,7 +1579,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Quá trình học tập</strong>
                     </h3>
                     <ul>
@@ -1601,7 +1601,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Danh hiệu, phần thưởng, công trình nghiên cứu khoa học</strong>
                     </h3>
                     <ul>
@@ -1625,7 +1625,7 @@ let doctorData = [
 
                     <br />
                     <p>
-                        <span style="color: #F3262D;">Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
+                        <span >Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
                         theo tình hình thực tế mà không báo trước. Cảm ơn Quý khách đã thông cảm.
                     </p>
                     <br />
@@ -1642,18 +1642,18 @@ let doctorData = [
         vote: 5,
         Description() {
             return (
-                <div class="doctor-single-content">
+                <div className="doctor-single-content">
                     <h2>Hoạt động chuyên ngành</h2>
                     <p>
-                        <strong style="color: #1D93E3;">Trình độ:</strong> Phó giáo sư
+                        <strong >Trình độ:</strong> Phó giáo sư
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Chuyên khoa:</strong> Ung bướu
+                        <strong >Chuyên khoa:</strong> Ung bướu
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Số năm kinh nghiệm:</strong> 40 năm
+                        <strong >Số năm kinh nghiệm:</strong> 40 năm
                     </p>
-                    <h3 style="color: #1D93E3;">Quá trình công tác</h3>
+                    <h3 >Quá trình công tác</h3>
                     <ul>
                         <ul>
                             <li>
@@ -1673,7 +1673,7 @@ let doctorData = [
                                 <b>1997 - nay:</b> Phó chủ tịch hội Ung thư Hà Nội.
                             </li>
                             <li>
-                                <span style="font-size: 0.875rem;">
+                                <span >
                                     <b>1975 - 1979:</b>{' '}
                                 </span>
                                 Bác sĩ nội trú, Bệnh viện Việt Đức.
@@ -1681,7 +1681,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Quá trình học tập</strong>
                     </h3>
                     <ul>
@@ -1703,7 +1703,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Danh hiệu, phần thưởng, công trình nghiên cứu khoa học</strong>
                     </h3>
                     <ul>
@@ -1727,7 +1727,7 @@ let doctorData = [
 
                     <br />
                     <p>
-                        <span style="color: #F3262D;">Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
+                        <span >Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
                         theo tình hình thực tế mà không báo trước. Cảm ơn Quý khách đã thông cảm.
                     </p>
                     <br />
@@ -1744,18 +1744,18 @@ let doctorData = [
         vote: 5,
         Description() {
             return (
-                <div class="doctor-single-content">
+                <div className="doctor-single-content">
                     <h2>Hoạt động chuyên ngành</h2>
                     <p>
-                        <strong style="color: #1D93E3;">Trình độ:</strong> Phó giáo sư
+                        <strong >Trình độ:</strong> Phó giáo sư
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Chuyên khoa:</strong> Ung bướu
+                        <strong >Chuyên khoa:</strong> Ung bướu
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Số năm kinh nghiệm:</strong> 40 năm
+                        <strong >Số năm kinh nghiệm:</strong> 40 năm
                     </p>
-                    <h3 style="color: #1D93E3;">Quá trình công tác</h3>
+                    <h3 >Quá trình công tác</h3>
                     <ul>
                         <ul>
                             <li>
@@ -1775,7 +1775,7 @@ let doctorData = [
                                 <b>1997 - nay:</b> Phó chủ tịch hội Ung thư Hà Nội.
                             </li>
                             <li>
-                                <span style="font-size: 0.875rem;">
+                                <span >
                                     <b>1975 - 1979:</b>{' '}
                                 </span>
                                 Bác sĩ nội trú, Bệnh viện Việt Đức.
@@ -1783,7 +1783,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Quá trình học tập</strong>
                     </h3>
                     <ul>
@@ -1805,7 +1805,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Danh hiệu, phần thưởng, công trình nghiên cứu khoa học</strong>
                     </h3>
                     <ul>
@@ -1829,7 +1829,7 @@ let doctorData = [
 
                     <br />
                     <p>
-                        <span style="color: #F3262D;">Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
+                        <span >Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
                         theo tình hình thực tế mà không báo trước. Cảm ơn Quý khách đã thông cảm.
                     </p>
                     <br />
@@ -1846,18 +1846,18 @@ let doctorData = [
         vote: 5,
         Description() {
             return (
-                <div class="doctor-single-content">
+                <div className="doctor-single-content">
                     <h2>Hoạt động chuyên ngành</h2>
                     <p>
-                        <strong style="color: #1D93E3;">Trình độ:</strong> Phó giáo sư
+                        <strong >Trình độ:</strong> Phó giáo sư
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Chuyên khoa:</strong> Ung bướu
+                        <strong >Chuyên khoa:</strong> Ung bướu
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Số năm kinh nghiệm:</strong> 40 năm
+                        <strong >Số năm kinh nghiệm:</strong> 40 năm
                     </p>
-                    <h3 style="color: #1D93E3;">Quá trình công tác</h3>
+                    <h3 >Quá trình công tác</h3>
                     <ul>
                         <ul>
                             <li>
@@ -1877,7 +1877,7 @@ let doctorData = [
                                 <b>1997 - nay:</b> Phó chủ tịch hội Ung thư Hà Nội.
                             </li>
                             <li>
-                                <span style="font-size: 0.875rem;">
+                                <span >
                                     <b>1975 - 1979:</b>{' '}
                                 </span>
                                 Bác sĩ nội trú, Bệnh viện Việt Đức.
@@ -1885,7 +1885,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Quá trình học tập</strong>
                     </h3>
                     <ul>
@@ -1907,7 +1907,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Danh hiệu, phần thưởng, công trình nghiên cứu khoa học</strong>
                     </h3>
                     <ul>
@@ -1931,7 +1931,7 @@ let doctorData = [
 
                     <br />
                     <p>
-                        <span style="color: #F3262D;">Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
+                        <span >Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
                         theo tình hình thực tế mà không báo trước. Cảm ơn Quý khách đã thông cảm.
                     </p>
                     <br />
@@ -1948,18 +1948,18 @@ let doctorData = [
         vote: 5,
         Description() {
             return (
-                <div class="doctor-single-content">
+                <div className="doctor-single-content">
                     <h2>Hoạt động chuyên ngành</h2>
                     <p>
-                        <strong style="color: #1D93E3;">Trình độ:</strong> Phó giáo sư
+                        <strong >Trình độ:</strong> Phó giáo sư
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Chuyên khoa:</strong> Ung bướu
+                        <strong >Chuyên khoa:</strong> Ung bướu
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Số năm kinh nghiệm:</strong> 40 năm
+                        <strong >Số năm kinh nghiệm:</strong> 40 năm
                     </p>
-                    <h3 style="color: #1D93E3;">Quá trình công tác</h3>
+                    <h3 >Quá trình công tác</h3>
                     <ul>
                         <ul>
                             <li>
@@ -1979,7 +1979,7 @@ let doctorData = [
                                 <b>1997 - nay:</b> Phó chủ tịch hội Ung thư Hà Nội.
                             </li>
                             <li>
-                                <span style="font-size: 0.875rem;">
+                                <span >
                                     <b>1975 - 1979:</b>{' '}
                                 </span>
                                 Bác sĩ nội trú, Bệnh viện Việt Đức.
@@ -1987,7 +1987,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Quá trình học tập</strong>
                     </h3>
                     <ul>
@@ -2009,7 +2009,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Danh hiệu, phần thưởng, công trình nghiên cứu khoa học</strong>
                     </h3>
                     <ul>
@@ -2033,7 +2033,7 @@ let doctorData = [
 
                     <br />
                     <p>
-                        <span style="color: #F3262D;">Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
+                        <span >Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
                         theo tình hình thực tế mà không báo trước. Cảm ơn Quý khách đã thông cảm.
                     </p>
                     <br />
@@ -2050,18 +2050,18 @@ let doctorData = [
         vote: 5,
         Description() {
             return (
-                <div class="doctor-single-content">
+                <div className="doctor-single-content">
                     <h2>Hoạt động chuyên ngành</h2>
                     <p>
-                        <strong style="color: #1D93E3;">Trình độ:</strong> Phó giáo sư
+                        <strong >Trình độ:</strong> Phó giáo sư
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Chuyên khoa:</strong> Ung bướu
+                        <strong >Chuyên khoa:</strong> Ung bướu
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Số năm kinh nghiệm:</strong> 40 năm
+                        <strong >Số năm kinh nghiệm:</strong> 40 năm
                     </p>
-                    <h3 style="color: #1D93E3;">Quá trình công tác</h3>
+                    <h3 >Quá trình công tác</h3>
                     <ul>
                         <ul>
                             <li>
@@ -2081,7 +2081,7 @@ let doctorData = [
                                 <b>1997 - nay:</b> Phó chủ tịch hội Ung thư Hà Nội.
                             </li>
                             <li>
-                                <span style="font-size: 0.875rem;">
+                                <span >
                                     <b>1975 - 1979:</b>{' '}
                                 </span>
                                 Bác sĩ nội trú, Bệnh viện Việt Đức.
@@ -2089,7 +2089,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Quá trình học tập</strong>
                     </h3>
                     <ul>
@@ -2111,7 +2111,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Danh hiệu, phần thưởng, công trình nghiên cứu khoa học</strong>
                     </h3>
                     <ul>
@@ -2135,7 +2135,7 @@ let doctorData = [
 
                     <br />
                     <p>
-                        <span style="color: #F3262D;">Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
+                        <span >Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
                         theo tình hình thực tế mà không báo trước. Cảm ơn Quý khách đã thông cảm.
                     </p>
                     <br />
@@ -2152,18 +2152,18 @@ let doctorData = [
         vote: 5,
         Description() {
             return (
-                <div class="doctor-single-content">
+                <div className="doctor-single-content">
                     <h2>Hoạt động chuyên ngành</h2>
                     <p>
-                        <strong style="color: #1D93E3;">Trình độ:</strong> Phó giáo sư
+                        <strong >Trình độ:</strong> Phó giáo sư
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Chuyên khoa:</strong> Ung bướu
+                        <strong >Chuyên khoa:</strong> Ung bướu
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Số năm kinh nghiệm:</strong> 40 năm
+                        <strong >Số năm kinh nghiệm:</strong> 40 năm
                     </p>
-                    <h3 style="color: #1D93E3;">Quá trình công tác</h3>
+                    <h3 >Quá trình công tác</h3>
                     <ul>
                         <ul>
                             <li>
@@ -2183,7 +2183,7 @@ let doctorData = [
                                 <b>1997 - nay:</b> Phó chủ tịch hội Ung thư Hà Nội.
                             </li>
                             <li>
-                                <span style="font-size: 0.875rem;">
+                                <span >
                                     <b>1975 - 1979:</b>{' '}
                                 </span>
                                 Bác sĩ nội trú, Bệnh viện Việt Đức.
@@ -2191,7 +2191,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Quá trình học tập</strong>
                     </h3>
                     <ul>
@@ -2213,7 +2213,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Danh hiệu, phần thưởng, công trình nghiên cứu khoa học</strong>
                     </h3>
                     <ul>
@@ -2237,7 +2237,7 @@ let doctorData = [
 
                     <br />
                     <p>
-                        <span style="color: #F3262D;">Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
+                        <span >Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
                         theo tình hình thực tế mà không báo trước. Cảm ơn Quý khách đã thông cảm.
                     </p>
                     <br />
@@ -2254,18 +2254,18 @@ let doctorData = [
         vote: 5,
         Description() {
             return (
-                <div class="doctor-single-content">
+                <div className="doctor-single-content">
                     <h2>Hoạt động chuyên ngành</h2>
                     <p>
-                        <strong style="color: #1D93E3;">Trình độ:</strong> Phó giáo sư
+                        <strong >Trình độ:</strong> Phó giáo sư
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Chuyên khoa:</strong> Ung bướu
+                        <strong >Chuyên khoa:</strong> Ung bướu
                     </p>
                     <p>
-                        <strong style="color: #1D93E3;">Số năm kinh nghiệm:</strong> 40 năm
+                        <strong >Số năm kinh nghiệm:</strong> 40 năm
                     </p>
-                    <h3 style="color: #1D93E3;">Quá trình công tác</h3>
+                    <h3 >Quá trình công tác</h3>
                     <ul>
                         <ul>
                             <li>
@@ -2285,7 +2285,7 @@ let doctorData = [
                                 <b>1997 - nay:</b> Phó chủ tịch hội Ung thư Hà Nội.
                             </li>
                             <li>
-                                <span style="font-size: 0.875rem;">
+                                <span >
                                     <b>1975 - 1979:</b>{' '}
                                 </span>
                                 Bác sĩ nội trú, Bệnh viện Việt Đức.
@@ -2293,7 +2293,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Quá trình học tập</strong>
                     </h3>
                     <ul>
@@ -2315,7 +2315,7 @@ let doctorData = [
                             </li>
                         </ul>
                     </ul>
-                    <h3 style="color: #1D93E3;">
+                    <h3 >
                         <strong>Danh hiệu, phần thưởng, công trình nghiên cứu khoa học</strong>
                     </h3>
                     <ul>
@@ -2339,7 +2339,7 @@ let doctorData = [
 
                     <br />
                     <p>
-                        <span style="color: #F3262D;">Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
+                        <span >Lưu ý: </span>Lịch làm việc của Chuyên gia có thể thay đổi tùy
                         theo tình hình thực tế mà không báo trước. Cảm ơn Quý khách đã thông cảm.
                     </p>
                     <br />

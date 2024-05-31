@@ -1,0 +1,11 @@
+.DoctorInformationModal-Body{
+    display: flex;
+    .DoctorItem{
+        flex-basis: 80%;
+        margin-right: 20px;
+        height: 500px;
+        .Doctor-Item-Cotent{
+            padding: 60px !important;
+        }
+    }
+}

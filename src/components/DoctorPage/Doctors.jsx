@@ -21,7 +21,6 @@ function Doctors() {
         if (academicRank) {
             remainDoctor = remainDoctor.filter((p) => p.academic_rank.toLowerCase() === academicRank.toLowerCase());
         }
-
         setFilteredDoctors(remainDoctor);
     }
 

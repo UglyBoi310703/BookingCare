@@ -1,0 +1,25 @@
+.UserContainer{
+    display: flex;
+    align-items: center;
+    .UserAvatarButton{
+        margin-left: 15px;
+    }
+   
+}
+.UserMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 15px;
+    a{
+        cursor: pointer;
+        margin-top: 8px;
+        &:hover{
+            
+        }
+    }
+    
+    .UserMenu-Item{
+        margin-top: 5px;
+    }
+}

@@ -6,7 +6,7 @@ import Search from '../Search';
 
 import Navbar from '../NavBar/Navbar';
 import NavbarInformation from '../NavBar/NavbarInformation';
-import User from '../TestComponent/UserComponent';
+import User from '../Modal/UserComponent';
 import { useAuth } from '../NavBar/AuthContext';
 import {
     MDBContainer,
@@ -29,10 +29,10 @@ function Header() {
         let index = 1;
         if (link.pathname == '/Services') {
             index = 2;
-        } else if (link.pathname =='/Doctors') {
-            console.log("Hi")
+        } else if (link.pathname == '/Doctors') {
+            console.log('Hi');
             index = 3;
-        } else if (link.pathname =='/Facility') {
+        } else if (link.pathname == '/Facility') {
             index = 4;
         }
         const ActiveBlock = document.getElementById('BlockActive');
@@ -40,12 +40,11 @@ function Header() {
         ActiveBlock.classList.add(`animation${index}`);
         const LinkActiveCurrent = document.getElementById('LinkActive');
         console.log(LinkActiveCurrent);
-    
-        LinkActiveCurrent.removeAttribute("id") 
+
+        LinkActiveCurrent.removeAttribute('id');
         const NewLinkActive = document.getElementsByClassName(`Nav-Link${index}`);
-        NewLinkActive[0].setAttribute("id","LinkActive")
-        
-    },[openNav]);
+        NewLinkActive[0].setAttribute('id', 'LinkActive');
+    }, [openNav]);
     return (
         <MDBNavbar className="Header" expand="lg" fixed="top" sticky light bgColor="light">
             <MDBContainer fluid>
@@ -76,9 +75,8 @@ function Header() {
                         </>
                     )}
                 </MDBCollapse>
-               
             </MDBContainer>
-            <Navbar openNav={openNav}/>
+            <Navbar openNav={openNav} />
         </MDBNavbar>
     );
 }

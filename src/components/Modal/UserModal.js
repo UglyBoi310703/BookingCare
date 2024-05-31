@@ -8,9 +8,10 @@ import {
   MDBModalFooter,
   MDBBtn,
   MDBInput,
-  MDBCol,
+  MDBCol,MDBIcon
 } from 'mdb-react-ui-kit';
 import UserInformationForm from '../Form/UserInformation/UserInformationForm';
+import ChangePasswordForm from '../Form/ChangePassWord/ChangePassWord';
 function UserModal() {
   const [modalOpen, setModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('personalInfo');
@@ -41,36 +42,33 @@ function UserModal() {
 
   return (
     <>
-      <MDBBtn onClick={toggleModal}>Mở Modal</MDBBtn>
+      <a  onClick={toggleModal}>Thông tin tài khoản</a>
       <MDBModal  open={modalOpen} onClose={setModalOpen} tabIndex="-1" >
-        <MDBModalDialog>
+        <MDBModalDialog size='xl'>
           <MDBModalContent>
             <MDBModalHeader>
-              <h5 className="modal-title">Thông tin cá nhân</h5>
+              <h4 className="modal-title">Thông tin tài khoản</h4>
               <MDBBtn className="btn-close" color="none" onClick={toggleModal}></MDBBtn>
             </MDBModalHeader>
-            <MDBModalBody className="d-flex">
+            <MDBModalBody className="d-flex row">
               <MDBCol className="col-3">
-                <MDBBtn
+                <MDBBtn  size='lg'
                   className={`w-100 mb-2 ${activeTab === 'personalInfo' ? 'btn-primary' : 'btn-outline-primary'}`}
                   onClick={() => setActiveTab('personalInfo')}
                 >
-                  Thông tin cá nhân
+                  <MDBIcon fas icon="user" /><span>Thông tin cá nhân</span>
                 </MDBBtn>
-                <MDBBtn
+                <MDBBtn  size='lg'
                   className={`w-100 ${activeTab === 'securitySettings' ? 'btn-primary' : 'btn-outline-primary'}`}
                   onClick={() => setActiveTab('securitySettings')}
                 >
-                  Mật khẩu và bảo mật
+                  <MDBIcon fas icon="lock" /> <span>Mật khẩu và bảo mật</span>
                 </MDBBtn>
               </MDBCol>
-              <MDBCol className="col-9">
+              <MDBCol className="col-8">
                 {activeTab === 'personalInfo' && <UserInformationForm/>}
                 {activeTab === 'securitySettings' && (
-                  <div>
-                    <h5>Cài đặt mật khẩu và bảo mật</h5>
-                    <p>Các tùy chọn bảo mật sẽ được hiển thị ở đây.</p>
-                  </div>
+                 <ChangePasswordForm/>
                 )}
               </MDBCol>
             </MDBModalBody>

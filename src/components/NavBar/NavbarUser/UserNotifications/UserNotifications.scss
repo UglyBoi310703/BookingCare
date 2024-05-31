@@ -1,0 +1,10 @@
+.MessageBox{
+    display: flex;
+    justify-content: space-between;
+    .MessageBox-Item{
+        margin-left: 5px;
+    }
+    img{
+        flex-basis: 20%;
+    }
+}
