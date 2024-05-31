@@ -11,6 +11,9 @@ import Test from './components/TestComponent/ServicesModal';
 import ModalTest from './components/TestComponent/UserComponent';
 import Register from './components/Form/Register/Register';
 import UserModal from './components/TestComponent/UserModal';
+import DoctorManagementPage from './pages/Dashboard/DoctorManagement';
+import ServiceManagementPage from './pages/Dashboard/ServiceManagementPage';
+import FacilitiesManagementPage from './pages/Dashboard/FacilityManagement';
 
 function App() {
     return (
@@ -21,6 +24,10 @@ function App() {
                 <Route path="/Doctors" element={<Doctors />} />
                 <Route path="/Facility" element={<Facility />} />
                 <Route path="/Test" element={<UserModal />} />
+                <Route path="/Dashboard" element={<DoctorManagementPage />} />
+                <Route path="/Dashboard/Doctor" element={<DoctorManagementPage />} />
+                <Route path="/Dashboard/Facilities" element={<FacilitiesManagementPage />} />
+                <Route path="/Dashboard/Service" element={<ServiceManagementPage />} />
             </Routes>
         </>
     );
