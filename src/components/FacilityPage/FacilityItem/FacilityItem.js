@@ -1,6 +1,7 @@
 import React from 'react';
 import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn, MDBRipple } from 'mdb-react-ui-kit';
 import styles from "./FacilityItem.scss"
+import OrderDoctorModal from '~/components/Modal/OrderDoctor/OrderDoctorModal';
 export default function FacilityItem({ img, name }) {
     return (
         <MDBCard className='Facilities-Item' alignment="center">
@@ -9,7 +10,7 @@ export default function FacilityItem({ img, name }) {
             </MDBRipple>
             <MDBCardBody className='Facilities-Item-Body'>
                 <MDBCardTitle>{name}</MDBCardTitle>
-                <MDBBtn className='Btn-Order' href="#">Đặt lịch khám</MDBBtn>
+                <OrderDoctorModal/>
             </MDBCardBody>
         </MDBCard>
     );

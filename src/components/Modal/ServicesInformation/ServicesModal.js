@@ -20,6 +20,7 @@ import {
     MDBTableHead,
     MDBTableBody,
 } from 'mdb-react-ui-kit';
+import OrderServicesModal from '../OrderServices/OrderServices';
 import styles from './ServicesModal.scss';
 export default function ServicesModal({ DescriptionTitle, Description, name, img, price, gender, age, location }) {
     const [basicModal, setBasicModal] = useState(false);
@@ -165,9 +166,7 @@ export default function ServicesModal({ DescriptionTitle, Description, name, img
         </div>
                         </MDBModalBody>
                         <MDBModalFooter>
-                        <MDBBtn >
-                                Đặt lịch khám
-                            </MDBBtn>
+                        <OrderServicesModal title={"Đặt lịch khám"}/>
                             <MDBBtn color="info" onClick={toggleOpen}>
                                 Close
                             </MDBBtn>

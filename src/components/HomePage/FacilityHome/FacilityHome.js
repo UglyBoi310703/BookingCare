@@ -3,8 +3,7 @@ import { MDBCarousel, MDBCarouselItem } from 'mdb-react-ui-kit';
 import FacilitiesData from '../../FacilityPage/FacilityData';
 import FacilityItem from '../../FacilityPage/FacilityItem/FacilityItem';
 import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+
 import styles from './FacilityHome.scss';
 
 export default function FacilityHome() {
@@ -14,8 +13,8 @@ export default function FacilityHome() {
         slidesToShow: 3,
         speed: 500,
         slidesToScroll: 1,
-        arrows: true,
-        dots: false,
+       
+    
         responsive: [
             {
                 breakpoint: 768,
@@ -41,13 +40,15 @@ export default function FacilityHome() {
                     Cơ sở vật chất tại <span>MEDLATEC</span>
                 </h2>
             </div>
-            <section className="FacilitiesContent">
-                <Slider {...settings}>
-                    {FacilitiesData.map((item) => (
-                        <FacilityItem {...settings} img={item.img} name={item.name} />
-                    ))}
-                </Slider>
-            </section>
+           
+                <div className="FacilitiesContent">
+                    <Slider {...settings}>
+                        {FacilitiesData.map((item) => (
+                            <FacilityItem {...settings} img={item.img} name={item.name} />
+                        ))}
+                    </Slider>
+                </div>
+           
         </div>
     );
 }

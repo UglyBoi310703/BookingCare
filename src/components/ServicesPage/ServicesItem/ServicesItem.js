@@ -10,6 +10,7 @@ import {
     MDBCardText,
     MDBCardGroup,
 } from 'mdb-react-ui-kit';
+import OrderServicesModal from '~/components/Modal/OrderServices/OrderServices';
 import styles from './ServicesItem.scss';
 
 import TestComponent from '../../Modal/TestComponent';
@@ -22,9 +23,8 @@ export default function ServicesItem({ name, img, price, gender, age, location, 
                 <MDBCardImage className="img-fluid" src={img} position="top" alt="..." />
             </MDBRipple>
             <MDBCardBody className="Services-Item-Cotent">
-                <MDBBtn color="danger" className="Services-Item-Cotent-price" href="#">
-                    {price}
-                </MDBBtn>
+           <div  className="Services-Item-Cotent-price" > <OrderServicesModal color="danger" title={price}/></div>
+               
                 <ServicesModal
                     img={img}
                     price={price}

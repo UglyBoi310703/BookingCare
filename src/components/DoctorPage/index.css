@@ -1,6 +1,4 @@
-.order_btn {
-    margin-top: 1rem;
-}
+
 .order_btn:hover {
     background-color: #1d93e3;
     color: white;
@@ -51,4 +49,50 @@
 
 .search-button:hover {
     background-color: #0056b3;
+}
+.DoctorInfomationModal{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 40px;
+  }
+  .OrderDoctor{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-right: 5px;
+    height: 40px;
+  }
+  .DoctorsImg img{
+   
+  }
+  .DoctorsImg::before{
+    content: "";
+    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1D93E3;
+    border-radius: 4px;
+    background-image: url("https://medlatec.vn/med/images/logo-mobile.png");
+    background-repeat: no-repeat;
+}
+.DoctorItem-Body{
+ 
+    background-color: lavender;
+    border-radius: 4px;
+    padding: 20px 10px;
+    -webkit-box-shadow: -3px 6px 28px rgba(0, 0, 0, 0.08);
+    box-shadow: -3px 6px 28px rgba(0, 0, 0, 0.08);
+    position: relative;
+    margin: -24px 24px 0;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+.DoctorItem{
+    padding: 0 30px;
 }

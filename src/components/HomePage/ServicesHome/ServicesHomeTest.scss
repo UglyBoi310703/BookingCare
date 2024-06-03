@@ -1,5 +1,8 @@
 .ServicesHomeComponent{
     margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .Services-title {
         padding: 0px 25px;
        h2 {

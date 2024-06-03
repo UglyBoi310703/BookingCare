@@ -10,6 +10,7 @@ import Header from '~/components/Header';
 import ContactInformationList from '~/components/Header/ContactInfomation/ContactInformationList';
 import ServicesHomeTest from '~/components/HomePage/ServicesHome/ServicesHomeTest';
 import DoctorHome from '~/components/HomePage/DoctorsHome/DoctorsHome';
+import FacilitiesHome from '~/components/HomePage/FacilityHome/FacilitiesHome';
 function Home() {
     return (
         <>
@@ -18,7 +19,7 @@ function Home() {
                 <DoctorHome />
                 <ServicesHomeTest />
                 <MenuMedicalSpecialties />
-                <FacilityHome />
+                <FacilitiesHome />
             </HomeLayout>
         </>
     );

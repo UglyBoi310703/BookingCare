@@ -1,4 +1,7 @@
 .MedicalSpecial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 30px;
     padding: 0px 25px;
     .MedicalSpecial-title {
@@ -14,6 +17,7 @@
     }
 }
 .MedicalSpecial-Group {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

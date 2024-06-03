@@ -19,7 +19,7 @@ export default function LoginModal( {handleLogin}) {
   return (
     <>
       <MDBBtn className='Btn-Login NavbarLogin-Item mx-2'  color='info' onClick={toggleOpen}>ĐĂNG NHẬP</MDBBtn>
-      <MDBModal staticBackdrop tabIndex='-1' open={staticModal} onClose={() => setStaticModal(false)}>
+      <MDBModal  tabIndex='-1' open={staticModal} onClose={() => setStaticModal(false)}>
         <MDBModalDialog size='xl'>
           <MDBModalContent>
             <MDBModalHeader>

@@ -1,13 +1,13 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { SmoothHorizontalScrolling } from '../../../utils';
-import doctorData from '~/assets/data/DoctorData';
+import FacilitiesData from '~/components/FacilityPage/FacilityData';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import DoctorItem from '~/components/DoctorPage/DoctorItem/DoctorItem';
+import FacilityItem from '~/components/FacilityPage/FacilityItem/FacilityItem';
 import { MDBIcon } from 'mdb-react-ui-kit';
-import styles from "./DoctorsHome.scss"
-function DoctorHome() {
+import styles from "./FacilityHome.scss";
+function FacilitiesHome() {
     const sliderRef = useRef();
-    const itemWidth = 480; // Chiều rộng của mỗi phần tử
+    const itemWidth = 475; // Chiều rộng của mỗi phần tử
     const itemsToShow = 3;
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);
@@ -16,7 +16,7 @@ function DoctorHome() {
     useEffect(() => {
         if (sliderRef.current) {
             // Cuộn đến phần giữa của danh sách để hỗ trợ cuộn vô hạn
-            sliderRef.current.scrollLeft = doctorData.length * itemWidth;
+            sliderRef.current.scrollLeft = FacilitiesData.length * itemWidth;
         }
     }, [itemWidth]);
 
@@ -43,17 +43,17 @@ function DoctorHome() {
 
         // Xử lý cuộn vô hạn
         if (sliderRef.current.scrollLeft <= 0) {
-            sliderRef.current.scrollLeft = doctorData.length * itemWidth;
-        } else if (sliderRef.current.scrollLeft >= (doctorData.length * 2 - itemsToShow) * itemWidth) {
-            sliderRef.current.scrollLeft = doctorData.length * itemWidth - itemWidth * itemsToShow;
+            sliderRef.current.scrollLeft = FacilitiesData.length * itemWidth;
+        } else if (sliderRef.current.scrollLeft >= (FacilitiesData.length * 2 - itemsToShow) * itemWidth) {
+            sliderRef.current.scrollLeft = FacilitiesData.length * itemWidth - itemWidth * itemsToShow;
         }
     };
 
     const handleScrollRight = () => {
         SmoothHorizontalScrolling(sliderRef.current, 250, itemWidth * itemsToShow, sliderRef.current.scrollLeft, () => {
             // Xử lý cuộn vô hạn sau khi cuộn
-            if (sliderRef.current.scrollLeft >= (doctorData.length * 2 - itemsToShow) * itemWidth) {
-                sliderRef.current.scrollLeft = doctorData.length * itemWidth - itemWidth * itemsToShow;
+            if (sliderRef.current.scrollLeft >= (FacilitiesData.length * 2 - itemsToShow) * itemWidth) {
+                sliderRef.current.scrollLeft = FacilitiesData.length * itemWidth - itemWidth * itemsToShow;
             }
         });
     };
@@ -67,25 +67,25 @@ function DoctorHome() {
             () => {
                 // Xử lý cuộn vô hạn sau khi cuộn
                 if (sliderRef.current.scrollLeft <= 0) {
-                    sliderRef.current.scrollLeft = doctorData.length * itemWidth;
+                    sliderRef.current.scrollLeft = FacilitiesData.length * itemWidth;
                 }
             },
         );
     };
 
-    return doctorData.length > 0 ? (
-        <div className="DoctorHomeComponent">
-            <div className="DoctorHome-title">
+    return FacilitiesData.length > 0 ? (
+        <div className="Facilities">
+            <div className="Facilities-title">
                 <h2>
-                    Đội ngũ y bác sĩ <span>MEDLATEC</span>
+                    Cơ sở vật chất tại <span>MEDLATEC</span>
                 </h2>
             </div>
-            <div className="DoctorHome ContentsSection bg-white">
+            <div className="FacilityHome ContentsSection bg-white">
                 <div className=" btnLeft" onClick={handleScrollLeft}>
                     <FaChevronLeft />
                 </div>
                 <div
-                    className="DoctorSlider"
+                    className="FacilitySlider"
                     ref={sliderRef}
                     onMouseDown={handleMouseDown}
                     onMouseLeave={handleMouseLeave}
@@ -98,14 +98,11 @@ function DoctorHome() {
                         cursor: isDragging ? 'grabbing' : 'grab',
                     }}
                 >
-                    {doctorData.concat(doctorData).map((item, index) => (
+                    {FacilitiesData.concat(FacilitiesData).map((item, index) => (
                         <div className="DoctorSlider-Item" key={index} style={{ minWidth: `${itemWidth}px` }}>
-                            <DoctorItem
+                            <FacilityItem
                                 img={item.img}
                                 name={item.name}
-                                vote={item.vote}
-                                role={item.role}
-                                Description={item.Description()}
                             />
                         </div>
                     ))}
@@ -120,4 +117,4 @@ function DoctorHome() {
     );
 }
 
-export default DoctorHome;
+export default FacilitiesHome;
