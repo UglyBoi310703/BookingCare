@@ -130,6 +130,10 @@ function DoctorList() {
                                         <div className="d-flex align-items-center">
                                             <span className="me-1">{doctor.star}</span>
                                             <FaStar color="yellow" />
+                                            <FaStar color="yellow" />
+                                            <FaStar color="yellow" />
+                                            <FaStar color="yellow" />
+                                            <FaStar color="yellow" />
                                         </div>
                                         <div>
                                             <span className="me-1">{doctor.reviews}</span>
