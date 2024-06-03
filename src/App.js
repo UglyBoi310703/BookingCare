@@ -15,6 +15,13 @@ import DoctorItem from './components/DoctorPage/DoctorItem/DoctorItem';
 import MainApp from './components/ServicesPage/TestFilter';
 import DoctorList from './components/Dashboard/DoctorList';
 import Menu from './components/Dashboard/Menu/Menu';
+
+import DoctorManagementPage from './pages/Dashboard/DoctorManagement';
+import ServiceManagementPage from './pages/Dashboard/ServiceManagementPage';
+import FacilitiesManagementPage from './pages/Dashboard/FacilityManagement';
+
+
+
 function App() {
     return (
         <>
@@ -23,6 +30,11 @@ function App() {
                 <Route path="/Services" element={<Services />} />
                 <Route path="/Doctors" element={<Doctors />} />
                 <Route path="/Facility" element={<Facility />} />
+                <Route path="/Dashboard" element={<DoctorManagementPage />} />
+                <Route path="/Dashboard/Doctor" element={<DoctorManagementPage />} />
+                <Route path="/Dashboard/Facilities" element={<FacilitiesManagementPage />} />
+                <Route path="/Dashboard/Service" element={<ServiceManagementPage />} />
+                <Route path="/Test" element={<MainApp />} />
             </Routes>
         </>
     );

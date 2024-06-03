@@ -87,13 +87,13 @@ function ServiceList() {
         <div className="container">
             <div className="row product-title">
                 <div className="col-lg-12 d-flex align-items-center justify-content-between">
-                    <h5>Doctor List Management</h5>
+                    <h5>Service List Management</h5>
                     <button
                         className="btn btn-warning btn-sm d-flex align-items-center"
                         onClick={() => setOpenAddProductArea(true)}
                     >
                         <FaPlus size={15} className="me-2" />
-                        Add new Doctor
+                        Add new Service
                     </button>
                 </div>
             </div>
