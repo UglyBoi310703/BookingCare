@@ -22,6 +22,9 @@ function handleMouseOver(event) {
         } else if (link.pathname == '/Facility') {
             index = 4;
         }
+     else if (link.pathname == '/MedicalSpecialties') {
+        index = 5;
+    }
         const LinkActiveCurrent = document.getElementById('LinkActive');
         LinkActiveCurrent.removeAttribute('id');
         const NewLinkActive = document.getElementsByClassName(`Nav-Link${index}`);

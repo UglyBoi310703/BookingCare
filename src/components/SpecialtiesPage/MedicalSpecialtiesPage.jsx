@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { MDBCard, MDBCardBody, MDBCol, MDBListGroup, MDBCardGroup, MDBListGroupItem, MDBRow } from 'mdb-react-ui-kit';
-import MedicalSpecialtiesPageData from './MedicalSpecialtiesPageData';
-
-
+import MedicalSpecialtiesPageData from '../../assets/data/MedicalSpecialtiesPageData';
 
 import MedicalSpecialtiesPagination from './MedicalSpecialtiesPagination/MedicalSpecialtiesPagination';
 
@@ -49,7 +47,11 @@ export default function MedicalSpecialtiesPage({ itemsPerPage }) {
                 </h1>
             </div>
             <MedicalSpecialtiesPagination currentItems={CurrentItems} />
-            <Paginated itemsPerPage={itemsPerPage} Data={MedicalSpecialtiesPageData} handlePageClick={handlePageClick} />
+            <Paginated
+                itemsPerPage={itemsPerPage}
+                Data={MedicalSpecialtiesPageData}
+                handlePageClick={handlePageClick}
+            />
         </div>
     );
 }

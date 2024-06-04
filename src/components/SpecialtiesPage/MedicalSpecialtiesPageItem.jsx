@@ -11,7 +11,7 @@ import {
     MDBCardGroup,
     MDBCardFooter,
 } from 'mdb-react-ui-kit';
-
+import OrderMedicalSpecialtiesModal from '../Modal/OrderMedicalSpecialties/OrderMedicalSpecialtiesModal';
 
 export default function MedicalSpecialtiesPageItem({ name, img, content }) {
     return (
@@ -27,7 +27,7 @@ export default function MedicalSpecialtiesPageItem({ name, img, content }) {
                 
             </MDBCardBody>
             <MDBCardFooter>
-                <MDBBtn>Đặt lịch khám</MDBBtn>
+           <OrderMedicalSpecialtiesModal medicalSpecial={name}/>
             </MDBCardFooter>
         </MDBCard>
     );

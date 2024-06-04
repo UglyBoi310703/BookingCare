@@ -30,21 +30,20 @@
             margin: -24px 15px 0;
         }
         .Services-Item-Cotent-price {
-          
             color: #fff;
             top: -28px;
             display: inline-block;
             position: absolute;
             left: 20px;
             max-width: calc(100% - 40px);
-            button {
+            .OrderDoctor{
                 font-weight: 700;
                 font-size: 18px;
                 line-height: 28px;
                 border-radius: 4px;
-
                 padding: 7px 25px;
             }
+           
         }
         .ServicesModal {
             background: #1d93e3;

@@ -22,6 +22,8 @@
     justify-content: space-between;
     flex-wrap: wrap;
     .card {
+       
+        margin: 10px 0;
         cursor: pointer;
        flex-basis: 15%;
         border: solid 1px #1d93e3;
@@ -31,16 +33,22 @@
             display: none;
         }
         box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;
-    }
-    :hover {
-        background-color: #1d93e3;
-        
-        color: #fff;
-        .imgMain {
-            display: none;
+        .card-body{
+            padding: 20px 10px;
         }
-        .imgHover {
-            display: block;
+        &:hover {
+            background-color: #1d93e3;   
+            color: #fff;
+            .imgMain {
+                display: none;
+            }
+            .imgHover {
+                display: block;
+            }
+            .modal-title{
+                color: black;
+            }
         }
     }
+   
 }

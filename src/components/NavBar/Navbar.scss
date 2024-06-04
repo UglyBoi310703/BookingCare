@@ -20,7 +20,7 @@
             position: absolute;
             height: 75%;
             /* height: 5px; */
-            width: 14%;
+            width: 12%;
             bottom: 0;
             /* bottom: 0; */
             z-index: 0;
@@ -32,9 +32,9 @@
             position: absolute;
             height: 75%;
             /* height: 5px; */
-            width: 25%;
+            width: 21%;
             bottom: 0;
-            left: 19%;
+            left: 15%;
             /* bottom: 0; */
             z-index: 0;
             background: #1d93e3;
@@ -45,8 +45,8 @@
             position: absolute;
             height: 75%;
             /* height: 5px; */
-            width: 26%;
-            left: 49%;
+            width: 21%;
+            left: 38%;
             bottom: 0;
             /* bottom: 0; */
             z-index: 0;
@@ -58,8 +58,8 @@
             position: absolute;
             height: 75%;
             /* height: 5px; */
-            width: 21%;
-            left: 80%;
+            width: 17%;
+            left: 62%;
             bottom: 0;
             /* bottom: 0; */
             z-index: 0;
@@ -71,8 +71,8 @@
             position: absolute;
             height: 75%;
             /* height: 5px; */
-            width: 21%;
-            left: 100%;
+            width: 19%;
+            left: 82%;
             bottom: 0;
             /* bottom: 0; */
             z-index: 0;
@@ -88,85 +88,87 @@
         }
     }
 }
-//NavLink1
-.navbar-nav a:nth-child(1) {
-    width: 15%;
-}
 
-.navbar-nav .start-home,
-a:nth-child(1):hover ~ .animation1 {
-    width: 14%;
+
+//NavLink1
+
+.navbar-nav .start-home, a:nth-child(1):hover ~ .animation1 {
+    width: 12%;
     left: 0;
 }
-.navbar-nav a:nth-child(2) {
-    width: 25%;
-    
-}
+
 .navbar-nav a:nth-child(2):hover ~ .animation1 {
-    width: 26%;
-    left: 19%;
-}
-.navbar-nav a:nth-child(3) {
-    width: 25%;
-}
-.navbar-nav a:nth-child(3):hover ~ .animation1 {
-    width: 26%;
-    left: 49%;
-}
-.navbar-nava:nth-child(4) {
-    width: 25%;
-}
-.navbar-nav a:nth-child(4):hover ~ .animation1 {
     width: 21%;
-    left: 80%;
+    left: 15%;
 }
 
+.navbar-nav a:nth-child(3):hover ~ .animation1 {
+    width: 21%;
+    left: 38%;
+}
+
+.navbar-nav a:nth-child(4):hover ~ .animation1 {
+    width: 17%;
+    left: 62%;
+}
+
+.navbar-nav a:nth-child(5):hover ~ .animation1 {
+    width: 19%;
+    left: 82%;
+}
 //NavLink 2
 
-.navbar-nav .start-home,
-a:nth-child(1):hover ~ .animation2 {
-    width: 14%;
+.navbar-nav a:nth-child(1):hover ~ .animation2 {
+    width: 12%;
     left: 0;
 }
 
 .navbar-nav a:nth-child(2):hover ~ .animation2 {
-    width: 25%;
-    left: 19%;
+    width: 21%;
+    left: 15%;
 }
 
 .navbar-nav a:nth-child(3):hover ~ .animation2 {
-    width: 26%;
-    left: 49%;
+    width: 21%;
+    left: 38%;
 }
 
 .navbar-nav a:nth-child(4):hover ~ .animation2 {
-    width: 21%;
-    left: 80%;
+    width: 17%;
+    left: 62%;
+}
+
+.navbar-nav a:nth-child(5):hover ~ .animation2 {
+    width: 19%;
+    left: 82%;
 }
 
 //NavLink3
 
-.Navbar .start-home,
-a:nth-child(1):hover ~ .animation3 {
-    width: 14%;
+.navbar-nav a:nth-child(1):hover ~ .animation3 {
+    width: 12%;
     left: 0;
 }
 
-.Navbar a:nth-child(2):hover ~ .animation3 {
-    width: 25%;
-    left: 18%;
-}
-
-.Navbar a:nth-child(3):hover ~ .animation3 {
-    width: 25%;
-    left: 46%;
-}
-
-.Navbar a:nth-child(4):hover ~ .animation3 {
+.navbar-nav a:nth-child(2):hover ~ .animation3 {
     width: 21%;
-    left: 74%;
+    left: 15%;
 }
 
+.navbar-nav a:nth-child(3):hover ~ .animation3 {
+    width: 21%;
+    left: 38%;
+}
+
+.navbar-nav a:nth-child(4):hover ~ .animation3 {
+    width: 17%;
+    left: 62%;
+}
+
+.navbar-nav a:nth-child(5):hover ~ .animation3 {
+    width: 19%;
+    left: 82%;
+}
 //NavLink 4
 .Navbar .start-home,
 a:nth-child(1):hover ~ .animation4 {
