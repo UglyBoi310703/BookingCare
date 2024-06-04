@@ -19,7 +19,7 @@ import Menu from './components/Dashboard/Menu/Menu';
 import DoctorManagementPage from './pages/Dashboard/DoctorManagement';
 import ServiceManagementPage from './pages/Dashboard/ServiceManagementPage';
 import FacilitiesManagementPage from './pages/Dashboard/FacilityManagement';
-
+import HeaderDefault from './components/Header/HeaderDefault';
 function App() {
     return (
         <>
@@ -32,7 +32,7 @@ function App() {
                 <Route path="/Dashboard/Doctor" element={<DoctorManagementPage />} />
                 <Route path="/Dashboard/Facilities" element={<FacilitiesManagementPage />} />
                 <Route path="/Dashboard/Service" element={<ServiceManagementPage />} />
-                <Route path="/Test" element={<MainApp />} />
+                <Route path="/Test" element={<HeaderDefault />} />
             </Routes>
         </>
     );

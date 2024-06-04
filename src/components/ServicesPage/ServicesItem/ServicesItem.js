@@ -23,8 +23,11 @@ export default function ServicesItem({ name, img, price, gender, age, location, 
                 <MDBCardImage className="img-fluid" src={img} position="top" alt="..." />
             </MDBRipple>
             <MDBCardBody className="Services-Item-Cotent">
-           <div  className="Services-Item-Cotent-price" > <OrderServicesModal color="danger" title={price}/></div>
-               
+                <div className="Services-Item-Cotent-price">
+                    {' '}
+                    <OrderServicesModal Name={name} Price={price} color="danger" title={price} />
+                </div>
+
                 <ServicesModal
                     img={img}
                     price={price}

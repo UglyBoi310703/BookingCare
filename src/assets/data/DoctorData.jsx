@@ -2369,8 +2369,6 @@ let doctorData = [
         },
     },
 ];
-// const doctorDataJson = JSON.stringify(doctorData);
-// localStorage.setItem('doctorData', doctorDataJson);
 
 // const doctorDataJson = JSON.stringify(doctorData);
 // localStorage.setItem('doctorData', doctorDataJson);

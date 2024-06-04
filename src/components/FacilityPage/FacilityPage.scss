@@ -1,22 +1,32 @@
 .Facility{
-    margin-top: 60px;
+    margin-top: 30px;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     .FacilityTitle{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin-bottom: 20px;
         span{
             color: #1d93e3 ;
         }
     }
-    .Pagination{
-        margin-top: 35px;
-    }
-    .Facilities-Item{
-        padding: 10px 25px;
-        img{
-            height: 300px;
+    .FacilityContent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .Pagination{
+            margin-top: 35px;
         }
+        .Facilities-Item{
+            padding: 10px 25px;
+            img{
+                height: 300px;
+            }
+        }
+
     }
+    
 }

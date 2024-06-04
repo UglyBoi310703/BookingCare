@@ -10,7 +10,7 @@ export default function FacilityItem({ img, name }) {
             </MDBRipple>
             <MDBCardBody className='Facilities-Item-Body'>
                 <MDBCardTitle>{name}</MDBCardTitle>
-                <OrderDoctorModal/>
+              
             </MDBCardBody>
         </MDBCard>
     );
