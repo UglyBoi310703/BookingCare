@@ -9,172 +9,307 @@ import {
     MDBModalBody,
     MDBModalFooter,
 } from 'mdb-react-ui-kit';
+import { Modal, Button, Form, Row, Col, FormGroup } from 'react-bootstrap';
 import OrderDoctorForm from '../../Form/Order/OrderDoctor';
-import { Modal, Button, Form, Row, Col } from 'react-bootstrap';
+
 export default function OrderList({ Doctorname, Role }) {
     const [basicModal, setBasicModal] = useState(false);
     const [formDataArray, setFormDataArray] = useState([]);
+    const [selectedFormData, setSelectedFormData] = useState(null);
+    const [editMode, setEditMode] = useState(false);
+
     useEffect(() => {
         const storedData = JSON.parse(localStorage.getItem('orderDoctorFormData'));
         if (Array.isArray(storedData)) {
             setFormDataArray(storedData);
         }
     }, []);
-    const toggleOpen = () => {
+
+    const toggleOpen = (index = null) => {
         setBasicModal(!basicModal);
+        if (index !== null) {
+            setSelectedFormData({ ...formDataArray[index], index });
+            setEditMode(false);
+        }
+    };
+
+    const handleDelete = (index) => {
+        const updatedFormDataArray = formDataArray.filter((_, i) => i !== index);
+        setFormDataArray(updatedFormDataArray);
+        localStorage.setItem('orderDoctorFormData', JSON.stringify(updatedFormDataArray));
+    };
+
+    const handleSave = () => {
+        if (selectedFormData.index !== undefined) {
+            const updatedFormDataArray = [...formDataArray];
+            updatedFormDataArray[selectedFormData.index] = { ...selectedFormData };
+            setFormDataArray(updatedFormDataArray);
+            localStorage.setItem('orderDoctorFormData', JSON.stringify(updatedFormDataArray));
+            setBasicModal(false);
+        }
+    };
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setSelectedFormData({
+            ...selectedFormData,
+            [name]: value,
+        });
     };
 
     return (
         <>
-            {formDataArray.length > 0
-                ? formDataArray.map((formData, index) => (
-                      <div key={index}>
-                          <div>Lịch khám cùng bác sĩ {formData.doctor}</div>
-                          <div>{formData.specialty}</div>
-                          <div>{formData.appointmentDate}</div>
-                          <div>{formData.appointmentTime}</div>
-                          {/* Hiển thị thêm các trường dữ liệu khác nếu cần */}
-                          <div>
-                              <MDBBtn onClick={toggleOpen}></MDBBtn>
-                              <MDBModal open={basicModal} onClose={() => setBasicModal(false)} tabIndex="-1">
-                                  <MDBModalDialog size="xl">
-                                      <MDBModalContent>
-                                          <MDBModalHeader>
-                                              <MDBModalTitle>LỊCH KHÁM CÙNG CHUYÊN GIA</MDBModalTitle>
-                                              <MDBBtn className="btn-close" color="none" onClick={toggleOpen}></MDBBtn>
-                                          </MDBModalHeader>
-                                          <MDBModalBody>
-                                              <Form key={index} className="bg-light mb-4">
-                                                  <Row className="mb-3">
-                                                      <Form.Group as={Col} controlId={`fullName-${index}`}>
-                                                          <Form.Label>Họ và tên</Form.Label>
-                                                          <Form.Control
-                                                              type="text"
-                                                              value={formData.fullName}
-                                                              readOnly
-                                                          />
-                                                      </Form.Group>
+            {formDataArray.length > 0 ? (
+                formDataArray.map((formData, index) => (
+                    <div key={index}>
+                        <div>Lịch khám cùng bác sĩ {formData.doctor}</div>
+                        <div>{formData.specialty}</div>
+                        <div>{formData.appointmentDate}</div>
+                        <div>{formData.appointmentTime}</div>
+                        <div>
+                            <MDBBtn onClick={() => toggleOpen(index)}>Chi tiết</MDBBtn>
+                            <MDBModal open={basicModal} onHide={() => setBasicModal(false)} tabIndex="-1">
+                                <MDBModalDialog size="xl">
+                                    <MDBModalContent>
+                                        <MDBModalHeader>
+                                            <MDBModalTitle>LỊCH KHÁM CÙNG CHUYÊN GIA</MDBModalTitle>
+                                            <MDBBtn
+                                                className="btn-close"
+                                                color="none"
+                                                onClick={() => setBasicModal(false)}
+                                            ></MDBBtn>
+                                        </MDBModalHeader>
+                                        <MDBModalBody>
+                                            {selectedFormData && (
+                                                <Form className="bg-light mb-4">
+                                                    <Row className="mb-3">
+                                                        <Form.Group
+                                                            as={Col}
+                                                            controlId={`fullName-${selectedFormData.index}`}
+                                                        >
+                                                            <Form.Label>Họ và tên</Form.Label>
+                                                            <Form.Control
+                                                                type="text"
+                                                                name="fullName"
+                                                                value={selectedFormData.fullName}
+                                                                onChange={handleChange}
+                                                                readOnly={!editMode}
+                                                            />
+                                                        </Form.Group>
 
-                                                      <Form.Group as={Col} controlId={`phoneNumber-${index}`}>
-                                                          <Form.Label>Số điện thoại</Form.Label>
-                                                          <Form.Control
-                                                              type="text"
-                                                              value={formData.phoneNumber}
-                                                              readOnly
-                                                          />
-                                                      </Form.Group>
-                                                  </Row>
+                                                        <Form.Group
+                                                            as={Col}
+                                                            controlId={`phoneNumber-${selectedFormData.index}`}
+                                                        >
+                                                            <Form.Label>Số điện thoại</Form.Label>
+                                                            <Form.Control
+                                                                type="text"
+                                                                name="phoneNumber"
+                                                                value={selectedFormData.phoneNumber}
+                                                                onChange={handleChange}
+                                                                readOnly={!editMode}
+                                                            />
+                                                        </Form.Group>
+                                                    </Row>
 
-                                                  <Row className="mb-3">
-                                                      <Form.Group as={Col} controlId={`dateOfBirth-${index}`}>
-                                                          <Form.Label>Ngày sinh</Form.Label>
-                                                          <Form.Control
-                                                              type="date"
-                                                              value={formData.dateOfBirth}
-                                                              readOnly
-                                                          />
-                                                      </Form.Group>
+                                                    <Row className="mb-3">
+                                                        <Form.Group>
+                                                            <Form.Label>Ngày sinh</Form.Label>
+                                                            <Form.Control
+                                                                type="date"
+                                                                name="dateOfBirth"
+                                                                value={selectedFormData.dateOfBirth}
+                                                                onChange={handleChange}
+                                                                readOnly={!editMode}
+                                                            />
+                                                        </Form.Group>
 
-                                                      <Form.Group as={Col} controlId={`email-${index}`}>
-                                                          <Form.Label>Email</Form.Label>
-                                                          <Form.Control type="email" value={formData.email} readOnly />
-                                                      </Form.Group>
-                                                  </Row>
+                                                        <Form.Group
+                                                            as={Col}
+                                                            controlId={`email-${selectedFormData.index}`}
+                                                        >
+                                                            <Form.Label>Email</Form.Label>
+                                                            <Form.Control
+                                                                type="email"
+                                                                name="email"
+                                                                value={selectedFormData.email}
+                                                                onChange={handleChange}
+                                                                readOnly={!editMode}
+                                                            />
+                                                        </Form.Group>
+                                                    </Row>
 
-                                                  <Row className="mb-3">
-                                                      <Form.Group as={Col} controlId={`gender-${index}`}>
-                                                          <Form.Label>Giới tính</Form.Label>
-                                                          <Form.Control as="select" value={formData.gender} readOnly>
-                                                              <option>{formData.gender}</option>
-                                                          </Form.Control>
-                                                      </Form.Group>
+                                                    <Row className="mb-3">
+                                                        <Form.Group
+                                                            as={Col}
+                                                            controlId={`gender-${selectedFormData.index}`}
+                                                        >
+                                                            <Form.Label>Giới tính</Form.Label>
+                                                            <Form.Control
+                                                                as="select"
+                                                                name="gender"
+                                                                value={selectedFormData.gender}
+                                                                onChange={handleChange}
+                                                                readOnly={!editMode}
+                                                            >
+                                                                <option>{selectedFormData.gender}</option>
+                                                            </Form.Control>
+                                                        </Form.Group>
 
-                                                      <Form.Group as={Col} controlId={`city-${index}`}>
-                                                          <Form.Label>Tỉnh/Thành phố</Form.Label>
-                                                          <Form.Control as="select" value={formData.city} readOnly>
-                                                              <option>{formData.city}</option>
-                                                          </Form.Control>
-                                                      </Form.Group>
-                                                  </Row>
+                                                        <Form.Group
+                                                            as={Col}
+                                                            controlId={`city-${selectedFormData.index}`}
+                                                        >
+                                                            <Form.Label>Tỉnh/Thành phố</Form.Label>
+                                                            <Form.Control
+                                                                as="select"
+                                                                name="city"
+                                                                value={selectedFormData.city}
+                                                                onChange={handleChange}
+                                                                readOnly={!editMode}
+                                                            >
+                                                                <option>{selectedFormData.city}</option>
+                                                            </Form.Control>
+                                                        </Form.Group>
+                                                    </Row>
 
-                                                  <Row className="mb-3">
-                                                      <Form.Group as={Col} controlId={`district-${index}`}>
-                                                          <Form.Label>Quận/Huyện</Form.Label>
-                                                          <Form.Control as="select" value={formData.district} readOnly>
-                                                              <option>{formData.district}</option>
-                                                          </Form.Control>
-                                                      </Form.Group>
+                                                    <Row className="mb-3">
+                                                        <Form.Group
+                                                            as={Col}
+                                                            controlId={`district-${selectedFormData.index}`}
+                                                        >
+                                                            <Form.Label>Quận/Huyện</Form.Label>
+                                                            <Form.Control
+                                                                as="select"
+                                                                name="district"
+                                                                value={selectedFormData.district}
+                                                                onChange={handleChange}
+                                                                readOnly={!editMode}
+                                                            >
+                                                                <option>{selectedFormData.district}</option>
+                                                            </Form.Control>
+                                                        </Form.Group>
 
-                                                      <Form.Group as={Col} controlId={`address-${index}`}>
-                                                          <Form.Label>Địa chỉ</Form.Label>
-                                                          <Form.Control type="text" value={formData.address} readOnly />
-                                                      </Form.Group>
-                                                  </Row>
+                                                        <Form.Group
+                                                            as={Col}
+                                                            controlId={`address-${selectedFormData.index}`}
+                                                        >
+                                                            <Form.Label>Địa chỉ</Form.Label>
+                                                            <Form.Control
+                                                                type="text"
+                                                                name="address"
+                                                                value={selectedFormData.address}
+                                                                onChange={handleChange}
+                                                                readOnly={!editMode}
+                                                            />
+                                                        </Form.Group>
+                                                    </Row>
 
-                                                  <Row className="mb-3">
-                                                      <Form.Group as={Col} controlId={`specialty-${index}`}>
-                                                          <Form.Label>Chuyên khoa</Form.Label>
-                                                          <Form.Control as="select" value={formData.specialty} readOnly>
-                                                              <option>{formData.specialty}</option>
-                                                          </Form.Control>
-                                                      </Form.Group>
+                                                    <Row className="mb-3">
+                                                        <Form.Group
+                                                            as={Col}
+                                                            controlId={`specialty-${selectedFormData.index}`}
+                                                        >
+                                                            <Form.Label>Chuyên khoa</Form.Label>
+                                                            <Form.Control
+                                                                as="select"
+                                                                name="specialty"
+                                                                value={selectedFormData.specialty}
+                                                                onChange={handleChange}
+                                                                readOnly={!editMode}
+                                                            >
+                                                                <option>{selectedFormData.specialty}</option>
+                                                            </Form.Control>
+                                                        </Form.Group>
 
-                                                      <Form.Group as={Col} controlId={`clinic-${index}`}>
-                                                          <Form.Label>Bác sĩ</Form.Label>
-                                                          <Form.Control as="select" value={formData.clinic} readOnly>
-                                                              <option>{formData.doctor}</option>
-                                                          </Form.Control>
-                                                      </Form.Group>
-                                                  </Row>
+                                                        <Form.Group
+                                                            as={Col}
+                                                            controlId={`clinic-${selectedFormData.index}`}
+                                                        >
+                                                            <Form.Label>Bác sĩ</Form.Label>
+                                                            <Form.Control
+                                                                as="select"
+                                                                name="doctor"
+                                                                value={selectedFormData.doctor}
+                                                                onChange={handleChange}
+                                                                readOnly={!editMode}
+                                                            >
+                                                                <option>{selectedFormData.doctor}</option>
+                                                            </Form.Control>
+                                                        </Form.Group>
+                                                    </Row>
 
-                                                  <Row className="mb-3">
-                                                      <Form.Group as={Col} controlId={`appointmentDate-${index}`}>
-                                                          <Form.Label>Ngày khám</Form.Label>
-                                                          <Form.Control
-                                                              type="date"
-                                                              value={formData.appointmentDate}
-                                                              readOnly
-                                                          />
-                                                      </Form.Group>
+                                                    <Row className="mb-3">
+                                                        <Form.Group
+                                                            as={Col}
+                                                            controlId={`appointmentDate-${selectedFormData.index}`}
+                                                        >
+                                                            <Form.Label>Ngày khám</Form.Label>
+                                                            <Form.Control
+                                                                type="date"
+                                                                name="appointmentDate"
+                                                                value={selectedFormData.appointmentDate}
+                                                                onChange={handleChange}
+                                                                readOnly={!editMode}
+                                                            />
+                                                        </Form.Group>
 
-                                                      <Form.Group as={Col} controlId={`appointmentTime-${index}`}>
-                                                          <Form.Label>Giờ khám</Form.Label>
-                                                          <Form.Control
-                                                              type="time"
-                                                              value={formData.appointmentTime}
-                                                              readOnly
-                                                          />
-                                                      </Form.Group>
-                                                  </Row>
+                                                        <Form.Group
+                                                            as={Col}
+                                                            controlId={`appointmentTime-${selectedFormData.index}`}
+                                                        >
+                                                            <Form.Label>Giờ khám</Form.Label>
+                                                            <Form.Control
+                                                                type="time"
+                                                                name="appointmentTime"
+                                                                value={selectedFormData.appointmentTime}
+                                                                onChange={handleChange}
+                                                                readOnly={!editMode}
+                                                            />
+                                                        </Form.Group>
+                                                    </Row>
 
-                                                  <Form.Group controlId={`notes-${index}`}>
-                                                      <Form.Label>Ghi chú</Form.Label>
-                                                      <Form.Control
-                                                          as="textarea"
-                                                          rows={3}
-                                                          value={formData.notes}
-                                                          readOnly
-                                                      />
-                                                  </Form.Group>
-                                              </Form>
-                                          </MDBModalBody>
-
-                                          <MDBModalFooter>
-                                              <MDBBtn color="secondary" onClick={toggleOpen}>
-                                                  Sửa
-                                              </MDBBtn>
-                                              <MDBBtn color="secondary" onClick={toggleOpen}>
-                                                  Lưu thông tin
-                                              </MDBBtn>
-                                          </MDBModalFooter>
-                                      </MDBModalContent>
-                                  </MDBModalDialog>
-                              </MDBModal>
-                          </div>
-                          <div>Xóa</div>
-                      </div>
-                  ))
-                : 'Danh sách trống :))'}
+                                                    <Form.Group controlId={`notes-${selectedFormData.index}`}>
+                                                        <Form.Label>Ghi chú</Form.Label>
+                                                        <Form.Control
+                                                            as="textarea"
+                                                            rows={3}
+                                                            name="notes"
+                                                            value={selectedFormData.notes}
+                                                            onChange={handleChange}
+                                                            readOnly={!editMode}
+                                                        />
+                                                    </Form.Group>
+                                                </Form>
+                                            )}
+                                        </MDBModalBody>
+                                        <MDBModalFooter>
+                                            {editMode ? (
+                                                <MDBBtn color="secondary" onClick={handleSave}>
+                                                    Lưu thông tin
+                                                </MDBBtn>
+                                            ) : (
+                                                <MDBBtn color="primary" onClick={() => setEditMode(true)}>
+                                                    Chỉnh sửa
+                                                </MDBBtn>
+                                            )}
+                                            <MDBBtn color="secondary" onClick={() => setBasicModal(false)}>
+                                                Đóng
+                                            </MDBBtn>
+                                        </MDBModalFooter>
+                                    </MDBModalContent>
+                                </MDBModalDialog>
+                            </MDBModal>
+                            
+                        </div>
+                        <MDBBtn color="danger" onClick={() => handleDelete(selectedFormData.index)}>
+                                Xóa
+                            </MDBBtn>
+                    </div>
+                ))
+            ) : (
+                <div>Không có lịch khám nào.</div>
+            )}
         </>
     );
 }

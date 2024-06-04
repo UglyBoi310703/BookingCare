@@ -21,7 +21,7 @@ export default function UserOrderListModal() {
     <>
       <a onClick={toggleOpen}>Danh sách lịch khám </a>
       <MDBModal open={basicModal} onClose={() => setBasicModal(false)} tabIndex='-1'>
-        <MDBModalDialog size='lg'>
+        <MDBModalDialog size='xl'>
           <MDBModalContent>
             <MDBModalHeader>
               <MDBModalTitle>Danh sách lịch khám</MDBModalTitle>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form, Row, Col } from 'react-bootstrap';
 
-const OrderServicesForm = () => {
+const OrderServicesForm = ({Name,Price}) => {
     return (
         <>
             
@@ -70,14 +70,14 @@ const OrderServicesForm = () => {
                             <Form.Group as={Col} controlId="specialty">
                                 <Form.Label>Gói khám</Form.Label>
                                 <Form.Control as="select" required>
-                                    <option>Gói khám sức khỏe tổng quát</option>
+                                    <option>{Name}</option>
                                 </Form.Control>
                             </Form.Group>
 
                             <Form.Group as={Col} controlId="clinic">
-                                <Form.Label>Cơ sở khám</Form.Label>
+                                <Form.Label>Giá gói khám</Form.Label>
                                 <Form.Control as="select" required>
-                                    <option>Chọn cơ sở khám</option>
+                                    <option>{Price}</option>
                                 </Form.Control>
                             </Form.Group>
                         </Row>

@@ -10,7 +10,7 @@ import {
     MDBModalFooter,
 } from 'mdb-react-ui-kit';
 import OrderServicesForm from '~/components/Form/Order/OrderServicesForm';
-export default function OrderServicesModal({title,color}) {
+export default function OrderServicesModal({title,color,Name,Price}) {
     const [basicModal, setBasicModal] = useState(false);
 
     const toggleOpen = () => setBasicModal(!basicModal);
@@ -26,7 +26,7 @@ export default function OrderServicesModal({title,color}) {
                             <MDBBtn className="btn-close" color="none" onClick={toggleOpen}></MDBBtn>
                         </MDBModalHeader>
                         <MDBModalBody>
-                            <OrderServicesForm />
+                            <OrderServicesForm Name={Name} Price={Price} />
                         </MDBModalBody>
 
                         <MDBModalFooter>
