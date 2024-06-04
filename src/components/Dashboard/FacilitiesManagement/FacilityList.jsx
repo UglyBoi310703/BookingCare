@@ -5,8 +5,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
-import doctorData from '~/assets/data/DoctorData';
-import FacilitiesData from '../FacilityPage/FacilityData';
+import FacilitiesData from '../../FacilityPage/FacilityData';
 
 const schema = yup.object({
     title: yup.string().required(),

@@ -13,7 +13,7 @@ import Register from './components/Form/Register/Register';
 import UserModal from './components/Modal/UserModal';
 import DoctorItem from './components/DoctorPage/DoctorItem/DoctorItem';
 import MainApp from './components/ServicesPage/TestFilter';
-import DoctorList from './components/Dashboard/DoctorList';
+import DoctorList from './components/Dashboard/DoctorManagement/DoctorList';
 import Menu from './components/Dashboard/Menu/Menu';
 
 import DoctorManagementPage from './pages/Dashboard/DoctorManagement';

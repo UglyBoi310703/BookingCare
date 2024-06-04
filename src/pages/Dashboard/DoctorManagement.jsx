@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import DoctorList from '~/components/Dashboard/DoctorList';
+import DoctorList from '~/components/Dashboard/DoctorManagement/DoctorList';
 
 import DashboardLayout from '~/layouts/DashboardLayout';
 import doctorData from '~/assets/data/DoctorData';

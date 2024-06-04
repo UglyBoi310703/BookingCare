@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FaEdit, FaPlus, FaStar, FaTrash } from 'react-icons/fa';
-import { FaTimes, FaUpload } from 'react-icons/fa';
+import { FaEdit, FaPlus, FaStar, FaTrash, FaTimes, FaUpload } from 'react-icons/fa';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -20,15 +19,11 @@ const schema = yup.object({
 function DoctorList() {
     const [doctorData, setDoctorData] = useState([]);
     const [openAddDoctorArea, setOpenAddDoctorArea] = useState(false);
-    const [page, setPage] = useState(1);
-    const [pageSize, setPageSize] = useState(10);
-    const [direction, setDirection] = useState('next');
-    const [field, setField] = useState('id');
-    const [order, setOrder] = useState('asc');
     const [temporaryPhoto, setTemporaryPhoto] = useState();
     const [selectFile, setSelectFile] = useState();
     const [uploading, setUploading] = useState(false);
     const [selectDoctor, setSelectDotor] = useState();
+    const [searchTerm, setSearchTerm] = useState('');
 
     const {
         register,
@@ -40,8 +35,6 @@ function DoctorList() {
         resolver: yupResolver(schema),
     });
 
-    const [selectProduct, setSelectProduct] = useState({});
-
     useEffect(() => {
         const storedData = localStorage.getItem('doctorData');
         if (storedData) {
@@ -49,7 +42,7 @@ function DoctorList() {
         }
     }, []);
 
-    const handleCloseAddProductArea = () => {
+    const handleCloseAddDoctorArea = () => {
         setOpenAddDoctorArea(false);
         reset();
         setSelectFile();
@@ -65,16 +58,25 @@ function DoctorList() {
             });
             return;
         }
+        Swal.fire({
+            title: 'Confirm add doctor',
+            text: `Bạn có chắc chắn muốn thêm bác sĩ: ${data.name}?`,
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                const newDoctor = { ...data, id: uuidv4() };
+                const updatedDoctorData = [...doctorData, newDoctor];
 
-        const newDoctor = { ...data, id: uuidv4() };
-        const updatedDoctorData = [...doctorData, newDoctor];
-
-        localStorage.setItem('doctorData', JSON.stringify(updatedDoctorData));
-        setDoctorData(updatedDoctorData);
-        reset();
-        setSelectFile(null);
-        setTemporaryPhoto(null);
-        toast.success('Doctor added successfully!');
+                localStorage.setItem('doctorData', JSON.stringify(updatedDoctorData));
+                setDoctorData(updatedDoctorData);
+                reset();
+                setSelectFile(null);
+                setTemporaryPhoto(null);
+                toast.success('Doctor added successfully!');
+                setOpenAddDoctorArea(false);
+            }
+        });
     };
 
     const handleSelectDoctor = (doctor) => {
@@ -82,10 +84,20 @@ function DoctorList() {
     };
 
     const handleRemoveDoctor = (doctor) => {
-        const doctorData = JSON.parse(localStorage.getItem('doctorData'));
-        const updatedDoctorData = doctorData.filter((d) => d.id !== doctor.id);
-        localStorage.setItem('doctorData', JSON.stringify(updatedDoctorData));
-        setDoctorData(updatedDoctorData);
+        Swal.fire({
+            title: 'Confirm remove doctor',
+            text: `Bạn có chắc chắn muốn xóa bác sĩ: ${doctor.name}?`,
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                const doctorData = JSON.parse(localStorage.getItem('doctorData'));
+                const updatedDoctorData = doctorData.filter((d) => d.id !== doctor.id);
+                localStorage.setItem('doctorData', JSON.stringify(updatedDoctorData));
+                setDoctorData(updatedDoctorData);
+                toast(`Thông tin bác sĩ ${doctor.name} đã được xóa thành công!`);
+            }
+        });
     };
 
     const handleSelectPhoto = (e) => {
@@ -109,12 +121,14 @@ function DoctorList() {
         setUploading(false);
     };
 
+    const filteredDoctors = doctorData.filter((doctor) => doctor.name.toLowerCase().includes(searchTerm.toLowerCase()));
+
     return (
         <div className="container">
             <EditDoctorModel selectDoctor={selectDoctor} setSelectDoctor={setSelectDotor} />
             <div className="row product-title">
                 <div className="col-lg-12 d-flex align-items-center justify-content-between">
-                    <h5>Danh sách bác sĩ</h5>
+                    <h5 className="title_list">Danh sách bác sĩ</h5>
                     <button
                         className="btn btn-warning btn-sm d-flex align-items-center"
                         onClick={() => setOpenAddDoctorArea(true)}
@@ -122,6 +136,17 @@ function DoctorList() {
                         <FaPlus size={15} className="me-2" />
                         Thêm mới bác sĩ
                     </button>
+                </div>
+            </div>
+            <div className="row my-2">
+                <div className="col-lg-12">
+                    <input
+                        type="text"
+                        className="form-control dashboard_search"
+                        placeholder="Tìm kiếm theo tên bác sĩ"
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                    />
                 </div>
             </div>
             {openAddDoctorArea && (
@@ -164,7 +189,7 @@ function DoctorList() {
                                     </button>
                                     <button
                                         type="button"
-                                        onClick={handleCloseAddProductArea}
+                                        onClick={handleCloseAddDoctorArea}
                                         className="btn btn-dark btn-sm flex-grow-1 d-flex align-items-center justify-content-center"
                                     >
                                         <FaTimes className="me-2" />
@@ -279,7 +304,7 @@ function DoctorList() {
                         </tr>
                     </thead>
                     <tbody>
-                        {doctorData?.map((doctor) => (
+                        {filteredDoctors.map((doctor) => (
                             <tr key={doctor.id}>
                                 <td className="text-start align-middle" style={{ minWidth: '250px' }}>
                                     <div className="d-flex align-items-center">

@@ -1,5 +1,5 @@
 import React from 'react';
-import ServiceList from '~/components/Dashboard/ServiceList';
+import ServiceList from '~/components/Dashboard/ServiceManagement/ServiceList';
 
 import DashboardLayout from '~/layouts/DashboardLayout';
 

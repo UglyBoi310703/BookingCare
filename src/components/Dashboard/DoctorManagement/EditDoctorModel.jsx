@@ -20,6 +20,7 @@ function EditDoctorModel({ selectDoctor, setSelectDoctor, setDoctorData }) {
     const [temporaryChangePhoto, setTemporaryChangePhoto] = useState();
     const [selectedNewPhoto, setSelectedNewPhoto] = useState();
     const [reUploading, setReUploading] = useState(false);
+    const [isFormChanged, setIsFormChanged] = useState(false);
 
     const {
         register,
@@ -51,6 +52,20 @@ function EditDoctorModel({ selectDoctor, setSelectDoctor, setDoctorData }) {
     };
 
     const handleSaveDoctor = (data) => {
+        const isDataChanged =
+            data.name !== currentDoctor.name ||
+            data.role !== currentDoctor.role ||
+            data.academic_rank !== currentDoctor.academic_rank ||
+            data.degree !== currentDoctor.degree ||
+            data.img !== currentDoctor.img;
+
+        if (!isDataChanged) {
+            Swal.fire({
+                title: 'Alert',
+                text: 'No changes detected!',
+            });
+            return;
+        }
         if (selectedNewPhoto?.name) {
             Swal.fire({
                 title: 'Alert',
@@ -58,27 +73,35 @@ function EditDoctorModel({ selectDoctor, setSelectDoctor, setDoctorData }) {
             });
             return;
         }
+        Swal.fire({
+            title: 'Confirm remove doctor',
+            text: `Bạn có chắc chắn muốn sửa thông tin bác sĩ: ${data.name}?`,
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                let editDoctor = {
+                    ...currentDoctor,
+                    ...data,
+                };
+                console.log(editDoctor);
 
-        let editDoctor = {
-            ...currentDoctor,
-            ...data,
-        };
-        console.log(editDoctor);
+                let doctorData = JSON.parse(localStorage.getItem('doctorData')) || [];
 
-        let doctorData = JSON.parse(localStorage.getItem('doctorData')) || [];
+                const doctorIndex = doctorData.findIndex((doctor) => doctor.id === editDoctor.id);
+                console.log(doctorIndex);
 
-        const doctorIndex = doctorData.findIndex((doctor) => doctor.id === editDoctor.id);
-        console.log(doctorIndex);
-
-        if (doctorIndex !== -1) {
-            doctorData[doctorIndex] = editDoctor;
-        } else {
-            doctorData.push(editDoctor);
-        }
-        localStorage.setItem('doctorData', JSON.stringify(doctorData));
-        toast.success('Doctor updated successfully');
-        setSelectDoctor({});
-        window.location.reload();
+                if (doctorIndex !== -1) {
+                    doctorData[doctorIndex] = editDoctor;
+                } else {
+                    doctorData.push(editDoctor);
+                }
+                localStorage.setItem('doctorData', JSON.stringify(doctorData));
+                toast.success(`Thông tin bác sĩ ${data.name} đã được sửa thành công`);
+                setSelectDoctor({});
+                window.location.reload();
+            }
+        });
     };
 
     const handleChangePhoto = (e) => {
