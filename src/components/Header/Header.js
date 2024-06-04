@@ -34,6 +34,8 @@ function Header() {
             index = 3;
         } else if (link.pathname == '/Facility') {
             index = 4;
+        }else if (link.pathname == '/MedicalSpecialties') {
+            index = 5;
         }
         const ActiveBlock = document.getElementById('BlockActive');
         ActiveBlock.classList.remove();

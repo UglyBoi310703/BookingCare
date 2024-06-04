@@ -166,7 +166,7 @@ export default function ServicesModal({ DescriptionTitle, Description, name, img
         </div>
                         </MDBModalBody>
                         <MDBModalFooter>
-                        <OrderServicesModal    Name={name}
+                        <OrderServicesModal  Name={name}
                     Price = {price} title={"Đặt lịch khám"}/>
                             <MDBBtn color="info" onClick={toggleOpen}>
                                 Close

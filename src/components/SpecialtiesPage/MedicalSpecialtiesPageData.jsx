@@ -9,7 +9,7 @@ const MedicalSpecialtiesPageData = [
     id:2,
     img:"https://medlatec.vn/media/379/catalog/chuyenkhoanoi.jpg?size=600",
     name:"Chuyên khoa nội",
-    content:"Với ý nghĩa thông qua khám nội, khách hàng/bệnh nhân xác định bước đầu các bất thường, để từ đó có hướng khám chuyên sâu chính xác và điều trị hiệu quả. Vì vậy, chuyên khoa Nội của Bệnh viện Đa khoa MEDLATEC đã được hội tụ đội ngũ chuyên gia, bác sĩ đầu ngành, dày dặn kinh nghiệm cùng hệ thống máy móc, thiết bị đồng bộ các chuyên khoa nhằm phục vụ tốt nhất nhu cầu kiểm tra sức khỏe của người dân.",
+    content:"Chuyên khoa Nội của Bệnh viện Đa khoa MEDLATEC đã được hội tụ đội ngũ chuyên gia, bác sĩ đầu ngành, dày dặn kinh nghiệm cùng hệ thống máy móc, thiết bị đồng bộ các chuyên khoa nhằm phục vụ tốt nhất nhu cầu kiểm tra sức khỏe của người dân.",
 },
 {
     id:3,
@@ -52,14 +52,14 @@ const MedicalSpecialtiesPageData = [
     img: 'https://medlatec.vn/media/211/catalog/anh-chinh-co-xuong-khop.jpg?size=600',
     imgSrcHover: 'https://medlatec.vn/media/158/catalog/specialty14-2.png?size=72',
     name: 'Cơ xương khớp',
-    content:"Bệnh cơ xương khớp không gây hậu quả nghiêm trọng, tức thời, nhưng lâu dài bệnh ảnh hưởng đến chức năng vận động của khớp, thậm chí có thể gây tàn phế nếu không được chẩn đoán sớm và điều trị kịp thời. Với mong muốn giúp người dân có một hệ vận động khỏe mạnh, chuyên Khoa Cơ xương khớp - Bệnh viện Đa khoa MEDLATEC được ra đời và chiếm niềm tin tưởng phục vụ chẩn đoán, điều trị bệnh với đông đảo khách hàng cùng người nhà bệnh nhân."
+    content:"Với mong muốn giúp người dân có một hệ vận động khỏe mạnh, chuyên Khoa Cơ xương khớp - Bệnh viện Đa khoa MEDLATEC được ra đời và chiếm niềm tin tưởng phục vụ chẩn đoán, điều trị bệnh với đông đảo khách hàng cùng người nhà bệnh nhân."
 },
 {
     id: 10,
     img: 'https://medlatec.vn/media/500/catalog/anh-chinh-chuyen-khoa-noi-than-kinh-2.jpg?size=600',
     imgSrcHover: 'https://medlatec.vn/media/501/catalog/specialty16-2-2.png?size=72',
     name: 'Thần kinh',
-    content:"Áp lực trong công việc, cuộc sống khiến nhiều người rơi vào trạng thái mệt mỏi, rối loạn giấc ngủ. Đây là nguyên nhân gây trí tuệ sa sút, giấc ngủ rối loạn (mất ngủ cấp tính hoặc mạn tính), đau đầu,… nếu không được chẩn đoán và điều trị kịp thời, khiến nặng thêm như các bệnh lý tim mạch, huyết áp, rối loạn điều chỉnh cảm xúc, suy giảm trí nhớ, suy giảm chức năng sinh lý của cơ thể. Chuyên khoa Thần kinh, Bệnh viện Đa khoa MEDLATEC là địa chỉ uy tín khám và điều trị các bệnh lý thần kinh, tâm thần với cam kết chính xác, chất lượng và đa dạng dịch vụ tiện ích."
+    content:"Chuyên khoa Thần kinh, Bệnh viện Đa khoa MEDLATEC là địa chỉ uy tín khám và điều trị các bệnh lý thần kinh, tâm thần với cam kết chính xác, chất lượng và đa dạng dịch vụ tiện ích."
 },
 {
     id: 11,
