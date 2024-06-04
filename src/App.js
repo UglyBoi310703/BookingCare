@@ -10,11 +10,9 @@ import ScrollTest from './components/Modal/UserComponent';
 import Test from './components/Modal/ServicesInformation/ServicesModal';
 import ModalTest from './components/Modal/UserComponent';
 import Register from './components/Form/Register/Register';
-
 import DoctorManagementPage from './pages/Dashboard/DoctorManagement';
 import ServiceManagementPage from './pages/Dashboard/ServiceManagementPage';
 import FacilitiesManagementPage from './pages/Dashboard/FacilityManagement';
-
 import DoctorItem from './components/DoctorPage/DoctorItem/DoctorItem';
 import MainApp from './components/ServicesPage/TestFilter';
 function App() {
