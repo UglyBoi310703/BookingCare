@@ -58,10 +58,10 @@ function Doctors() {
                     Tìm kiếm bác sĩ
                 </button>
             </div>
-            <div className="py-2 d-flex flex-column justify-content-center">
+            <div className="py-2 px-4 d-flex flex-column justify-content-center">
                 <div className="row">
                     {filteredDoctors.map((doctor) => (
-                        <Doctor key={doctor.id} doctor={doctor} />
+                        <Doctor key={doctor.id} doctor={doctor}  />
                     ))}
                 </div>
             </div>

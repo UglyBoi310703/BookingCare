@@ -21,7 +21,7 @@ export default function RegisterModal() {
             <MDBBtn className="Btn-Register NavbarLogin-Item" color="secondary " onClick={toggleOpen}>
                 ĐĂNG KÝ
             </MDBBtn>
-            <MDBModal staticBackdrop tabIndex="-1" open={staticModal} onClose={() => setStaticModal(false)}>
+            <MDBModal  tabIndex="-1" open={staticModal} onClose={() => setStaticModal(false)}>
                 <MDBModalDialog size="xl">
                     <MDBModalContent>
                         <MDBModalHeader>
