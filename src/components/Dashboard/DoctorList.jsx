@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FaEdit,FaPlus, FaStar, FaTrash } from 'react-icons/fa';
+import { FaEdit, FaPlus, FaStar, FaTrash } from 'react-icons/fa';
 import { FaTimes, FaUpload } from 'react-icons/fa';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
-
+import EditDoctorModel from './EditDoctorModel';
 
 const schema = yup.object({
     name: yup.string().required(),
@@ -111,7 +111,7 @@ function DoctorList() {
 
     return (
         <div className="container">
-        
+            <EditDoctorModel selectDoctor={selectDoctor} setSelectDoctor={setSelectDotor} />
             <div className="row product-title">
                 <div className="col-lg-12 d-flex align-items-center justify-content-between">
                     <h5>Danh sách bác sĩ</h5>
