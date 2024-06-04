@@ -113,10 +113,7 @@ function DoctorList() {
 
     return (
         <div className="container">
-<<<<<<< HEAD
-=======
             <EditDoctorModel selectDoctor={selectDoctor} setSelectDoctor={setSelectDotor} />
->>>>>>> fix-branch
             <div className="row product-title">
                 <div className="col-lg-12 d-flex align-items-center justify-content-between">
                     <h5>Danh sách bác sĩ</h5>
