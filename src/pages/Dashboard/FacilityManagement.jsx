@@ -1,5 +1,5 @@
 import React from 'react';
-import FacilitiesList from '~/components/Dashboard/FacilityList';
+import FacilitiesList from '~/components/Dashboard/FacilitiesManagement/FacilityList';
 import DashboardLayout from '~/layouts/DashboardLayout';
 
 function FacilitiesManagementPage() {

@@ -6,7 +6,7 @@ import * as yup from 'yup';
 import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
 import doctorData from '~/assets/data/DoctorData';
-import ServicesData from '../ServicesPage/ServicesData';
+import ServicesData from '../../ServicesPage/ServicesData';
 
 const schema = yup.object({
     title: yup.string().required(),
