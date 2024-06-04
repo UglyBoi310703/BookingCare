@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
+import { Modal, Button, Form, Row, Col } from 'react-bootstrap';
 import {
   MDBBtn,
   MDBModal,
@@ -9,23 +10,26 @@ import {
   MDBModalBody,
   MDBModalFooter,
 } from 'mdb-react-ui-kit';
-
+import OrderList from './OrderList/OrderList';
 export default function UserOrderListModal() {
   const [basicModal, setBasicModal] = useState(false);
 
   const toggleOpen = () => setBasicModal(!basicModal);
 
+
   return (
     <>
       <a onClick={toggleOpen}>Danh sách lịch khám </a>
       <MDBModal open={basicModal} onClose={() => setBasicModal(false)} tabIndex='-1'>
-        <MDBModalDialog>
+        <MDBModalDialog size='lg'>
           <MDBModalContent>
             <MDBModalHeader>
               <MDBModalTitle>Danh sách lịch khám</MDBModalTitle>
               <MDBBtn className='btn-close' color='none' onClick={toggleOpen}></MDBBtn>
             </MDBModalHeader>
-            <MDBModalBody>Danh sách trống </MDBModalBody>
+            <MDBModalBody> 
+            <OrderList/>
+            </MDBModalBody>
 
             <MDBModalFooter>
               <MDBBtn color='secondary' onClick={toggleOpen}>

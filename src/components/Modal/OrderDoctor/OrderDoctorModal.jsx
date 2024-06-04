@@ -10,14 +10,19 @@ import {
     MDBModalFooter,
 } from 'mdb-react-ui-kit';
 import OrderDoctorForm from '../../Form/Order/OrderDoctor';
-export default function OrderDoctorModal() {
+export default function OrderDoctorModal({Doctorname,Role}) {
     const [basicModal, setBasicModal] = useState(false);
-
-    const toggleOpen = () => setBasicModal(!basicModal);
+    const [DoctorName,setDoctorName] = useState("")
+    const [StateRole,setStateRole] = useState("")
+    const toggleOpen = () =>{
+        setBasicModal(!basicModal)
+        setStateRole(Role)
+        setDoctorName(Doctorname)
+    };
 
     return (
         <>
-            <MDBBtn className='OrderDoctor' onClick={toggleOpen}>Đặt lịch khám</MDBBtn>
+            <MDBBtn className='OrderDoctor'  onClick={toggleOpen}>Đặt lịch khám</MDBBtn>
             <MDBModal open={basicModal} onClose={() => setBasicModal(false)} tabIndex="-1">
                 <MDBModalDialog size="lg">
                     <MDBModalContent>
@@ -26,7 +31,7 @@ export default function OrderDoctorModal() {
                             <MDBBtn className="btn-close" color="none" onClick={toggleOpen}></MDBBtn>
                         </MDBModalHeader>
                         <MDBModalBody>
-                            <OrderDoctorForm />
+                            <OrderDoctorForm DoctorName={DoctorName} Role={StateRole}/>
                         </MDBModalBody>
 
                         <MDBModalFooter>

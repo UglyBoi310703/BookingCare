@@ -24,7 +24,7 @@ export default function DoctorItem({ img, name, role, vote, Description }) {
                     ))}
                 </div>
                 <div className='DoctorItem-Btn'>
-                    <OrderDoctorModal />
+                    <OrderDoctorModal Doctorname={name} Role = {role} />
                     <DoctorInformationModal img={img} name={name} role={role} Description={Description} />
                 </div>
             </MDBCardBody>

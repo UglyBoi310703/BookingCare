@@ -1,11 +1,43 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form, Row, Col } from 'react-bootstrap';
 
-const OrderDoctorForm = () => {
+const saveToLocalStorage = (formData) => {
+    let existingData = JSON.parse(localStorage.getItem('orderDoctorFormData'));
+    
+    if (!Array.isArray(existingData)) {
+        existingData = [];
+    }
+    
+    existingData.push(formData);
+    localStorage.setItem('orderDoctorFormData', JSON.stringify(existingData));
+};
+
+
+const OrderDoctorForm = ({DoctorName,Role}) => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(e.target)
+        const formData = {
+            fullName: e.target.elements.fullName.value,
+            phoneNumber: e.target.elements.phoneNumber.value,
+            dateOfBirth: e.target.elements.dateOfBirth.value,
+            email: e.target.elements.email.value,
+            gender: e.target.elements.gender.value,
+            city: e.target.elements.city.value,
+            district: e.target.elements.district.value,
+            address: e.target.elements.address.value,
+            specialty: e.target.elements.specialty.value,
+            doctor: e.target.elements.doctor.value,
+            appointmentDate: e.target.elements.appointmentDate.value,
+            appointmentTime: e.target.elements.appointmentTime.value,
+            notes: e.target.elements.notes.value,
+        };
+        saveToLocalStorage(formData);
+        console.log(formData)
+    };
     return (
         <>
-            
-                    <Form className="bg-light">
+                    <Form onSubmit={handleSubmit} className="bg-light">
                         <Row className="mb-3">
                             <Form.Group as={Col} controlId="fullName">
                                 <Form.Label>Họ và tên</Form.Label>
@@ -57,6 +89,8 @@ const OrderDoctorForm = () => {
                                 <Form.Label>Quận/Huyện</Form.Label>
                                 <Form.Control as="select" required>
                                     <option>Chọn Quận/Huyện</option>
+                                    <option>Quận Hai Bà Trưng</option>
+                                    <option>Quận Hoàng Mai</option>
                                 </Form.Control>
                             </Form.Group>
 
@@ -70,14 +104,15 @@ const OrderDoctorForm = () => {
                             <Form.Group as={Col} controlId="specialty">
                                 <Form.Label>Chuyên khoa</Form.Label>
                                 <Form.Control as="select" required>
-                                    <option>Huyết học</option>
+                                    <option>{Role}</option>
                                 </Form.Control>
                             </Form.Group>
 
-                            <Form.Group as={Col} controlId="clinic">
-                                <Form.Label>Cơ sở khám</Form.Label>
+                            <Form.Group as={Col} controlId="doctor">
+                                <Form.Label>Bác sĩ</Form.Label>
                                 <Form.Control as="select" required>
-                                    <option>Chọn cơ sở khám</option>
+                                   <option>{DoctorName}</option>
+                                  
                                 </Form.Control>
                             </Form.Group>
                         </Row>
