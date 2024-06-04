@@ -47,9 +47,9 @@ function handleMouseOver(event) {
                     <MDBNavbarLink onMouseOver={handleMouseOver} className="Nav-Link4" href="/Facility">
                         Cơ sở vật chất
                     </MDBNavbarLink>
-                    {/* <MDBNavbarLink onMouseOver={handleMouseOver} className="Nav-Link5" href="/">
+                    <MDBNavbarLink onMouseOver={handleMouseOver} className="Nav-Link5" href="/MedicalSpecialties">
                         Chuyên khoa y tế
-                    </MDBNavbarLink> */}
+                    </MDBNavbarLink>
                     <div className="animation1 start-home" id="BlockActive"></div>
                 </div>
             </MDBNavbarNav>

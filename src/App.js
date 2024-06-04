@@ -15,11 +15,11 @@ import DoctorItem from './components/DoctorPage/DoctorItem/DoctorItem';
 import MainApp from './components/ServicesPage/TestFilter';
 import DoctorList from './components/Dashboard/DoctorList';
 import Menu from './components/Dashboard/Menu/Menu';
-
+import MedicalSpecialtiesPage from './components/SpecialtiesPage/MedicalSpecialtiesPage';
 import DoctorManagementPage from './pages/Dashboard/DoctorManagement';
 import ServiceManagementPage from './pages/Dashboard/ServiceManagementPage';
 import FacilitiesManagementPage from './pages/Dashboard/FacilityManagement';
-import HeaderDefault from './components/Header/HeaderDefault';
+import MedicalSpecial from './pages/Home/MedicalSpecialties';
 function App() {
     return (
         <>
@@ -32,7 +32,7 @@ function App() {
                 <Route path="/Dashboard/Doctor" element={<DoctorManagementPage />} />
                 <Route path="/Dashboard/Facilities" element={<FacilitiesManagementPage />} />
                 <Route path="/Dashboard/Service" element={<ServiceManagementPage />} />
-                <Route path="/Test" element={<HeaderDefault />} />
+                <Route path="/MedicalSpecialties" element={<MedicalSpecial />} />
             </Routes>
         </>
     );

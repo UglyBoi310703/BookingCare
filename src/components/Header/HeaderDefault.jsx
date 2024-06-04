@@ -21,7 +21,6 @@ function HeaderDefault({ openNav }) {
                 <img src="https://medlatec.vn/media/115/content/logo-pc.png" />
             </MDBNavbarBrand>
             <Search />
-          
             <NavbarInformation />
            <a href='/'><img src='https://medlatec.vn/med/images/logo-mobile.png'/></a>
         </MDBContainer>

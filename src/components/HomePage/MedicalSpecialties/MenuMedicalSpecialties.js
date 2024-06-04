@@ -16,13 +16,13 @@ const menuMedicalSpecialties = [
         id: 1,
         imgSrcMain: 'https://medlatec.vn/media/418/catalog/specialty13-1.png?size=72',
         imgSrcHover: 'https://medlatec.vn/media/156/catalog/service6-2.png?size=68',
-        titile: 'Chuẩn đoán hình ảnh',
+        titile: 'Chẩn đoán hình ảnh',
     },
     {
         id: 2,
-        imgSrcMain: 'https://medlatec.vn/media/479/catalog/specialty6-1-1.png?size=72',
-        imgSrcHover: 'https://medlatec.vn/media/477/catalog/specialty6-2-1.png?size=72',
-        titile: 'Khoa ngoại',
+        imgSrcMain: 'https://medlatec.vn/media/369/catalog/specialty7-1.png?size=72',
+        imgSrcHover: 'https://medlatec.vn/media/144/catalog/specialty7-2.png?size=72',
+        titile: 'Tiêu hóa',
     },
     {
         id: 3,
@@ -47,6 +47,42 @@ const menuMedicalSpecialties = [
         imgSrcMain: 'https://medlatec.vn/media/372/catalog/specialty10-1.png?size=72',
         imgSrcHover: 'https://medlatec.vn/media/150/catalog/specialty10-2.png?size=72',
         titile: 'Tim mạch',
+    },
+    {
+        id: 7,
+        imgSrcMain: 'https://medlatec.vn/media/466/catalog/specialty1-1-2.png?size=72',
+        imgSrcHover: 'https://medlatec.vn/media/464/catalog/speciality1-2-3.png?size=68',
+        titile: 'Chuyên khoa nội',
+    },
+    {
+        id: 8,
+        imgSrcMain: 'https://medlatec.vn/media/472/catalog/specialty5-1-1.png?size=72',
+        imgSrcHover: 'https://medlatec.vn/media/470/catalog/service2-2-1.png?size=68',
+        titile: 'Xét nghiệm',
+    },
+    {
+        id: 9,
+        imgSrcMain: 'https://medlatec.vn/media/258/catalog/specialty2-1.png?size=72',
+        imgSrcHover: 'https://medlatec.vn/media/134/catalog/speciality2-2.png?size=68',
+        titile: 'Ung bướu',
+    },
+    {
+        id: 10,
+        imgSrcMain: 'https://medlatec.vn/media/369/catalog/specialty7-1.png?size=72',
+        imgSrcHover: 'https://medlatec.vn/media/144/catalog/specialty7-2.png?size=72',
+        titile: 'Tiêu hóa',
+    },
+    {
+        id: 11,
+        imgSrcMain: 'https://medlatec.vn/media/378/catalog/specialty18-1.png?size=72',
+        imgSrcHover: 'https://medlatec.vn/media/166/catalog/specialty18-2.png?size=72',
+        titile: 'Răng hàm mặt',
+    },
+    {
+        id: 12,
+        imgSrcMain: 'https://medlatec.vn/media/508/catalog/specialty9-1-1.png?size=72',
+        imgSrcHover: 'https://medlatec.vn/media/506/catalog/specialty9-2-1.png?size=72',
+        titile: 'Mắt',
     },
 ];
 
