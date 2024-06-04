@@ -38,9 +38,11 @@
         "react-scroll": "^1.9.0",
         "react-scroll-component": "^0.6.7",
         "react-slick": "^0.30.2",
+        "react-toastify": "^10.0.5",
         "slick-carousel": "^1.8.1",
         "styled-components": "^6.1.11",
         "sweetalert2": "^11.11.0",
+        "uuid": "^9.0.1",
         "web-vitals": "^2.1.4",
         "yup": "^1.4.0"
     },

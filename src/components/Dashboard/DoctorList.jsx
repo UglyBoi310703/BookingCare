@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FaEdit,FaPlus, FaStar, FaTrash } from 'react-icons/fa';
+import { FaEdit, FaPlus, FaStar, FaTrash } from 'react-icons/fa';
 import { FaTimes, FaUpload } from 'react-icons/fa';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
-
+import EditDoctorModel from './EditDoctorModel';
 
 const schema = yup.object({
     name: yup.string().required(),
@@ -78,7 +78,9 @@ function DoctorList() {
     };
 
     const handleSelectDoctor = (doctor) => {
-        setSelectDotor(doctor);
+        console.log(1);
+        // setSelectDotor(doctor);
+        // console.log(selectDoctor);
     };
 
     const handleRemoveDoctor = (doctor) => {
@@ -111,7 +113,10 @@ function DoctorList() {
 
     return (
         <div className="container">
-        
+<<<<<<< HEAD
+=======
+            <EditDoctorModel selectDoctor={selectDoctor} setSelectDoctor={setSelectDotor} />
+>>>>>>> fix-branch
             <div className="row product-title">
                 <div className="col-lg-12 d-flex align-items-center justify-content-between">
                     <h5>Danh sách bác sĩ</h5>
@@ -307,11 +312,6 @@ function DoctorList() {
                                 </td>
                                 <td className="text-center align-middle">
                                     <div className="d-flex align-items-center justify-content-center">
-                                        <FaEdit
-                                            className="text-success me-1"
-                                            role="button"
-                                            onClick={() => handleSelectDoctor(doctor)}
-                                        />
                                         <FaTrash
                                             className="text-danger"
                                             role="button"

@@ -20,8 +20,6 @@ import DoctorManagementPage from './pages/Dashboard/DoctorManagement';
 import ServiceManagementPage from './pages/Dashboard/ServiceManagementPage';
 import FacilitiesManagementPage from './pages/Dashboard/FacilityManagement';
 
-
-
 function App() {
     return (
         <>
