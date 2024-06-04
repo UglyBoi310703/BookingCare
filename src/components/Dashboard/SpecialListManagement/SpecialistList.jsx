@@ -6,8 +6,11 @@ import * as yup from 'yup';
 import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
 import axios from 'axios';
+
 import { v4 as uuidv4 } from 'uuid';
 import EditSpecialistModel from './EditSpecialistModel';
+import MedicalSpecialtiesPageData from '~/components/SpecialtiesPage/MedicalSpecialtiesPageData';
+
 const schema = yup.object({
     name: yup.string().required('tên là trường bắt buộc'),
     content: yup.string().required('nội dung là trường bắt buộc'),
@@ -262,7 +265,7 @@ function SpecialistList() {
                         <tr>
                             <th className="text-center">Ảnh</th>
                             <th className="text-start">Tên chuyên khoa</th>
-                            <th className="text-start">Nội dung</th>
+                            <th className="text-center">Nội dung</th>
                             <th className="text-start">Action</th>
                         </tr>
                     </thead>
@@ -270,7 +273,7 @@ function SpecialistList() {
                         {filteredSpecialists.map((Specialist) => (
                             <tr key={Specialist.id}>
                                 <td className="text-start align-middle" style={{ minWidth: '250px' }}>
-                                    <div className="d-flex align-items-center">
+                                    <div className="d-flex align-items-center justify-content-center">
                                         <img style={{ width: '50px' }} src={Specialist.img} alt="" />
                                     </div>
                                 </td>
@@ -295,7 +298,6 @@ function SpecialistList() {
                         ))}
                     </tbody>
                 </table>
-                <div className="d-flex align-items-center justify-content-between"></div>
             </div>
         </div>
     );
