@@ -8,15 +8,15 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 
 const schema = yup.object({
-    name: yup.string().required('Tên là trường bắt buộc'),
-    role: yup.string().required('Chuyên khoa là trường bắt buộc'),
-    academic_rank: yup.string().required('Học hàm là trường bắt buộc'),
-    degree: yup.string().required('Học vị là trường bắt buộc'),
-    img: yup.string().required(),
+    name: yup.string().required('tên là trường bắt buộc'),
+    price: yup.number().required('Giá tiền là trường bắt buộc').positive().typeError('Giá tiền là trường bắt buộc'),
+    gender: yup.string().required('Giới tính là trường bắt buộc'),
+    location: yup.string().required('địa chỉ là trường bắt buộc'),
+    age: yup.string().required('Tuổi là trường bắt buộc'),
 });
 
-function EditDoctorModel({ selectDoctor, setSelectDoctor, setDoctorData }) {
-    const [currentDoctor, setCurrentDoctor] = useState({});
+function EditServiceModel({ selectService, setSelectService, setServiceData }) {
+    const [currentService, setCurrentService] = useState({});
     const [temporaryChangePhoto, setTemporaryChangePhoto] = useState();
     const [selectedNewPhoto, setSelectedNewPhoto] = useState();
     const [reUploading, setReUploading] = useState(false);
@@ -33,32 +33,33 @@ function EditDoctorModel({ selectDoctor, setSelectDoctor, setDoctorData }) {
     });
 
     useEffect(() => {
-        if (selectDoctor?.id) {
-            const doctor = selectDoctor;
-            setCurrentDoctor(doctor);
-            setValue('name', doctor.name);
-            setValue('role', doctor.role);
-            setValue('academic_rank', doctor.academic_rank);
-            setValue('degree', doctor.degree);
-            setValue('img', doctor.img);
+        if (selectService?.id) {
+            const Service = selectService;
+            setCurrentService(Service);
+            setValue('name', Service.name);
+            setValue('price', Service.price);
+            setValue('gender', Service.gender);
+            setValue('age', Service.age);
+            setValue('location', Service.location);
+            setValue('DescriptionTitle', Service.DescriptionTitle);
         }
-    }, [selectDoctor, setValue]);
+    }, [selectService, setValue]);
 
     const handleCloseEditModel = () => {
-        setSelectDoctor({});
+        setSelectService({});
         reset();
         setSelectedNewPhoto();
         setTemporaryChangePhoto();
     };
 
-    const handleSaveDoctor = (data) => {
+    const handleSaveService = (data) => {
         const isDataChanged =
-            data.name !== currentDoctor.name ||
-            data.role !== currentDoctor.role ||
-            data.academic_rank !== currentDoctor.academic_rank ||
-            data.degree !== currentDoctor.degree ||
-            data.img !== currentDoctor.img;
-        console.log(data.img !== currentDoctor.img);
+            data.name !== currentService.name ||
+            data.price !== currentService.price ||
+            data.age !== currentService.age ||
+            data.gender !== currentService.gender ||
+            data.DescriptionTitle !== currentService.DescriptionTitle ||
+            data.img !== currentService.img;
 
         if (!isDataChanged) {
             Swal.fire({
@@ -75,31 +76,30 @@ function EditDoctorModel({ selectDoctor, setSelectDoctor, setDoctorData }) {
             return;
         }
         Swal.fire({
-            title: 'Confirm remove doctor',
-            text: `Bạn có chắc chắn muốn sửa thông tin bác sĩ: ${data.name}?`,
+            title: 'Confirm remove Service',
+            text: `Bạn có chắc chắn muốn sửa thông tin dịch vụ: ${data.name}?`,
             showCancelButton: true,
             confirmButtonColor: '#d33',
         }).then((result) => {
             if (result.isConfirmed) {
-                let editDoctor = {
-                    ...currentDoctor,
+                let editService = {
+                    ...currentService,
                     ...data,
                 };
-                console.log(editDoctor);
+                console.log(editService);
 
-                let doctorData = JSON.parse(localStorage.getItem('doctorData')) || [];
+                let ServiceData = JSON.parse(localStorage.getItem('ServiceData')) || [];
 
-                const doctorIndex = doctorData.findIndex((doctor) => doctor.id === editDoctor.id);
-                console.log(doctorIndex);
+                const ServiceIndex = ServiceData.findIndex((Service) => Service.id === editService.id);
 
-                if (doctorIndex !== -1) {
-                    doctorData[doctorIndex] = editDoctor;
+                if (ServiceIndex !== -1) {
+                    ServiceData[ServiceIndex] = editService;
                 } else {
-                    doctorData.push(editDoctor);
+                    ServiceData.push(editService);
                 }
-                localStorage.setItem('doctorData', JSON.stringify(doctorData));
-                toast.success(`Thông tin bác sĩ ${data.name} đã được sửa thành công`);
-                setSelectDoctor({});
+                localStorage.setItem('ServiceData', JSON.stringify(ServiceData));
+                toast.success(`Thông tin dịch vụ ${data.name} đã được sửa thành công`);
+                setSelectService({});
                 window.location.reload();
             }
         });
@@ -136,12 +136,12 @@ function EditDoctorModel({ selectDoctor, setSelectDoctor, setDoctorData }) {
 
     return (
         <>
-            <div className="modal fade show" style={{ display: selectDoctor?.id ? 'block' : 'none' }}>
+            <div className="modal fade show" style={{ display: selectService?.id ? 'block' : 'none' }}>
                 <div className="modal-dialog modal-lg">
                     <div className="modal-content">
-                        <form onSubmit={handleSubmit(handleSaveDoctor)}>
+                        <form onSubmit={handleSubmit(handleSaveService)}>
                             <div className="modal-header">
-                                <h5 className="modal-title">Modify Doctor</h5>
+                                <h5 className="modal-title">Modify Service</h5>
                                 <button type="button" className="btn-close" onClick={handleCloseEditModel} />
                             </div>
                             <div className="modal-body">
@@ -149,93 +149,75 @@ function EditDoctorModel({ selectDoctor, setSelectDoctor, setDoctorData }) {
                                     <div className="row">
                                         <div className="col-md-4">
                                             <div className="form-group mb-4">
-                                                <label className="form-label">Tên bác sĩ</label>
+                                                <label className="form-label">Tên dịch vụ</label>
                                                 <input
                                                     type="text"
                                                     className={`form-control form-control-sm ${
                                                         errors?.name?.message ? 'is-invalid' : ''
                                                     }`}
-                                                    placeholder="Doctor Name"
+                                                    placeholder="Service Name"
                                                     {...register('name')}
                                                 />
                                                 <span className="invalid-feedback">{errors?.name?.message}</span>
                                             </div>
-                                            <div className="form-group mb-3">
-                                                <label className="form-label">Chuyên khoa</label>
-                                                <select
-                                                    className={`form-select form-select-sm form-control-sm ${
-                                                        errors?.degree?.message ? 'is-invalid' : ''
+                                            <div className="form-group mb-4">
+                                                <label className="form-label">Giá tiền(đ)</label>
+                                                <input
+                                                    type="number"
+                                                    className={`form-control form-control-sm ${
+                                                        errors?.price?.message ? 'is-invalid' : ''
                                                     }`}
-                                                    defaultValue={''}
-                                                    {...register('role')}
-                                                >
-                                                    <option value={''} disabled>
-                                                        Chọn chuyên khoa
-                                                    </option>
-                                                    <option value={'Chuyên khoa - Tiêu hóa'}>Tiêu hóa</option>
-                                                    <option value={'Chuyên khoa - Chẩn đoán hình ảnh'}>
-                                                        Chẩn đoán hình ảnh
-                                                    </option>
-                                                    <option value={'Chuyên khoa - Tiêu hóa'}>Xương khớp</option>
-                                                    <option value={'Chuyên khoa - Thần kinh'}>Thần kinh</option>
-                                                    <option value={'Chuyên khoa - Nội tiết'}>Nội tiết</option>
-                                                    <option value={'Chuyên khoa - Tim mạch'}>Tim mạch</option>
-                                                    <option value={'Chuyên khoa - Chuyên khoa nội'}>
-                                                        Chuyên khoa nội
-                                                    </option>
-                                                    <option value={'Chuyên khoa - Xét nghiệm'}>Xét nghiệm</option>
-                                                    <option value={'Chuyên khoa - Ung bướu'}>Ung bướu</option>
-                                                    <option value={'Chuyên khoa - Mắt'}>Mắt</option>
-                                                    <option value={'Chuyên khoa - Tai mũi họng'}>Tai mũi họng</option>
-                                                    <option value={'Chuyên khoa - Răng hàm mặt'}>Răng hàm mặt</option>
-                                                </select>
-                                                <span className="invalid-feedback">{errors?.degree?.message}</span>
+                                                    placeholder="Giá tiền"
+                                                    {...register('price')}
+                                                />
+                                                <span className="invalid-feedback">{errors?.price?.message}</span>
                                             </div>
-                                            <div className="form-group mb-2">
-                                                <label className="form-label">Học hàm</label>
-                                                <select
-                                                    className={`form-select form-select-sm ${
-                                                        errors?.academic_rank?.message ? 'is-invalid' : ''
+                                            <div className="form-group mb-4">
+                                                <label className="form-label">Giới tính</label>
+                                                <input
+                                                    type="text"
+                                                    className={`form-control form-control-sm ${
+                                                        errors?.gender?.message ? 'is-invalid' : ''
                                                     }`}
-                                                    defaultValue={''}
-                                                    {...register('academic_rank')}
-                                                >
-                                                    <option value={''} disabled>
-                                                        Select Academic Rank
-                                                    </option>
-                                                    <option value={'Giáo sư'}>Giáo sư</option>
-                                                    <option value={'Phó giáo sư'}>Phó giáo sư</option>
-                                                </select>
-                                                <span className="invalid-feedback">
-                                                    {errors?.academic_rank?.message}
-                                                </span>
+                                                    placeholder="Giới tính"
+                                                    {...register('gender')}
+                                                />
+                                                <span className="invalid-feedback">{errors?.gender?.message}</span>
                                             </div>
                                         </div>
                                         <div className="col-md-4">
-                                            <div className="form-group mb-3">
-                                                <label className="form-label">Học vị</label>
-                                                <select
-                                                    className={`form-select form-select-sm ${
-                                                        errors?.degree?.message ? 'is-invalid' : ''
+                                            <div className="form-group mb-4">
+                                                <label className="form-label">Tuổi</label>
+                                                <input
+                                                    type="text"
+                                                    className={`form-control form-control-sm ${
+                                                        errors?.age?.message ? 'is-invalid' : ''
                                                     }`}
-                                                    defaultValue={''}
-                                                    {...register('degree')}
-                                                >
-                                                    <option value={''} disabled>
-                                                        Chọn học vị
-                                                    </option>
-                                                    <option value={'Bác sĩ nội trú'}>Bác sĩ nội trú</option>
-                                                    <option value={'Tiến sĩ'}>Tiến sĩ</option>
-                                                    <option value={'Thạc sĩ'}>Thạc sĩ</option>
-                                                </select>
-                                                <span className="invalid-feedback">{errors?.degree?.message}</span>
+                                                    placeholder="Tuổi"
+                                                    {...register('age')}
+                                                />
+                                                <span className="invalid-feedback">{errors?.age?.message}</span>
+                                            </div>
+                                            <div className="form-group mb-4">
+                                                <label className="form-label">Mô tả tiêu đề</label>
+                                                <textarea
+                                                    type="number"
+                                                    className={`form-control form-control-sm ${
+                                                        errors?.DescriptionTitle?.message ? 'is-invalid' : ''
+                                                    }`}
+                                                    placeholder="Mô tả tiêu đề"
+                                                    {...register('DescriptionTitle')}
+                                                />
+                                                <span className="invalid-feedback">
+                                                    {errors?.DescriptionTitle?.message}
+                                                </span>
                                             </div>
                                         </div>
                                         <div className="col-md-4">
                                             <div className="border-dashed d-flex flex-column align-items-center justify-content-between w-100 h-100">
                                                 <img
                                                     style={{ maxWidth: '90%', maxHeight: '70%' }}
-                                                    src={temporaryChangePhoto || currentDoctor?.img}
+                                                    src={temporaryChangePhoto || currentService?.img}
                                                     alt=""
                                                 />
                                                 <div className="d-flex align-items-center justify-content-between">
@@ -295,4 +277,4 @@ function EditDoctorModel({ selectDoctor, setSelectDoctor, setDoctorData }) {
     );
 }
 
-export default EditDoctorModel;
+export default EditServiceModel;

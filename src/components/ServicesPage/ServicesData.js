@@ -10,13 +10,16 @@ const ServicesData = [
         age: '0+',
         location: 'Hà Nội',
         DescriptionTitle: '',
-        Description(){
+        Description() {
             return (
-                <div >
-                    <h2>Mô tả</h2>
-        * Địa điểm áp dụng: Tại các Bệnh viện phòng khám và Các đơn vị lấy mẫu tại nhà trên địa bàn Hà Nội<br></br>* Thời gian áp dụng: Từ ngày 01/4/2023 đến 31/12/2024<br/>* Ý nghĩa gói khám:<br/>- Các xét nghiệm đánh giá tình trạng sức khỏe của người bệnh trong quá trình theo dõi và điều trị sốt xuất huyết tại nhà để có thái độ xử trí phù hợp
-    </div>
-            )
+                <div>
+                    <h2>Mô tả</h2>* Địa điểm áp dụng: Tại các Bệnh viện phòng khám và Các đơn vị lấy mẫu tại nhà trên
+                    địa bàn Hà Nội<br></br>* Thời gian áp dụng: Từ ngày 01/4/2023 đến 31/12/2024
+                    <br />* Ý nghĩa gói khám:
+                    <br />- Các xét nghiệm đánh giá tình trạng sức khỏe của người bệnh trong quá trình theo dõi và điều
+                    trị sốt xuất huyết tại nhà để có thái độ xử trí phù hợp
+                </div>
+            );
         },
     },
     {
@@ -28,13 +31,21 @@ const ServicesData = [
         age: '0+',
         location: 'Hà Nội',
         DescriptionTitle: '',
-        Description(){
+        Description() {
             return (
-                <div >
+                <div>
                     <h2>Mô tả</h2>
-                    * Địa điểm áp dụng: Tại các Bệnh viện phòng khám và Các đơn vị lấy mẫu tại nhà trên địa bàn Hà Nội<br/>* Thời gian áp dụng: Từ ngày 01/4/2023 đến 31/12/2024<br/>* Ý nghĩa gói khám:<br/>- Các xét nghiệm đánh giá tình trạng sức khỏe của người bệnh để có thái độ xử trí phù hợp<br/>- Các xét nghiệm xác định tác nhân thường gặp có thể phát hiện được kể từ mốc 24h (sau sốt- hạn chế nguy cơ âm tính giả), gồm:<br/>+ Sốt XH Dengue: Test Dengue NS1/IgM/IgG,&nbsp;<br/>&nbsp;
+                    * Địa điểm áp dụng: Tại các Bệnh viện phòng khám và Các đơn vị lấy mẫu tại nhà trên địa bàn Hà Nội
+                    <br />* Thời gian áp dụng: Từ ngày 01/4/2023 đến 31/12/2024
+                    <br />* Ý nghĩa gói khám:
+                    <br />- Các xét nghiệm đánh giá tình trạng sức khỏe của người bệnh để có thái độ xử trí phù hợp
+                    <br />- Các xét nghiệm xác định tác nhân thường gặp có thể phát hiện được kể từ mốc 24h (sau sốt-
+                    hạn chế nguy cơ âm tính giả), gồm:
+                    <br />+ Sốt XH Dengue: Test Dengue NS1/IgM/IgG,&nbsp;
+                    <br />
+                    &nbsp;
                 </div>
-            )
+            );
         },
     },
     {
@@ -46,13 +57,21 @@ const ServicesData = [
         age: '0+',
         location: 'Hà Nội',
         DescriptionTitle: '',
-        Description(){
+        Description() {
             return (
-                <div >
+                <div>
                     <h2>Mô tả</h2>
-                    * Địa điểm áp dụng: Tại các Bệnh viện phòng khám và Các đơn vị lấy mẫu tại nhà trên địa bàn Hà Nội<br/>* Thời gian áp dụng: Từ ngày 01/4/2023 đến 31/12/2024<br/>* Ý nghĩa gói khám:<br/>- Các xét nghiệm đánh giá tình trạng sức khỏe của người bệnh để có thái độ xử trí phù hợp<br/>- Các xét nghiệm xác định tác nhân thường gặp có thể phát hiện được kể từ mốc 24h (sau sốt- hạn chế nguy cơ âm tính giả), gồm:<br/>+ Sốt XH Dengue: Test Dengue NS1/IgM/IgG,&nbsp;<br/>&nbsp;
+                    * Địa điểm áp dụng: Tại các Bệnh viện phòng khám và Các đơn vị lấy mẫu tại nhà trên địa bàn Hà Nội
+                    <br />* Thời gian áp dụng: Từ ngày 01/4/2023 đến 31/12/2024
+                    <br />* Ý nghĩa gói khám:
+                    <br />- Các xét nghiệm đánh giá tình trạng sức khỏe của người bệnh để có thái độ xử trí phù hợp
+                    <br />- Các xét nghiệm xác định tác nhân thường gặp có thể phát hiện được kể từ mốc 24h (sau sốt-
+                    hạn chế nguy cơ âm tính giả), gồm:
+                    <br />+ Sốt XH Dengue: Test Dengue NS1/IgM/IgG,&nbsp;
+                    <br />
+                    &nbsp;
                 </div>
-            )
+            );
         },
     },
     {
@@ -64,13 +83,21 @@ const ServicesData = [
         age: '0+',
         location: 'Hà Nội',
         DescriptionTitle: '',
-        Description(){
+        Description() {
             return (
-                <div >
+                <div>
                     <h2>Mô tả</h2>
-                    * Địa điểm áp dụng: Tại các Bệnh viện phòng khám và Các đơn vị lấy mẫu tại nhà trên địa bàn Hà Nội<br/>* Thời gian áp dụng: Từ ngày 01/4/2023 đến 31/12/2024<br/>* Ý nghĩa gói khám:<br/>- Các xét nghiệm đánh giá tình trạng sức khỏe của người bệnh để có thái độ xử trí phù hợp<br/>- Các xét nghiệm xác định tác nhân thường gặp có thể phát hiện được kể từ mốc 24h (sau sốt- hạn chế nguy cơ âm tính giả), gồm:<br/>+ Sốt XH Dengue: Test Dengue NS1/IgM/IgG,&nbsp;<br/>&nbsp;
+                    * Địa điểm áp dụng: Tại các Bệnh viện phòng khám và Các đơn vị lấy mẫu tại nhà trên địa bàn Hà Nội
+                    <br />* Thời gian áp dụng: Từ ngày 01/4/2023 đến 31/12/2024
+                    <br />* Ý nghĩa gói khám:
+                    <br />- Các xét nghiệm đánh giá tình trạng sức khỏe của người bệnh để có thái độ xử trí phù hợp
+                    <br />- Các xét nghiệm xác định tác nhân thường gặp có thể phát hiện được kể từ mốc 24h (sau sốt-
+                    hạn chế nguy cơ âm tính giả), gồm:
+                    <br />+ Sốt XH Dengue: Test Dengue NS1/IgM/IgG,&nbsp;
+                    <br />
+                    &nbsp;
                 </div>
-            )
+            );
         },
     },
     {
@@ -82,10 +109,13 @@ const ServicesData = [
         age: '0+',
         location: 'Hà Nội',
         DescriptionTitle: '',
-        Description: ()=> (
-            <div >
-                    
-            * Địa điểm áp dụng: Tại các Bệnh viện phòng khám và Các đơn vị lấy mẫu tại nhà trên địa bàn Hà Nội<br></br>* Thời gian áp dụng: Từ ngày 01/4/2023 đến 31/12/2024<br/>* Ý nghĩa gói khám:<br/>- Các xét nghiệm đánh giá tình trạng sức khỏe của người bệnh trong quá trình theo dõi và điều trị sốt xuất huyết tại nhà để có thái độ xử trí phù hợp
+        Description: () => (
+            <div>
+                * Địa điểm áp dụng: Tại các Bệnh viện phòng khám và Các đơn vị lấy mẫu tại nhà trên địa bàn Hà Nội
+                <br></br>* Thời gian áp dụng: Từ ngày 01/4/2023 đến 31/12/2024
+                <br />* Ý nghĩa gói khám:
+                <br />- Các xét nghiệm đánh giá tình trạng sức khỏe của người bệnh trong quá trình theo dõi và điều trị
+                sốt xuất huyết tại nhà để có thái độ xử trí phù hợp
             </div>
         ),
     },
@@ -98,13 +128,42 @@ const ServicesData = [
         age: '0-16',
         location: 'Hà Nội',
         DescriptionTitle: '',
-        Description(){
+        Description() {
             return (
-                <div >
-                <h2>Mô tả</h2>
-                <strong>Địa điểm áp dụng:</strong><em>&nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội</em><br/><strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em><br/><strong>** Gói xét nghiệm bao gồm:</strong><p><em>- Phát hiện sớm các bệnh lý ung thư thường gặp của nam<br/>- Đánh giá bệnh lý về máu<br/>- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển hoá: đái tháo đường, rối loạn lipid máu, gút,...<br/>- Kiểm tra nồng độ Sắt,<br/>- Sàng lọc viêm gan Virus B- C,<br/>- Đo tải lượng kháng thể VGB)<br/>- Đánh giá chức năng tuyến giáp</em><br/><strong>***Khuyến cáo:</strong><br/><em>- Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).<br/>-Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.</em></p>
-            </div>
-            )
+                <div>
+                    <h2>Mô tả</h2>
+                    <strong>Địa điểm áp dụng:</strong>
+                    <em>
+                        &nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội
+                    </em>
+                    <br />
+                    <strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em>
+                    <br />
+                    <strong>** Gói xét nghiệm bao gồm:</strong>
+                    <p>
+                        <em>
+                            - Phát hiện sớm các bệnh lý ung thư thường gặp của nam
+                            <br />- Đánh giá bệnh lý về máu
+                            <br />- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển
+                            hoá: đái tháo đường, rối loạn lipid máu, gút,...
+                            <br />- Kiểm tra nồng độ Sắt,
+                            <br />- Sàng lọc viêm gan Virus B- C,
+                            <br />- Đo tải lượng kháng thể VGB)
+                            <br />- Đánh giá chức năng tuyến giáp
+                        </em>
+                        <br />
+                        <strong>***Khuyến cáo:</strong>
+                        <br />
+                        <em>
+                            - Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).
+                            <br />
+                            -Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết
+                            quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại
+                            trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.
+                        </em>
+                    </p>
+                </div>
+            );
         },
     },
     {
@@ -116,13 +175,42 @@ const ServicesData = [
         age: '16+',
         location: 'Hà Nội',
         DescriptionTitle: '',
-        Description(){
+        Description() {
             return (
-                <div >
-                <h2>Mô tả</h2>
-                <strong>Địa điểm áp dụng:</strong><em>&nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội</em><br/><strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em><br/><strong>** Gói xét nghiệm bao gồm:</strong><p><em>- Phát hiện sớm các bệnh lý ung thư thường gặp của nam<br/>- Đánh giá bệnh lý về máu<br/>- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển hoá: đái tháo đường, rối loạn lipid máu, gút,...<br/>- Kiểm tra nồng độ Sắt,<br/>- Sàng lọc viêm gan Virus B- C,<br/>- Đo tải lượng kháng thể VGB)<br/>- Đánh giá chức năng tuyến giáp</em><br/><strong>***Khuyến cáo:</strong><br/><em>- Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).<br/>-Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.</em></p>
-            </div>
-            )
+                <div>
+                    <h2>Mô tả</h2>
+                    <strong>Địa điểm áp dụng:</strong>
+                    <em>
+                        &nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội
+                    </em>
+                    <br />
+                    <strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em>
+                    <br />
+                    <strong>** Gói xét nghiệm bao gồm:</strong>
+                    <p>
+                        <em>
+                            - Phát hiện sớm các bệnh lý ung thư thường gặp của nam
+                            <br />- Đánh giá bệnh lý về máu
+                            <br />- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển
+                            hoá: đái tháo đường, rối loạn lipid máu, gút,...
+                            <br />- Kiểm tra nồng độ Sắt,
+                            <br />- Sàng lọc viêm gan Virus B- C,
+                            <br />- Đo tải lượng kháng thể VGB)
+                            <br />- Đánh giá chức năng tuyến giáp
+                        </em>
+                        <br />
+                        <strong>***Khuyến cáo:</strong>
+                        <br />
+                        <em>
+                            - Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).
+                            <br />
+                            -Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết
+                            quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại
+                            trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.
+                        </em>
+                    </p>
+                </div>
+            );
         },
     },
     {
@@ -134,13 +222,42 @@ const ServicesData = [
         age: '16+',
         location: 'Hà Nội',
         DescriptionTitle: '',
-        Description(){
+        Description() {
             return (
-                <div >
-                <h2>Mô tả</h2>
-                <strong>Địa điểm áp dụng:</strong><em>&nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội</em><br/><strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em><br/><strong>** Gói xét nghiệm bao gồm:</strong><p><em>- Phát hiện sớm các bệnh lý ung thư thường gặp của nam<br/>- Đánh giá bệnh lý về máu<br/>- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển hoá: đái tháo đường, rối loạn lipid máu, gút,...<br/>- Kiểm tra nồng độ Sắt,<br/>- Sàng lọc viêm gan Virus B- C,<br/>- Đo tải lượng kháng thể VGB)<br/>- Đánh giá chức năng tuyến giáp</em><br/><strong>***Khuyến cáo:</strong><br/><em>- Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).<br/>-Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.</em></p>
-            </div>
-            )
+                <div>
+                    <h2>Mô tả</h2>
+                    <strong>Địa điểm áp dụng:</strong>
+                    <em>
+                        &nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội
+                    </em>
+                    <br />
+                    <strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em>
+                    <br />
+                    <strong>** Gói xét nghiệm bao gồm:</strong>
+                    <p>
+                        <em>
+                            - Phát hiện sớm các bệnh lý ung thư thường gặp của nam
+                            <br />- Đánh giá bệnh lý về máu
+                            <br />- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển
+                            hoá: đái tháo đường, rối loạn lipid máu, gút,...
+                            <br />- Kiểm tra nồng độ Sắt,
+                            <br />- Sàng lọc viêm gan Virus B- C,
+                            <br />- Đo tải lượng kháng thể VGB)
+                            <br />- Đánh giá chức năng tuyến giáp
+                        </em>
+                        <br />
+                        <strong>***Khuyến cáo:</strong>
+                        <br />
+                        <em>
+                            - Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).
+                            <br />
+                            -Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết
+                            quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại
+                            trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.
+                        </em>
+                    </p>
+                </div>
+            );
         },
     },
     {
@@ -152,13 +269,42 @@ const ServicesData = [
         age: '16+',
         location: 'Hà Nội',
         DescriptionTitle: '',
-        Description(){
+        Description() {
             return (
-                <div >
-                <h2>Mô tả</h2>
-                <strong>Địa điểm áp dụng:</strong><em>&nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội</em><br/><strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em><br/><strong>** Gói xét nghiệm bao gồm:</strong><p><em>- Phát hiện sớm các bệnh lý ung thư thường gặp của nam<br/>- Đánh giá bệnh lý về máu<br/>- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển hoá: đái tháo đường, rối loạn lipid máu, gút,...<br/>- Kiểm tra nồng độ Sắt,<br/>- Sàng lọc viêm gan Virus B- C,<br/>- Đo tải lượng kháng thể VGB)<br/>- Đánh giá chức năng tuyến giáp</em><br/><strong>***Khuyến cáo:</strong><br/><em>- Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).<br/>-Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.</em></p>
-            </div>
-            )
+                <div>
+                    <h2>Mô tả</h2>
+                    <strong>Địa điểm áp dụng:</strong>
+                    <em>
+                        &nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội
+                    </em>
+                    <br />
+                    <strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em>
+                    <br />
+                    <strong>** Gói xét nghiệm bao gồm:</strong>
+                    <p>
+                        <em>
+                            - Phát hiện sớm các bệnh lý ung thư thường gặp của nam
+                            <br />- Đánh giá bệnh lý về máu
+                            <br />- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển
+                            hoá: đái tháo đường, rối loạn lipid máu, gút,...
+                            <br />- Kiểm tra nồng độ Sắt,
+                            <br />- Sàng lọc viêm gan Virus B- C,
+                            <br />- Đo tải lượng kháng thể VGB)
+                            <br />- Đánh giá chức năng tuyến giáp
+                        </em>
+                        <br />
+                        <strong>***Khuyến cáo:</strong>
+                        <br />
+                        <em>
+                            - Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).
+                            <br />
+                            -Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết
+                            quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại
+                            trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.
+                        </em>
+                    </p>
+                </div>
+            );
         },
     },
     {
@@ -170,13 +316,42 @@ const ServicesData = [
         age: '0+',
         location: 'Hà Nội',
         DescriptionTitle: '',
-        Description(){
+        Description() {
             return (
-                <div >
-                <h2>Mô tả</h2>
-                <strong>Địa điểm áp dụng:</strong><em>&nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội</em><br/><strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em><br/><strong>** Gói xét nghiệm bao gồm:</strong><p><em>- Phát hiện sớm các bệnh lý ung thư thường gặp của nam<br/>- Đánh giá bệnh lý về máu<br/>- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển hoá: đái tháo đường, rối loạn lipid máu, gút,...<br/>- Kiểm tra nồng độ Sắt,<br/>- Sàng lọc viêm gan Virus B- C,<br/>- Đo tải lượng kháng thể VGB)<br/>- Đánh giá chức năng tuyến giáp</em><br/><strong>***Khuyến cáo:</strong><br/><em>- Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).<br/>-Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.</em></p>
-            </div>
-            )
+                <div>
+                    <h2>Mô tả</h2>
+                    <strong>Địa điểm áp dụng:</strong>
+                    <em>
+                        &nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội
+                    </em>
+                    <br />
+                    <strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em>
+                    <br />
+                    <strong>** Gói xét nghiệm bao gồm:</strong>
+                    <p>
+                        <em>
+                            - Phát hiện sớm các bệnh lý ung thư thường gặp của nam
+                            <br />- Đánh giá bệnh lý về máu
+                            <br />- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển
+                            hoá: đái tháo đường, rối loạn lipid máu, gút,...
+                            <br />- Kiểm tra nồng độ Sắt,
+                            <br />- Sàng lọc viêm gan Virus B- C,
+                            <br />- Đo tải lượng kháng thể VGB)
+                            <br />- Đánh giá chức năng tuyến giáp
+                        </em>
+                        <br />
+                        <strong>***Khuyến cáo:</strong>
+                        <br />
+                        <em>
+                            - Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).
+                            <br />
+                            -Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết
+                            quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại
+                            trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.
+                        </em>
+                    </p>
+                </div>
+            );
         },
     },
     {
@@ -188,13 +363,42 @@ const ServicesData = [
         age: '16+',
         location: 'Hà Nội',
         DescriptionTitle: '',
-        Description(){
+        Description() {
             return (
-                <div >
-                <h2>Mô tả</h2>
-                <strong>Địa điểm áp dụng:</strong><em>&nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội</em><br/><strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em><br/><strong>** Gói xét nghiệm bao gồm:</strong><p><em>- Phát hiện sớm các bệnh lý ung thư thường gặp của nam<br/>- Đánh giá bệnh lý về máu<br/>- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển hoá: đái tháo đường, rối loạn lipid máu, gút,...<br/>- Kiểm tra nồng độ Sắt,<br/>- Sàng lọc viêm gan Virus B- C,<br/>- Đo tải lượng kháng thể VGB)<br/>- Đánh giá chức năng tuyến giáp</em><br/><strong>***Khuyến cáo:</strong><br/><em>- Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).<br/>-Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.</em></p>
-            </div>
-            )
+                <div>
+                    <h2>Mô tả</h2>
+                    <strong>Địa điểm áp dụng:</strong>
+                    <em>
+                        &nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội
+                    </em>
+                    <br />
+                    <strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em>
+                    <br />
+                    <strong>** Gói xét nghiệm bao gồm:</strong>
+                    <p>
+                        <em>
+                            - Phát hiện sớm các bệnh lý ung thư thường gặp của nam
+                            <br />- Đánh giá bệnh lý về máu
+                            <br />- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển
+                            hoá: đái tháo đường, rối loạn lipid máu, gút,...
+                            <br />- Kiểm tra nồng độ Sắt,
+                            <br />- Sàng lọc viêm gan Virus B- C,
+                            <br />- Đo tải lượng kháng thể VGB)
+                            <br />- Đánh giá chức năng tuyến giáp
+                        </em>
+                        <br />
+                        <strong>***Khuyến cáo:</strong>
+                        <br />
+                        <em>
+                            - Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).
+                            <br />
+                            -Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết
+                            quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại
+                            trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.
+                        </em>
+                    </p>
+                </div>
+            );
         },
     },
     {
@@ -206,13 +410,42 @@ const ServicesData = [
         age: '16+',
         location: 'Hà Nội',
         DescriptionTitle: '',
-        Description(){
+        Description() {
             return (
-                <div >
-                <h2>Mô tả</h2>
-                <strong>Địa điểm áp dụng:</strong><em>&nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội</em><br/><strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em><br/><strong>** Gói xét nghiệm bao gồm:</strong><p><em>- Phát hiện sớm các bệnh lý ung thư thường gặp của nam<br/>- Đánh giá bệnh lý về máu<br/>- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển hoá: đái tháo đường, rối loạn lipid máu, gút,...<br/>- Kiểm tra nồng độ Sắt,<br/>- Sàng lọc viêm gan Virus B- C,<br/>- Đo tải lượng kháng thể VGB)<br/>- Đánh giá chức năng tuyến giáp</em><br/><strong>***Khuyến cáo:</strong><br/><em>- Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).<br/>-Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.</em></p>
-            </div>
-            )
+                <div>
+                    <h2>Mô tả</h2>
+                    <strong>Địa điểm áp dụng:</strong>
+                    <em>
+                        &nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội
+                    </em>
+                    <br />
+                    <strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em>
+                    <br />
+                    <strong>** Gói xét nghiệm bao gồm:</strong>
+                    <p>
+                        <em>
+                            - Phát hiện sớm các bệnh lý ung thư thường gặp của nam
+                            <br />- Đánh giá bệnh lý về máu
+                            <br />- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển
+                            hoá: đái tháo đường, rối loạn lipid máu, gút,...
+                            <br />- Kiểm tra nồng độ Sắt,
+                            <br />- Sàng lọc viêm gan Virus B- C,
+                            <br />- Đo tải lượng kháng thể VGB)
+                            <br />- Đánh giá chức năng tuyến giáp
+                        </em>
+                        <br />
+                        <strong>***Khuyến cáo:</strong>
+                        <br />
+                        <em>
+                            - Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).
+                            <br />
+                            -Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết
+                            quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại
+                            trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.
+                        </em>
+                    </p>
+                </div>
+            );
         },
     },
     {
@@ -224,13 +457,42 @@ const ServicesData = [
         age: '18-55 tuổi',
         location: 'Hà Nội',
         DescriptionTitle: '',
-        Description(){
+        Description() {
             return (
-                <div >
-                <h2>Mô tả</h2>
-                <strong>Địa điểm áp dụng:</strong><em>&nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội</em><br/><strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em><br/><strong>** Gói xét nghiệm bao gồm:</strong><p><em>- Phát hiện sớm các bệnh lý ung thư thường gặp của nam<br/>- Đánh giá bệnh lý về máu<br/>- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển hoá: đái tháo đường, rối loạn lipid máu, gút,...<br/>- Kiểm tra nồng độ Sắt,<br/>- Sàng lọc viêm gan Virus B- C,<br/>- Đo tải lượng kháng thể VGB)<br/>- Đánh giá chức năng tuyến giáp</em><br/><strong>***Khuyến cáo:</strong><br/><em>- Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).<br/>-Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.</em></p>
-            </div>
-            )
+                <div>
+                    <h2>Mô tả</h2>
+                    <strong>Địa điểm áp dụng:</strong>
+                    <em>
+                        &nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội
+                    </em>
+                    <br />
+                    <strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em>
+                    <br />
+                    <strong>** Gói xét nghiệm bao gồm:</strong>
+                    <p>
+                        <em>
+                            - Phát hiện sớm các bệnh lý ung thư thường gặp của nam
+                            <br />- Đánh giá bệnh lý về máu
+                            <br />- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển
+                            hoá: đái tháo đường, rối loạn lipid máu, gút,...
+                            <br />- Kiểm tra nồng độ Sắt,
+                            <br />- Sàng lọc viêm gan Virus B- C,
+                            <br />- Đo tải lượng kháng thể VGB)
+                            <br />- Đánh giá chức năng tuyến giáp
+                        </em>
+                        <br />
+                        <strong>***Khuyến cáo:</strong>
+                        <br />
+                        <em>
+                            - Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).
+                            <br />
+                            -Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết
+                            quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại
+                            trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.
+                        </em>
+                    </p>
+                </div>
+            );
         },
     },
     {
@@ -242,13 +504,42 @@ const ServicesData = [
         age: '18-55 tuổi',
         location: 'Hà Nội',
         DescriptionTitle: '',
-        Description(){
+        Description() {
             return (
-                <div >
-                <h2>Mô tả</h2>
-                <strong>Địa điểm áp dụng:</strong><em>&nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội</em><br/><strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em><br/><strong>** Gói xét nghiệm bao gồm:</strong><p><em>- Phát hiện sớm các bệnh lý ung thư thường gặp của nam<br/>- Đánh giá bệnh lý về máu<br/>- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển hoá: đái tháo đường, rối loạn lipid máu, gút,...<br/>- Kiểm tra nồng độ Sắt,<br/>- Sàng lọc viêm gan Virus B- C,<br/>- Đo tải lượng kháng thể VGB)<br/>- Đánh giá chức năng tuyến giáp</em><br/><strong>***Khuyến cáo:</strong><br/><em>- Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).<br/>-Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.</em></p>
-            </div>
-            )
+                <div>
+                    <h2>Mô tả</h2>
+                    <strong>Địa điểm áp dụng:</strong>
+                    <em>
+                        &nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội
+                    </em>
+                    <br />
+                    <strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em>
+                    <br />
+                    <strong>** Gói xét nghiệm bao gồm:</strong>
+                    <p>
+                        <em>
+                            - Phát hiện sớm các bệnh lý ung thư thường gặp của nam
+                            <br />- Đánh giá bệnh lý về máu
+                            <br />- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển
+                            hoá: đái tháo đường, rối loạn lipid máu, gút,...
+                            <br />- Kiểm tra nồng độ Sắt,
+                            <br />- Sàng lọc viêm gan Virus B- C,
+                            <br />- Đo tải lượng kháng thể VGB)
+                            <br />- Đánh giá chức năng tuyến giáp
+                        </em>
+                        <br />
+                        <strong>***Khuyến cáo:</strong>
+                        <br />
+                        <em>
+                            - Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).
+                            <br />
+                            -Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết
+                            quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại
+                            trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.
+                        </em>
+                    </p>
+                </div>
+            );
         },
     },
     {
@@ -260,13 +551,42 @@ const ServicesData = [
         age: '18-55 tuổi',
         location: 'Hà Nội',
         DescriptionTitle: '',
-        Description(){
+        Description() {
             return (
-                <div >
-                <h2>Mô tả</h2>
-                <strong>Địa điểm áp dụng:</strong><em>&nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội</em><br/><strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em><br/><strong>** Gói xét nghiệm bao gồm:</strong><p><em>- Phát hiện sớm các bệnh lý ung thư thường gặp của nam<br/>- Đánh giá bệnh lý về máu<br/>- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển hoá: đái tháo đường, rối loạn lipid máu, gút,...<br/>- Kiểm tra nồng độ Sắt,<br/>- Sàng lọc viêm gan Virus B- C,<br/>- Đo tải lượng kháng thể VGB)<br/>- Đánh giá chức năng tuyến giáp</em><br/><strong>***Khuyến cáo:</strong><br/><em>- Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).<br/>-Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.</em></p>
-            </div>
-            )
+                <div>
+                    <h2>Mô tả</h2>
+                    <strong>Địa điểm áp dụng:</strong>
+                    <em>
+                        &nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội
+                    </em>
+                    <br />
+                    <strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em>
+                    <br />
+                    <strong>** Gói xét nghiệm bao gồm:</strong>
+                    <p>
+                        <em>
+                            - Phát hiện sớm các bệnh lý ung thư thường gặp của nam
+                            <br />- Đánh giá bệnh lý về máu
+                            <br />- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển
+                            hoá: đái tháo đường, rối loạn lipid máu, gút,...
+                            <br />- Kiểm tra nồng độ Sắt,
+                            <br />- Sàng lọc viêm gan Virus B- C,
+                            <br />- Đo tải lượng kháng thể VGB)
+                            <br />- Đánh giá chức năng tuyến giáp
+                        </em>
+                        <br />
+                        <strong>***Khuyến cáo:</strong>
+                        <br />
+                        <em>
+                            - Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).
+                            <br />
+                            -Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết
+                            quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại
+                            trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.
+                        </em>
+                    </p>
+                </div>
+            );
         },
     },
     {
@@ -278,13 +598,42 @@ const ServicesData = [
         age: '16+',
         location: 'Hà Nội',
         DescriptionTitle: '',
-        Description(){
+        Description() {
             return (
-                <div >
-                <h2>Mô tả</h2>
-                <strong>Địa điểm áp dụng:</strong><em>&nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội</em><br/><strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em><br/><strong>** Gói xét nghiệm bao gồm:</strong><p><em>- Phát hiện sớm các bệnh lý ung thư thường gặp của nam<br/>- Đánh giá bệnh lý về máu<br/>- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển hoá: đái tháo đường, rối loạn lipid máu, gút,...<br/>- Kiểm tra nồng độ Sắt,<br/>- Sàng lọc viêm gan Virus B- C,<br/>- Đo tải lượng kháng thể VGB)<br/>- Đánh giá chức năng tuyến giáp</em><br/><strong>***Khuyến cáo:</strong><br/><em>- Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).<br/>-Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.</em></p>
-            </div>
-            )
+                <div>
+                    <h2>Mô tả</h2>
+                    <strong>Địa điểm áp dụng:</strong>
+                    <em>
+                        &nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội
+                    </em>
+                    <br />
+                    <strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em>
+                    <br />
+                    <strong>** Gói xét nghiệm bao gồm:</strong>
+                    <p>
+                        <em>
+                            - Phát hiện sớm các bệnh lý ung thư thường gặp của nam
+                            <br />- Đánh giá bệnh lý về máu
+                            <br />- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển
+                            hoá: đái tháo đường, rối loạn lipid máu, gút,...
+                            <br />- Kiểm tra nồng độ Sắt,
+                            <br />- Sàng lọc viêm gan Virus B- C,
+                            <br />- Đo tải lượng kháng thể VGB)
+                            <br />- Đánh giá chức năng tuyến giáp
+                        </em>
+                        <br />
+                        <strong>***Khuyến cáo:</strong>
+                        <br />
+                        <em>
+                            - Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).
+                            <br />
+                            -Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết
+                            quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại
+                            trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.
+                        </em>
+                    </p>
+                </div>
+            );
         },
     },
     {
@@ -296,13 +645,42 @@ const ServicesData = [
         age: '0+',
         location: 'Hà Nội',
         DescriptionTitle: '',
-        Description(){
+        Description() {
             return (
-                <div >
-                <h2>Mô tả</h2>
-                <strong>Địa điểm áp dụng:</strong><em>&nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội</em><br/><strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em><br/><strong>** Gói xét nghiệm bao gồm:</strong><p><em>- Phát hiện sớm các bệnh lý ung thư thường gặp của nam<br/>- Đánh giá bệnh lý về máu<br/>- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển hoá: đái tháo đường, rối loạn lipid máu, gút,...<br/>- Kiểm tra nồng độ Sắt,<br/>- Sàng lọc viêm gan Virus B- C,<br/>- Đo tải lượng kháng thể VGB)<br/>- Đánh giá chức năng tuyến giáp</em><br/><strong>***Khuyến cáo:</strong><br/><em>- Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).<br/>-Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.</em></p>
-            </div>
-            )
+                <div>
+                    <h2>Mô tả</h2>
+                    <strong>Địa điểm áp dụng:</strong>
+                    <em>
+                        &nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội
+                    </em>
+                    <br />
+                    <strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em>
+                    <br />
+                    <strong>** Gói xét nghiệm bao gồm:</strong>
+                    <p>
+                        <em>
+                            - Phát hiện sớm các bệnh lý ung thư thường gặp của nam
+                            <br />- Đánh giá bệnh lý về máu
+                            <br />- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển
+                            hoá: đái tháo đường, rối loạn lipid máu, gút,...
+                            <br />- Kiểm tra nồng độ Sắt,
+                            <br />- Sàng lọc viêm gan Virus B- C,
+                            <br />- Đo tải lượng kháng thể VGB)
+                            <br />- Đánh giá chức năng tuyến giáp
+                        </em>
+                        <br />
+                        <strong>***Khuyến cáo:</strong>
+                        <br />
+                        <em>
+                            - Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).
+                            <br />
+                            -Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết
+                            quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại
+                            trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.
+                        </em>
+                    </p>
+                </div>
+            );
         },
     },
     {
@@ -314,13 +692,42 @@ const ServicesData = [
         age: '16+',
         location: 'Hà Nội',
         DescriptionTitle: '',
-        Description(){
+        Description() {
             return (
-                <div >
-                <h2>Mô tả</h2>
-                <strong>Địa điểm áp dụng:</strong><em>&nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội</em><br/><strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em><br/><strong>** Gói xét nghiệm bao gồm:</strong><p><em>- Phát hiện sớm các bệnh lý ung thư thường gặp của nam<br/>- Đánh giá bệnh lý về máu<br/>- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển hoá: đái tháo đường, rối loạn lipid máu, gút,...<br/>- Kiểm tra nồng độ Sắt,<br/>- Sàng lọc viêm gan Virus B- C,<br/>- Đo tải lượng kháng thể VGB)<br/>- Đánh giá chức năng tuyến giáp</em><br/><strong>***Khuyến cáo:</strong><br/><em>- Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).<br/>-Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.</em></p>
-            </div>
-            )
+                <div>
+                    <h2>Mô tả</h2>
+                    <strong>Địa điểm áp dụng:</strong>
+                    <em>
+                        &nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội
+                    </em>
+                    <br />
+                    <strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em>
+                    <br />
+                    <strong>** Gói xét nghiệm bao gồm:</strong>
+                    <p>
+                        <em>
+                            - Phát hiện sớm các bệnh lý ung thư thường gặp của nam
+                            <br />- Đánh giá bệnh lý về máu
+                            <br />- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển
+                            hoá: đái tháo đường, rối loạn lipid máu, gút,...
+                            <br />- Kiểm tra nồng độ Sắt,
+                            <br />- Sàng lọc viêm gan Virus B- C,
+                            <br />- Đo tải lượng kháng thể VGB)
+                            <br />- Đánh giá chức năng tuyến giáp
+                        </em>
+                        <br />
+                        <strong>***Khuyến cáo:</strong>
+                        <br />
+                        <em>
+                            - Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).
+                            <br />
+                            -Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết
+                            quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại
+                            trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.
+                        </em>
+                    </p>
+                </div>
+            );
         },
     },
     {
@@ -332,13 +739,42 @@ const ServicesData = [
         age: '16+',
         location: 'Hà Nội',
         DescriptionTitle: '',
-        Description(){
+        Description() {
             return (
-                <div >
-                <h2>Mô tả</h2>
-                <strong>Địa điểm áp dụng:</strong><em>&nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội</em><br/><strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em><br/><strong>** Gói xét nghiệm bao gồm:</strong><p><em>- Phát hiện sớm các bệnh lý ung thư thường gặp của nam<br/>- Đánh giá bệnh lý về máu<br/>- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển hoá: đái tháo đường, rối loạn lipid máu, gút,...<br/>- Kiểm tra nồng độ Sắt,<br/>- Sàng lọc viêm gan Virus B- C,<br/>- Đo tải lượng kháng thể VGB)<br/>- Đánh giá chức năng tuyến giáp</em><br/><strong>***Khuyến cáo:</strong><br/><em>- Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).<br/>-Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.</em></p>
-            </div>
-            )
+                <div>
+                    <h2>Mô tả</h2>
+                    <strong>Địa điểm áp dụng:</strong>
+                    <em>
+                        &nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội
+                    </em>
+                    <br />
+                    <strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em>
+                    <br />
+                    <strong>** Gói xét nghiệm bao gồm:</strong>
+                    <p>
+                        <em>
+                            - Phát hiện sớm các bệnh lý ung thư thường gặp của nam
+                            <br />- Đánh giá bệnh lý về máu
+                            <br />- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển
+                            hoá: đái tháo đường, rối loạn lipid máu, gút,...
+                            <br />- Kiểm tra nồng độ Sắt,
+                            <br />- Sàng lọc viêm gan Virus B- C,
+                            <br />- Đo tải lượng kháng thể VGB)
+                            <br />- Đánh giá chức năng tuyến giáp
+                        </em>
+                        <br />
+                        <strong>***Khuyến cáo:</strong>
+                        <br />
+                        <em>
+                            - Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).
+                            <br />
+                            -Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết
+                            quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại
+                            trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.
+                        </em>
+                    </p>
+                </div>
+            );
         },
     },
     {
@@ -350,13 +786,42 @@ const ServicesData = [
         age: '16+',
         location: 'Hà Nội',
         DescriptionTitle: '',
-        Description(){
+        Description() {
             return (
-                <div >
-                <h2>Mô tả</h2>
-                <strong>Địa điểm áp dụng:</strong><em>&nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội</em><br/><strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em><br/><strong>** Gói xét nghiệm bao gồm:</strong><p><em>- Phát hiện sớm các bệnh lý ung thư thường gặp của nam<br/>- Đánh giá bệnh lý về máu<br/>- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển hoá: đái tháo đường, rối loạn lipid máu, gút,...<br/>- Kiểm tra nồng độ Sắt,<br/>- Sàng lọc viêm gan Virus B- C,<br/>- Đo tải lượng kháng thể VGB)<br/>- Đánh giá chức năng tuyến giáp</em><br/><strong>***Khuyến cáo:</strong><br/><em>- Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).<br/>-Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.</em></p>
-            </div>
-            )
+                <div>
+                    <h2>Mô tả</h2>
+                    <strong>Địa điểm áp dụng:</strong>
+                    <em>
+                        &nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội
+                    </em>
+                    <br />
+                    <strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em>
+                    <br />
+                    <strong>** Gói xét nghiệm bao gồm:</strong>
+                    <p>
+                        <em>
+                            - Phát hiện sớm các bệnh lý ung thư thường gặp của nam
+                            <br />- Đánh giá bệnh lý về máu
+                            <br />- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển
+                            hoá: đái tháo đường, rối loạn lipid máu, gút,...
+                            <br />- Kiểm tra nồng độ Sắt,
+                            <br />- Sàng lọc viêm gan Virus B- C,
+                            <br />- Đo tải lượng kháng thể VGB)
+                            <br />- Đánh giá chức năng tuyến giáp
+                        </em>
+                        <br />
+                        <strong>***Khuyến cáo:</strong>
+                        <br />
+                        <em>
+                            - Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).
+                            <br />
+                            -Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết
+                            quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại
+                            trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.
+                        </em>
+                    </p>
+                </div>
+            );
         },
     },
     {
@@ -368,13 +833,42 @@ const ServicesData = [
         age: '0+',
         location: 'Hà Nội',
         DescriptionTitle: '',
-        Description(){
+        Description() {
             return (
-                <div >
-                <h2>Mô tả</h2>
-                <strong>Địa điểm áp dụng:</strong><em>&nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội</em><br/><strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em><br/><strong>** Gói xét nghiệm bao gồm:</strong><p><em>- Phát hiện sớm các bệnh lý ung thư thường gặp của nam<br/>- Đánh giá bệnh lý về máu<br/>- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển hoá: đái tháo đường, rối loạn lipid máu, gút,...<br/>- Kiểm tra nồng độ Sắt,<br/>- Sàng lọc viêm gan Virus B- C,<br/>- Đo tải lượng kháng thể VGB)<br/>- Đánh giá chức năng tuyến giáp</em><br/><strong>***Khuyến cáo:</strong><br/><em>- Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).<br/>-Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.</em></p>
-            </div>
-            )
+                <div>
+                    <h2>Mô tả</h2>
+                    <strong>Địa điểm áp dụng:</strong>
+                    <em>
+                        &nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội
+                    </em>
+                    <br />
+                    <strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em>
+                    <br />
+                    <strong>** Gói xét nghiệm bao gồm:</strong>
+                    <p>
+                        <em>
+                            - Phát hiện sớm các bệnh lý ung thư thường gặp của nam
+                            <br />- Đánh giá bệnh lý về máu
+                            <br />- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển
+                            hoá: đái tháo đường, rối loạn lipid máu, gút,...
+                            <br />- Kiểm tra nồng độ Sắt,
+                            <br />- Sàng lọc viêm gan Virus B- C,
+                            <br />- Đo tải lượng kháng thể VGB)
+                            <br />- Đánh giá chức năng tuyến giáp
+                        </em>
+                        <br />
+                        <strong>***Khuyến cáo:</strong>
+                        <br />
+                        <em>
+                            - Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).
+                            <br />
+                            -Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết
+                            quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại
+                            trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.
+                        </em>
+                    </p>
+                </div>
+            );
         },
     },
     {
@@ -386,13 +880,42 @@ const ServicesData = [
         age: '16+',
         location: 'Hà Nội',
         DescriptionTitle: '',
-        Description(){
+        Description() {
             return (
-                <div >
-                <h2>Mô tả</h2>
-                <strong>Địa điểm áp dụng:</strong><em>&nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội</em><br/><strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em><br/><strong>** Gói xét nghiệm bao gồm:</strong><p><em>- Phát hiện sớm các bệnh lý ung thư thường gặp của nam<br/>- Đánh giá bệnh lý về máu<br/>- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển hoá: đái tháo đường, rối loạn lipid máu, gút,...<br/>- Kiểm tra nồng độ Sắt,<br/>- Sàng lọc viêm gan Virus B- C,<br/>- Đo tải lượng kháng thể VGB)<br/>- Đánh giá chức năng tuyến giáp</em><br/><strong>***Khuyến cáo:</strong><br/><em>- Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).<br/>-Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.</em></p>
-            </div>
-            )
+                <div>
+                    <h2>Mô tả</h2>
+                    <strong>Địa điểm áp dụng:</strong>
+                    <em>
+                        &nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội
+                    </em>
+                    <br />
+                    <strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em>
+                    <br />
+                    <strong>** Gói xét nghiệm bao gồm:</strong>
+                    <p>
+                        <em>
+                            - Phát hiện sớm các bệnh lý ung thư thường gặp của nam
+                            <br />- Đánh giá bệnh lý về máu
+                            <br />- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển
+                            hoá: đái tháo đường, rối loạn lipid máu, gút,...
+                            <br />- Kiểm tra nồng độ Sắt,
+                            <br />- Sàng lọc viêm gan Virus B- C,
+                            <br />- Đo tải lượng kháng thể VGB)
+                            <br />- Đánh giá chức năng tuyến giáp
+                        </em>
+                        <br />
+                        <strong>***Khuyến cáo:</strong>
+                        <br />
+                        <em>
+                            - Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).
+                            <br />
+                            -Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết
+                            quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại
+                            trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.
+                        </em>
+                    </p>
+                </div>
+            );
         },
     },
     {
@@ -404,13 +927,42 @@ const ServicesData = [
         age: '16+',
         location: 'Hà Nội',
         DescriptionTitle: '',
-        Description(){
+        Description() {
             return (
-                <div >
-                <h2>Mô tả</h2>
-                <strong>Địa điểm áp dụng:</strong><em>&nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội</em><br/><strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em><br/><strong>** Gói xét nghiệm bao gồm:</strong><p><em>- Phát hiện sớm các bệnh lý ung thư thường gặp của nam<br/>- Đánh giá bệnh lý về máu<br/>- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển hoá: đái tháo đường, rối loạn lipid máu, gút,...<br/>- Kiểm tra nồng độ Sắt,<br/>- Sàng lọc viêm gan Virus B- C,<br/>- Đo tải lượng kháng thể VGB)<br/>- Đánh giá chức năng tuyến giáp</em><br/><strong>***Khuyến cáo:</strong><br/><em>- Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).<br/>-Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.</em></p>
-            </div>
-            )
+                <div>
+                    <h2>Mô tả</h2>
+                    <strong>Địa điểm áp dụng:</strong>
+                    <em>
+                        &nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội
+                    </em>
+                    <br />
+                    <strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em>
+                    <br />
+                    <strong>** Gói xét nghiệm bao gồm:</strong>
+                    <p>
+                        <em>
+                            - Phát hiện sớm các bệnh lý ung thư thường gặp của nam
+                            <br />- Đánh giá bệnh lý về máu
+                            <br />- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển
+                            hoá: đái tháo đường, rối loạn lipid máu, gút,...
+                            <br />- Kiểm tra nồng độ Sắt,
+                            <br />- Sàng lọc viêm gan Virus B- C,
+                            <br />- Đo tải lượng kháng thể VGB)
+                            <br />- Đánh giá chức năng tuyến giáp
+                        </em>
+                        <br />
+                        <strong>***Khuyến cáo:</strong>
+                        <br />
+                        <em>
+                            - Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).
+                            <br />
+                            -Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết
+                            quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại
+                            trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.
+                        </em>
+                    </p>
+                </div>
+            );
         },
     },
     {
@@ -422,15 +974,46 @@ const ServicesData = [
         age: '16+',
         location: 'Hà Nội',
         DescriptionTitle: '',
-        Description(){
+        Description() {
             return (
-                <div >
-                <h2>Mô tả</h2>
-                <strong>Địa điểm áp dụng:</strong><em>&nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội</em><br/><strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em><br/><strong>** Gói xét nghiệm bao gồm:</strong><p><em>- Phát hiện sớm các bệnh lý ung thư thường gặp của nam<br/>- Đánh giá bệnh lý về máu<br/>- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển hoá: đái tháo đường, rối loạn lipid máu, gút,...<br/>- Kiểm tra nồng độ Sắt,<br/>- Sàng lọc viêm gan Virus B- C,<br/>- Đo tải lượng kháng thể VGB)<br/>- Đánh giá chức năng tuyến giáp</em><br/><strong>***Khuyến cáo:</strong><br/><em>- Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).<br/>-Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.</em></p>
-            </div>
-            )
+                <div>
+                    <h2>Mô tả</h2>
+                    <strong>Địa điểm áp dụng:</strong>
+                    <em>
+                        &nbsp;&nbsp;Áp dụng đối với dịch vụ lấy mẫu tận nơi và tại văn phòng trên địa bàn tỉnh Hà Nội
+                    </em>
+                    <br />
+                    <strong>Thời gian áp dụng:</strong>&nbsp;<em>09/03/2023 đến 31/12/2024</em>
+                    <br />
+                    <strong>** Gói xét nghiệm bao gồm:</strong>
+                    <p>
+                        <em>
+                            - Phát hiện sớm các bệnh lý ung thư thường gặp của nam
+                            <br />- Đánh giá bệnh lý về máu
+                            <br />- Đánh giá tổng quát tình trạng sức khoẻ( bệnh lý gan, thận, mật; các rối loạn chuyển
+                            hoá: đái tháo đường, rối loạn lipid máu, gút,...
+                            <br />- Kiểm tra nồng độ Sắt,
+                            <br />- Sàng lọc viêm gan Virus B- C,
+                            <br />- Đo tải lượng kháng thể VGB)
+                            <br />- Đánh giá chức năng tuyến giáp
+                        </em>
+                        <br />
+                        <strong>***Khuyến cáo:</strong>
+                        <br />
+                        <em>
+                            - Dành cho NAM, đặc biệt nam ở độ tuổi cận trung niên và trung niên (tuổi từ 35 trở lên).
+                            <br />
+                            -Các xét nghiệm kiểm tra các chỉ số dấu ấn ung thư các cơ quan chỉ có giá trị sàng lọc, kết
+                            quả các chỉ số này không dùng đơn độc để chẩn đoán ung thư, cũng không dùng đơn độc để loại
+                            trừ hoàn toàn nguy cơ ung thư của cơ quan bộ phận tương ứng.
+                        </em>
+                    </p>
+                </div>
+            );
         },
     },
 ];
+// const ServiceDataJson = JSON.stringify(ServicesData);
+// localStorage.setItem('ServiceData', ServiceDataJson);
 
 export default ServicesData;

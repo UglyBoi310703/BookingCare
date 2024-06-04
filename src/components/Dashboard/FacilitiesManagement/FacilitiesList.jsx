@@ -7,22 +7,19 @@ import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
-import EditDoctorModel from './EditDoctorModel';
+import EditFacilityModel from './EditFacilityModel';
 
 const schema = yup.object({
     name: yup.string().required('Tên là trường bắt buộc'),
-    role: yup.string().required('Chuyên khoa là trường bắt buộc'),
-    academic_rank: yup.string().required('Học hàm là trường bắt buộc'),
-    degree: yup.string().required('Học vị là trường bắt buộc'),
 });
 
-function DoctorList() {
-    const [doctorData, setDoctorData] = useState([]);
-    const [openAddDoctorArea, setOpenAddDoctorArea] = useState(false);
+function FacilitiesList() {
+    const [FacilitiesData, setFacilitiesData] = useState([]);
+    const [openAddFacilitiesArea, setOpenAddFacilitiesArea] = useState(false);
     const [temporaryPhoto, setTemporaryPhoto] = useState();
     const [selectFile, setSelectFile] = useState();
     const [uploading, setUploading] = useState(false);
-    const [selectDoctor, setSelectDotor] = useState();
+    const [selectFacilities, setSelectFacilities] = useState();
     const [searchTerm, setSearchTerm] = useState('');
 
     const {
@@ -36,20 +33,20 @@ function DoctorList() {
     });
 
     useEffect(() => {
-        const storedData = localStorage.getItem('doctorData');
+        const storedData = localStorage.getItem('FacilitiesData');
         if (storedData) {
-            setDoctorData(JSON.parse(storedData));
+            setFacilitiesData(JSON.parse(storedData));
         }
     }, []);
 
-    const handleCloseAddDoctorArea = () => {
-        setOpenAddDoctorArea(false);
+    const handleCloseAddFacilitiesArea = () => {
+        setOpenAddFacilitiesArea(false);
         reset();
         setSelectFile();
         setTemporaryPhoto();
     };
 
-    const handleAddNewDoctor = (data) => {
+    const handleAddNewFacilities = (data) => {
         if (!data?.img) {
             Swal.fire({
                 title: 'Alert!',
@@ -59,43 +56,43 @@ function DoctorList() {
             return;
         }
         Swal.fire({
-            title: 'Confirm add doctor',
-            text: `Bạn có chắc chắn muốn thêm bác sĩ: ${data.name}?`,
+            title: 'Confirm add Facilities',
+            text: `Bạn có chắc chắn muốn thêm thông tin: ${data.name}?`,
             showCancelButton: true,
             confirmButtonColor: '#d33',
         }).then((result) => {
             if (result.isConfirmed) {
-                const newDoctor = { ...data, id: uuidv4() };
-                const updatedDoctorData = [...doctorData, newDoctor];
+                const newFacilities = { ...data, id: uuidv4() };
+                const updatedFacilitiesData = [...FacilitiesData, newFacilities];
 
-                localStorage.setItem('doctorData', JSON.stringify(updatedDoctorData));
-                setDoctorData(updatedDoctorData);
+                localStorage.setItem('FacilitiesData', JSON.stringify(updatedFacilitiesData));
+                setFacilitiesData(updatedFacilitiesData);
                 reset();
                 setSelectFile(null);
                 setTemporaryPhoto(null);
-                toast.success('Doctor added successfully!');
-                setOpenAddDoctorArea(false);
+                toast.success('Thông itn cơ sở vật chất được thêm thành công!');
+                setOpenAddFacilitiesArea(false);
             }
         });
     };
 
-    const handleSelectDoctor = (doctor) => {
-        setSelectDotor(doctor);
+    const handleSelectFacilities = (Facilities) => {
+        setSelectFacilities(Facilities);
     };
 
-    const handleRemoveDoctor = (doctor) => {
+    const handleRemoveFacilities = (Facilities) => {
         Swal.fire({
-            title: 'Confirm remove doctor',
-            text: `Bạn có chắc chắn muốn xóa bác sĩ: ${doctor.name}?`,
+            title: 'Confirm remove Facilities',
+            text: `Bạn có chắc chắn muốn xóa thông tin: ${Facilities.name}?`,
             showCancelButton: true,
             confirmButtonColor: '#d33',
         }).then((result) => {
             if (result.isConfirmed) {
-                const doctorData = JSON.parse(localStorage.getItem('doctorData'));
-                const updatedDoctorData = doctorData.filter((d) => d.id !== doctor.id);
-                localStorage.setItem('doctorData', JSON.stringify(updatedDoctorData));
-                setDoctorData(updatedDoctorData);
-                toast(`Thông tin bác sĩ ${doctor.name} đã được xóa thành công!`);
+                const FacilitiesData = JSON.parse(localStorage.getItem('FacilitiesData'));
+                const updatedFacilitiesData = FacilitiesData.filter((d) => d.id !== Facilities.id);
+                localStorage.setItem('FacilitiesData', JSON.stringify(updatedFacilitiesData));
+                setFacilitiesData(updatedFacilitiesData);
+                toast(`Thông tin cơ sở vật chất ${Facilities.name} đã được xóa thành công!`);
             }
         });
     };
@@ -121,20 +118,22 @@ function DoctorList() {
         setUploading(false);
     };
 
-    const filteredDoctors = doctorData.filter((doctor) => doctor.name.toLowerCase().includes(searchTerm.toLowerCase()));
+    const filteredFacilities = FacilitiesData.filter((Facilities) =>
+        Facilities.name.toLowerCase().includes(searchTerm.toLowerCase()),
+    );
 
     return (
         <div className="container">
-            <EditDoctorModel selectDoctor={selectDoctor} setSelectDoctor={setSelectDotor} />
+            <EditFacilityModel selectFacilities={selectFacilities} setSelectFacilities={setSelectFacilities} />
             <div className="row product-title">
                 <div className="col-lg-12 d-flex align-items-center justify-content-between">
-                    <h5 className="title_list">Danh sách bác sĩ</h5>
+                    <h5 className="title_list">Danh sách cơ sở vật chất</h5>
                     <button
                         className="btn btn-warning btn-sm d-flex align-items-center"
-                        onClick={() => setOpenAddDoctorArea(true)}
+                        onClick={() => setOpenAddFacilitiesArea(true)}
                     >
                         <FaPlus size={15} className="me-2" />
-                        Thêm mới bác sĩ
+                        Thêm mới cơ sở vật chất
                     </button>
                 </div>
             </div>
@@ -143,54 +142,39 @@ function DoctorList() {
                     <input
                         type="text"
                         className="form-control dashboard_search"
-                        placeholder="Tìm kiếm theo tên bác sĩ"
+                        placeholder="Tìm kiếm cơ sở vật chất"
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                     />
                 </div>
             </div>
-            {openAddDoctorArea && (
+            {openAddFacilitiesArea && (
                 <div className="product-form my-1">
-                    <form onSubmit={handleSubmit(handleAddNewDoctor)} className="row">
+                    <form onSubmit={handleSubmit(handleAddNewFacilities)} className="row">
                         <div className="col-md-4">
                             <div className="form-group mb-4">
-                                <label className="form-label">Tên bác sĩ</label>
+                                <label className="form-label">Tên cơ sở vật chất</label>
                                 <input
                                     type="text"
                                     className={`form-control form-control-sm ${
                                         errors?.name?.message ? 'is-invalid' : ''
                                     }`}
-                                    placeholder="tên bác sĩ"
+                                    placeholder="tên cơ sở vật chất"
                                     {...register('name')}
                                 />
                                 <span className="invalid-feedback">{errors?.name?.message}</span>
                             </div>
                             <div className="form-group mb-2">
-                                <label className="form-label">Chuyên khoa</label>
-                                <select
-                                    className={`form-select form-select-sm form-control-sm ${
-                                        errors?.role?.message ? 'is-invalid' : ''
+                                <label className="form-label">Mô tả</label>
+                                <textarea
+                                    type="text"
+                                    className={`form-control form-control-sm ${
+                                        errors?.describe?.message ? 'is-invalid' : ''
                                     }`}
-                                    defaultValue={''}
-                                    {...register('role')}
-                                >
-                                    <option value={''} disabled>
-                                        Chọn chuyên khoa
-                                    </option>
-                                    <option value={'Chuyên khoa - Tiêu hóa'}>Tiêu hóa</option>
-                                    <option value={'Chuyên khoa - Chẩn đoán hình ảnh'}>Chẩn đoán hình ảnh</option>
-                                    <option value={'Chuyên khoa - Tiêu hóa'}>Xương khớp</option>
-                                    <option value={'Chuyên khoa - Thần kinh'}>Thần kinh</option>
-                                    <option value={'Chuyên khoa - Nội tiết'}>Nội tiết</option>
-                                    <option value={'Chuyên khoa - Tim mạch'}>Tim mạch</option>
-                                    <option value={'Chuyên khoa - Chuyên khoa nội'}>Chuyên khoa nội</option>
-                                    <option value={'Chuyên khoa - Xét nghiệm'}>Xét nghiệm</option>
-                                    <option value={'Chuyên khoa - Ung bướu'}>Ung bướu</option>
-                                    <option value={'Chuyên khoa - Mắt'}>Mắt</option>
-                                    <option value={'Chuyên khoa - Tai mũi họng'}>Tai mũi họng</option>
-                                    <option value={'Chuyên khoa - Răng hàm mặt'}>Răng hàm mặt</option>
-                                </select>
-                                <span className="invalid-feedback">{errors?.role?.message}</span>
+                                    placeholder="Mô tả"
+                                    {...register('describe')}
+                                />
+                                <span className="invalid-feedback">{errors?.describe?.message}</span>
                             </div>
                             <div className="form-group mb-2">
                                 <label className="form-label"></label>
@@ -204,7 +188,7 @@ function DoctorList() {
                                     </button>
                                     <button
                                         type="button"
-                                        onClick={handleCloseAddDoctorArea}
+                                        onClick={handleCloseAddFacilitiesArea}
                                         className="btn btn-dark btn-sm flex-grow-1 d-flex align-items-center justify-content-center"
                                     >
                                         <FaTimes className="me-2" />
@@ -213,43 +197,7 @@ function DoctorList() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-4">
-                            <div className="form-group mb-4">
-                                <label className="form-label">Học hàm</label>
-                                <select
-                                    className={`form-select form-select-sm form-control-sm ${
-                                        errors?.academic_rank?.message ? 'is-invalid' : ''
-                                    }`}
-                                    defaultValue={''}
-                                    {...register('academic_rank')}
-                                >
-                                    <option value={''} disabled>
-                                        Chọn học hàm
-                                    </option>
-                                    <option value={'Giáo sư'}>Giáo sư</option>
-                                    <option value={'Phó giáo sư'}>Phó giáo sư</option>
-                                </select>
-                                <span className="invalid-feedback">{errors?.academic_rank?.message}</span>
-                            </div>
-                            <div className="form-group mb-2">
-                                <label className="form-label">Học vị</label>
-                                <select
-                                    className={`form-select form-select-sm form-control-sm ${
-                                        errors?.degree?.message ? 'is-invalid' : ''
-                                    }`}
-                                    defaultValue={''}
-                                    {...register('degree')}
-                                >
-                                    <option value={''} disabled>
-                                        Chọn học vị
-                                    </option>
-                                    <option value={'Tiến sĩ'}>Tiến sĩ</option>
-                                    <option value={'Thạc sĩ'}>Thạc sĩ</option>
-                                    <option value={'Bác sĩ nội trú'}>Bác sĩ nội trú</option>
-                                </select>
-                                <span className="invalid-feedback">{errors?.degree?.message}</span>
-                            </div>
-                        </div>
+
                         <div className="col-md-4">
                             <div
                                 className="border-dashed w-100 h-100"
@@ -310,52 +258,33 @@ function DoctorList() {
                 <table className="table table-striped product-table">
                     <thead>
                         <tr>
-                            <th className="text-center">Tên bác sĩ</th>
-                            <th className="text-start">Chuyên khoa</th>
-                            <th className="text-start">Học hàm</th>
-                            <th className="text-end">Học vị</th>
-                            <th className="text-center">Đánh giá</th>
+                            <th className="text-center">Ảnh</th>
+                            <th className="text-start">Tên cơ sở vật chất</th>
+                            <th className="text-center">Mô tả</th>
                             <th className="text-center">Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {filteredDoctors.map((doctor) => (
-                            <tr key={doctor.id}>
+                        {filteredFacilities.map((facility) => (
+                            <tr key={facility.id}>
                                 <td className="text-start align-middle" style={{ minWidth: '250px' }}>
-                                    <div className="d-flex align-items-center">
-                                        <img style={{ width: '50px' }} src={doctor.img} alt="" />
-                                        <span className="ms-2">{doctor.name}</span>
+                                    <div className="d-flex align-items-center justify-content-center">
+                                        <img style={{ width: '50px' }} src={facility.img} alt="" />
                                     </div>
                                 </td>
-                                <td className="text-start align-middle">{doctor.role}</td>
-                                <td className="text-start align-middle">{doctor.academic_rank}</td>
-                                <td className="text-end align-middle">
-                                    <div className="d-flex flex-column">
-                                        <span>{doctor.degree}</span>
-                                    </div>
-                                </td>
-                                <td className="text-center align-middle">
-                                    <div className="d-flex flex-column align-items-center justify-content-center">
-                                        <div className="d-flex align-items-center">
-                                            <FaStar color="yellow" />
-                                            <FaStar color="yellow" />
-                                            <FaStar color="yellow" />
-                                            <FaStar color="yellow" />
-                                            <FaStar color="yellow" />
-                                        </div>
-                                    </div>
-                                </td>
+                                <td className="text-start align-middle">{facility.name}</td>
+                                <td className="text-start align-middle">{facility.describe}</td>
                                 <td className="text-center align-middle">
                                     <div className="d-flex align-items-center justify-content-center">
                                         <FaEdit
                                             className="text-success me-1"
                                             role="button"
-                                            onClick={() => handleSelectDoctor(doctor)}
+                                            onClick={() => handleSelectFacilities(facility)}
                                         />
                                         <FaTrash
                                             className="text-danger"
                                             role="button"
-                                            onClick={() => handleRemoveDoctor(doctor)}
+                                            onClick={() => handleRemoveFacilities(facility)}
                                         />
                                     </div>
                                 </td>
@@ -369,4 +298,4 @@ function DoctorList() {
     );
 }
 
-export default DoctorList;
+export default FacilitiesList;
