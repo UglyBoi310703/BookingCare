@@ -71,4 +71,6 @@ const FacilitiesData = [
         describe: '',
     },
 ];
+// const FacilitiesDataJson = JSON.stringify(FacilitiesData);
+// localStorage.setItem('FacilitiesData', FacilitiesDataJson);
 export default FacilitiesData;

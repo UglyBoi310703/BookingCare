@@ -8,15 +8,13 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 
 const schema = yup.object({
-    name: yup.string().required('Tên là trường bắt buộc'),
-    role: yup.string().required('Chuyên khoa là trường bắt buộc'),
-    academic_rank: yup.string().required('Học hàm là trường bắt buộc'),
-    degree: yup.string().required('Học vị là trường bắt buộc'),
+    name: yup.string().required(),
+    content: yup.string().required(),
     img: yup.string().required(),
 });
 
-function EditDoctorModel({ selectDoctor, setSelectDoctor, setDoctorData }) {
-    const [currentDoctor, setCurrentDoctor] = useState({});
+function EditSpecialistModel({ selectSpecialist, setSelectSpecialist, setSpecialistData }) {
+    const [currentSpecialist, setCurrentSpecialist] = useState({});
     const [temporaryChangePhoto, setTemporaryChangePhoto] = useState();
     const [selectedNewPhoto, setSelectedNewPhoto] = useState();
     const [reUploading, setReUploading] = useState(false);
@@ -33,32 +31,31 @@ function EditDoctorModel({ selectDoctor, setSelectDoctor, setDoctorData }) {
     });
 
     useEffect(() => {
-        if (selectDoctor?.id) {
-            const doctor = selectDoctor;
-            setCurrentDoctor(doctor);
-            setValue('name', doctor.name);
-            setValue('role', doctor.role);
-            setValue('academic_rank', doctor.academic_rank);
-            setValue('degree', doctor.degree);
-            setValue('img', doctor.img);
+        if (selectSpecialist?.id) {
+            const Specialist = selectSpecialist;
+            setCurrentSpecialist(Specialist);
+            setValue('name', Specialist.name);
+            setValue('role', Specialist.role);
+            setValue('academic_rank', Specialist.academic_rank);
+            setValue('degree', Specialist.degree);
+            setValue('img', Specialist.img);
         }
-    }, [selectDoctor, setValue]);
+    }, [selectSpecialist, setValue]);
 
     const handleCloseEditModel = () => {
-        setSelectDoctor({});
+        setSelectSpecialist({});
         reset();
         setSelectedNewPhoto();
         setTemporaryChangePhoto();
     };
 
-    const handleSaveDoctor = (data) => {
+    const handleSaveSpecialist = (data) => {
         const isDataChanged =
-            data.name !== currentDoctor.name ||
-            data.role !== currentDoctor.role ||
-            data.academic_rank !== currentDoctor.academic_rank ||
-            data.degree !== currentDoctor.degree ||
-            data.img !== currentDoctor.img;
-        console.log(data.img !== currentDoctor.img);
+            data.name !== currentSpecialist.name ||
+            data.role !== currentSpecialist.role ||
+            data.academic_rank !== currentSpecialist.academic_rank ||
+            data.degree !== currentSpecialist.degree ||
+            data.img !== currentSpecialist.img;
 
         if (!isDataChanged) {
             Swal.fire({
@@ -75,31 +72,31 @@ function EditDoctorModel({ selectDoctor, setSelectDoctor, setDoctorData }) {
             return;
         }
         Swal.fire({
-            title: 'Confirm remove doctor',
+            title: 'Confirm remove Specialist',
             text: `Bạn có chắc chắn muốn sửa thông tin bác sĩ: ${data.name}?`,
             showCancelButton: true,
             confirmButtonColor: '#d33',
         }).then((result) => {
             if (result.isConfirmed) {
-                let editDoctor = {
-                    ...currentDoctor,
+                let editSpecialist = {
+                    ...currentSpecialist,
                     ...data,
                 };
-                console.log(editDoctor);
+                console.log(editSpecialist);
 
-                let doctorData = JSON.parse(localStorage.getItem('doctorData')) || [];
+                let SpecialistData = JSON.parse(localStorage.getItem('SpecialistData')) || [];
 
-                const doctorIndex = doctorData.findIndex((doctor) => doctor.id === editDoctor.id);
-                console.log(doctorIndex);
+                const SpecialistIndex = SpecialistData.findIndex((Specialist) => Specialist.id === editSpecialist.id);
+                console.log(SpecialistIndex);
 
-                if (doctorIndex !== -1) {
-                    doctorData[doctorIndex] = editDoctor;
+                if (SpecialistIndex !== -1) {
+                    SpecialistData[SpecialistIndex] = editSpecialist;
                 } else {
-                    doctorData.push(editDoctor);
+                    SpecialistData.push(editSpecialist);
                 }
-                localStorage.setItem('doctorData', JSON.stringify(doctorData));
+                localStorage.setItem('SpecialistData', JSON.stringify(SpecialistData));
                 toast.success(`Thông tin bác sĩ ${data.name} đã được sửa thành công`);
-                setSelectDoctor({});
+                setSelectSpecialist({});
                 window.location.reload();
             }
         });
@@ -136,60 +133,41 @@ function EditDoctorModel({ selectDoctor, setSelectDoctor, setDoctorData }) {
 
     return (
         <>
-            <div className="modal fade show" style={{ display: selectDoctor?.id ? 'block' : 'none' }}>
+            <div className="modal fade show" style={{ display: selectSpecialist?.id ? 'block' : 'none' }}>
                 <div className="modal-dialog modal-lg">
                     <div className="modal-content">
-                        <form onSubmit={handleSubmit(handleSaveDoctor)}>
+                        <form onSubmit={handleSubmit(handleSaveSpecialist)}>
                             <div className="modal-header">
-                                <h5 className="modal-title">Modify Doctor</h5>
+                                <h5 className="modal-title">Modify Specialist</h5>
                                 <button type="button" className="btn-close" onClick={handleCloseEditModel} />
                             </div>
                             <div className="modal-body">
                                 {
                                     <div className="row">
                                         <div className="col-md-4">
-                                            <div className="form-group mb-4">
+                                            <div className="form-group mb-2">
                                                 <label className="form-label">Tên bác sĩ</label>
                                                 <input
                                                     type="text"
                                                     className={`form-control form-control-sm ${
                                                         errors?.name?.message ? 'is-invalid' : ''
                                                     }`}
-                                                    placeholder="Doctor Name"
+                                                    placeholder="Specialist Name"
                                                     {...register('name')}
                                                 />
                                                 <span className="invalid-feedback">{errors?.name?.message}</span>
                                             </div>
-                                            <div className="form-group mb-3">
-                                                <label className="form-label">Chuyên khoa</label>
-                                                <select
-                                                    className={`form-select form-select-sm form-control-sm ${
-                                                        errors?.degree?.message ? 'is-invalid' : ''
+                                            <div className="form-group mb-2">
+                                                <label className="form-label">Nội dung</label>
+                                                <textarea
+                                                    type="text"
+                                                    className={`form-control form-control-sm ${
+                                                        errors?.role?.message ? 'is-invalid' : ''
                                                     }`}
-                                                    defaultValue={''}
+                                                    placeholder="Specialization"
                                                     {...register('role')}
-                                                >
-                                                    <option value={''} disabled>
-                                                        Chọn chuyên khoa
-                                                    </option>
-                                                    <option value={'Chuyên khoa - Tiêu hóa'}>Tiêu hóa</option>
-                                                    <option value={'Chuyên khoa - Chẩn đoán hình ảnh'}>
-                                                        Chẩn đoán hình ảnh
-                                                    </option>
-                                                    <option value={'Chuyên khoa - Tiêu hóa'}>Xương khớp</option>
-                                                    <option value={'Chuyên khoa - Thần kinh'}>Thần kinh</option>
-                                                    <option value={'Chuyên khoa - Nội tiết'}>Nội tiết</option>
-                                                    <option value={'Chuyên khoa - Tim mạch'}>Tim mạch</option>
-                                                    <option value={'Chuyên khoa - Chuyên khoa nội'}>
-                                                        Chuyên khoa nội
-                                                    </option>
-                                                    <option value={'Chuyên khoa - Xét nghiệm'}>Xét nghiệm</option>
-                                                    <option value={'Chuyên khoa - Ung bướu'}>Ung bướu</option>
-                                                    <option value={'Chuyên khoa - Mắt'}>Mắt</option>
-                                                    <option value={'Chuyên khoa - Tai mũi họng'}>Tai mũi họng</option>
-                                                    <option value={'Chuyên khoa - Răng hàm mặt'}>Răng hàm mặt</option>
-                                                </select>
-                                                <span className="invalid-feedback">{errors?.degree?.message}</span>
+                                                />
+                                                <span className="invalid-feedback">{errors?.role?.message}</span>
                                             </div>
                                             <div className="form-group mb-2">
                                                 <label className="form-label">Học hàm</label>
@@ -211,31 +189,12 @@ function EditDoctorModel({ selectDoctor, setSelectDoctor, setDoctorData }) {
                                                 </span>
                                             </div>
                                         </div>
-                                        <div className="col-md-4">
-                                            <div className="form-group mb-3">
-                                                <label className="form-label">Học vị</label>
-                                                <select
-                                                    className={`form-select form-select-sm ${
-                                                        errors?.degree?.message ? 'is-invalid' : ''
-                                                    }`}
-                                                    defaultValue={''}
-                                                    {...register('degree')}
-                                                >
-                                                    <option value={''} disabled>
-                                                        Chọn học vị
-                                                    </option>
-                                                    <option value={'Bác sĩ nội trú'}>Bác sĩ nội trú</option>
-                                                    <option value={'Tiến sĩ'}>Tiến sĩ</option>
-                                                    <option value={'Thạc sĩ'}>Thạc sĩ</option>
-                                                </select>
-                                                <span className="invalid-feedback">{errors?.degree?.message}</span>
-                                            </div>
-                                        </div>
+
                                         <div className="col-md-4">
                                             <div className="border-dashed d-flex flex-column align-items-center justify-content-between w-100 h-100">
                                                 <img
                                                     style={{ maxWidth: '90%', maxHeight: '70%' }}
-                                                    src={temporaryChangePhoto || currentDoctor?.img}
+                                                    src={temporaryChangePhoto || currentSpecialist?.img}
                                                     alt=""
                                                 />
                                                 <div className="d-flex align-items-center justify-content-between">
@@ -295,4 +254,4 @@ function EditDoctorModel({ selectDoctor, setSelectDoctor, setDoctorData }) {
     );
 }
 
-export default EditDoctorModel;
+export default EditSpecialistModel;

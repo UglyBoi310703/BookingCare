@@ -20,6 +20,7 @@ import DoctorManagementPage from './pages/Dashboard/DoctorManagement';
 import ServiceManagementPage from './pages/Dashboard/ServiceManagementPage';
 import FacilitiesManagementPage from './pages/Dashboard/FacilityManagement';
 import HeaderDefault from './components/Header/HeaderDefault';
+import SpecialistManagement from './pages/Dashboard/SpecialistManagement';
 function App() {
     return (
         <>
@@ -32,6 +33,7 @@ function App() {
                 <Route path="/Dashboard/Doctor" element={<DoctorManagementPage />} />
                 <Route path="/Dashboard/Facilities" element={<FacilitiesManagementPage />} />
                 <Route path="/Dashboard/Service" element={<ServiceManagementPage />} />
+                <Route path="/Dashboard/Specialist" element={<SpecialistManagement />} />
                 <Route path="/Test" element={<HeaderDefault />} />
             </Routes>
         </>
