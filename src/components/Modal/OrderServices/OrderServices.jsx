@@ -14,7 +14,10 @@ export default function OrderServicesModal({title,color,Name,Price}) {
     const [basicModal, setBasicModal] = useState(false);
 
     const toggleOpen = () => setBasicModal(!basicModal);
-
+    function offModal(){
+        setBasicModal(!basicModal)
+        
+    }
     return (
         <>
             <MDBBtn color={color} className='OrderDoctor' onClick={toggleOpen}>{title}</MDBBtn>
@@ -26,7 +29,7 @@ export default function OrderServicesModal({title,color,Name,Price}) {
                             <MDBBtn className="btn-close" color="none" onClick={toggleOpen}></MDBBtn>
                         </MDBModalHeader>
                         <MDBModalBody>
-                            <OrderServicesForm Name={Name} Price={Price} />
+                            <OrderServicesForm offModal={offModal} Name={Name} Price={Price} />
                         </MDBModalBody>
 
                         <MDBModalFooter>

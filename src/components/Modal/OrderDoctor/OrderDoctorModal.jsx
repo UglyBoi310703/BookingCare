@@ -19,7 +19,11 @@ export default function OrderDoctorModal({Doctorname,Role}) {
         setStateRole(Role)
         setDoctorName(Doctorname)
     };
-
+function offModal(){
+    setBasicModal(!basicModal)
+    
+    
+}
     return (
         <>
             <MDBBtn className='OrderDoctor'  onClick={toggleOpen}>Đặt lịch khám</MDBBtn>
@@ -31,7 +35,7 @@ export default function OrderDoctorModal({Doctorname,Role}) {
                             <MDBBtn className="btn-close" color="none" onClick={toggleOpen}></MDBBtn>
                         </MDBModalHeader>
                         <MDBModalBody>
-                            <OrderDoctorForm DoctorName={DoctorName} Role={StateRole}/>
+                            <OrderDoctorForm offModal={offModal} DoctorName={DoctorName} Role={StateRole}/>
                         </MDBModalBody>
 
                         <MDBModalFooter>

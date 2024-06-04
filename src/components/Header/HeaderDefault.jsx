@@ -7,36 +7,25 @@ import Search from '../Search';
 import Navbar from '../NavBar/Navbar';
 import NavbarInformation from '../NavBar/NavbarInformation';
 
-import { MDBContainer, MDBNavbarBrand, MDBCollapse } from 'mdb-react-ui-kit';
+import { MDBContainer, MDBNavbarBrand, MDBCollapse,MDBNavbar } from 'mdb-react-ui-kit';
 
 import User from '../Modal/UserComponent';
 
 function HeaderDefault({ openNav }) {
-    const [openNavLogin, setOpenNavLogin] = React.useState(true);
-    console.log(openNavLogin);
-    const handleLogin = useCallback(() => {
-        setOpenNavLogin(!openNavLogin);
-    }, []);
+   
+  
     return (
+        <MDBNavbar className="Header" expand="lg" fixed="top" sticky light bgColor="light">
         <MDBContainer fluid>
             <MDBNavbarBrand className="Logo" href="/">
                 <img src="https://medlatec.vn/media/115/content/logo-pc.png" />
             </MDBNavbarBrand>
             <Search />
-            <MDBCollapse navbar open={openNav} id="navbarExample">
-                {openNavLogin ? (
-                    <>
-                        <NavbarInformation />
-                        <NavbarLogin handleLogin={handleLogin} />
-                    </>
-                ) : (
-                    <>
-                        <NavbarInformation />
-                        <User />
-                    </>
-                )}
-            </MDBCollapse>
+          
+            <NavbarInformation />
+           <a href='/'><img src='https://medlatec.vn/med/images/logo-mobile.png'/></a>
         </MDBContainer>
+        </MDBNavbar>
     );
 }
 export default React.memo(HeaderDefault);

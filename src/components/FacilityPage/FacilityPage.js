@@ -33,9 +33,25 @@ export default function FacilityPage({ itemsPerPage }) {
                 <h1>
                     Cơ sở vật chất tại <span>Medlatec</span>
                 </h1>
+                <div>
+                    <h5>
+                        Hệ thống Y tế MEDLATEC với các phòng khám luôn sẵn sàng phục vụ bệnh nhân và các bác sĩ, mỗi
+                        ngày có thể đáp ứng hơn 100 lượt khám nhờ sở hữu cơ sở vật chất khang trang, trang thiết bị hiện
+                        đại hàng đầu, đồng bộ hoàn toàn, đảm bảo kết quả chẩn đoán chính xác và điều trị bệnh hiệu quả.
+                    </h5>
+                </div>
             </div>
-            <FacilityPaginationItem currentItems={CurrentItems} />
-            <Paginated itemsPerPage={itemsPerPage} Data={FacilitiesData} handlePageClick={handlePageClick} />
+            <img
+                style={{ height: '550px', width: '80%', marginBottom: '40px' }}
+                src="https://medlatec.vn//ckfinder/userfiles/images/bn-cho-kham-trich-sai.jpg"
+            />
+            <div className='FacilityContent'>
+                <h1>
+                    Trang thiết bị hiện đại tại <span>Medlatec</span>
+                </h1>
+                <FacilityPaginationItem currentItems={CurrentItems} />
+                <Paginated itemsPerPage={itemsPerPage} Data={FacilitiesData} handlePageClick={handlePageClick} />
+            </div>
         </div>
     );
 }

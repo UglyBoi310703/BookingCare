@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form, Row, Col } from 'react-bootstrap';
-
+import { v4 as uuidv4 } from 'uuid';
 const saveToLocalStorage = (formData) => {
-    let existingData = JSON.parse(localStorage.getItem('orderDoctorFormData'));
+    let existingData = JSON.parse(localStorage.getItem('orderFormData'));
     
     if (!Array.isArray(existingData)) {
         existingData = [];
     }
     
     existingData.push(formData);
-    localStorage.setItem('orderDoctorFormData', JSON.stringify(existingData));
+    localStorage.setItem('orderFormData', JSON.stringify(existingData));
 };
 
 
-const OrderDoctorForm = ({DoctorName,Role}) => {
+const OrderDoctorForm = ({DoctorName,Role,offModal}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(e.target)
         const formData = {
+            id: uuidv4(),
             fullName: e.target.elements.fullName.value,
             phoneNumber: e.target.elements.phoneNumber.value,
             dateOfBirth: e.target.elements.dateOfBirth.value,
@@ -33,6 +34,8 @@ const OrderDoctorForm = ({DoctorName,Role}) => {
             notes: e.target.elements.notes.value,
         };
         saveToLocalStorage(formData);
+        alert("Đặt lịch khám thành công");
+        offModal();
         console.log(formData)
     };
     return (
