@@ -78,9 +78,7 @@ function DoctorList() {
     };
 
     const handleSelectDoctor = (doctor) => {
-        console.log(1);
-        // setSelectDotor(doctor);
-        // console.log(selectDoctor);
+        setSelectDotor(doctor);
     };
 
     const handleRemoveDoctor = (doctor) => {
@@ -309,6 +307,11 @@ function DoctorList() {
                                 </td>
                                 <td className="text-center align-middle">
                                     <div className="d-flex align-items-center justify-content-center">
+                                        <FaEdit
+                                            className="text-success me-1"
+                                            role="button"
+                                            onClick={() => handleSelectDoctor(doctor)}
+                                        />
                                         <FaTrash
                                             className="text-danger"
                                             role="button"
