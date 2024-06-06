@@ -1,17 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import doctorData from '~/assets/data/DoctorData';
 import Doctor from './Doctor';
 import './index.css';
+import doctorDataWithFunction from './DoctorDataJson';
 
 function Doctors() {
-    const doctorList = doctorData;
+    console.log(doctorDataWithFunction);
+
+    const data = localStorage.getItem('doctorData');
+    console.log(typeof data);
     const [academicRank, setAcademicRank] = useState('');
     const [degree, setDegree] = useState('');
     const [role, setRole] = useState('');
-    const [filteredDoctors, setFilteredDoctors] = useState(doctorList);
+    const [filteredDoctors, setFilteredDoctors] = useState(doctorDataWithFunction);
 
     function handleSearchDoctor() {
-        let remainDoctor = [...doctorList];
+        let remainDoctor = [...doctorDataWithFunction];
         if (role) {
             remainDoctor = remainDoctor.filter((p) => p.role.toLowerCase() === role.toLowerCase());
         }
@@ -61,7 +65,7 @@ function Doctors() {
             <div className="py-2 px-4 d-flex flex-column justify-content-center">
                 <div className="row">
                     {filteredDoctors.map((doctor) => (
-                        <Doctor key={doctor.id} doctor={doctor}  />
+                        <Doctor key={doctor.id} doctor={doctor} />
                     ))}
                 </div>
             </div>

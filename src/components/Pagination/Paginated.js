@@ -13,7 +13,7 @@ function Paginated({ itemsPerPage, Data, handlePageClick }) {
     return (
         <Stack className="Pagination" spacing={2}>
             <Pagination
-                count={Data.length / itemsPerPage}
+                count={Math.floor(Data.length / itemsPerPage)}
                 color="primary"
                 breakLabel="..."
                 onChange={handlePageClick}

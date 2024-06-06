@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { SmoothHorizontalScrolling } from '../../../utils';
-import doctorData from '~/assets/data/DoctorData';
+import doctorDataWithFunction from '~/components/DoctorPage/DoctorDataJson';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import DoctorItem from '~/components/DoctorPage/DoctorItem/DoctorItem';
 import { MDBIcon } from 'mdb-react-ui-kit';
@@ -16,7 +16,7 @@ function DoctorHome() {
     useEffect(() => {
         if (sliderRef.current) {
             // Cuộn đến phần giữa của danh sách để hỗ trợ cuộn vô hạn
-            sliderRef.current.scrollLeft = doctorData.length * itemWidth;
+            sliderRef.current.scrollLeft = doctorDataWithFunction.length * itemWidth;
         }
     }, [itemWidth]);
 
@@ -43,17 +43,17 @@ function DoctorHome() {
 
         // Xử lý cuộn vô hạn
         if (sliderRef.current.scrollLeft <= 0) {
-            sliderRef.current.scrollLeft = doctorData.length * itemWidth;
-        } else if (sliderRef.current.scrollLeft >= (doctorData.length * 2 - itemsToShow) * itemWidth) {
-            sliderRef.current.scrollLeft = doctorData.length * itemWidth - itemWidth * itemsToShow;
+            sliderRef.current.scrollLeft = doctorDataWithFunction.length * itemWidth;
+        } else if (sliderRef.current.scrollLeft >= (doctorDataWithFunction.length * 2 - itemsToShow) * itemWidth) {
+            sliderRef.current.scrollLeft = doctorDataWithFunction.length * itemWidth - itemWidth * itemsToShow;
         }
     };
 
     const handleScrollRight = () => {
         SmoothHorizontalScrolling(sliderRef.current, 250, itemWidth * itemsToShow, sliderRef.current.scrollLeft, () => {
             // Xử lý cuộn vô hạn sau khi cuộn
-            if (sliderRef.current.scrollLeft >= (doctorData.length * 2 - itemsToShow) * itemWidth) {
-                sliderRef.current.scrollLeft = doctorData.length * itemWidth - itemWidth * itemsToShow;
+            if (sliderRef.current.scrollLeft >= (doctorDataWithFunction.length * 2 - itemsToShow) * itemWidth) {
+                sliderRef.current.scrollLeft = doctorDataWithFunction.length * itemWidth - itemWidth * itemsToShow;
             }
         });
     };
@@ -67,13 +67,13 @@ function DoctorHome() {
             () => {
                 // Xử lý cuộn vô hạn sau khi cuộn
                 if (sliderRef.current.scrollLeft <= 0) {
-                    sliderRef.current.scrollLeft = doctorData.length * itemWidth;
+                    sliderRef.current.scrollLeft = doctorDataWithFunction.length * itemWidth;
                 }
             },
         );
     };
 
-    return doctorData.length > 0 ? (
+    return doctorDataWithFunction.length > 0 ? (
         <div className="DoctorHomeComponent">
             <div className="DoctorHome-title">
                 <h2>
@@ -98,7 +98,7 @@ function DoctorHome() {
                         cursor: isDragging ? 'grabbing' : 'grab',
                     }}
                 >
-                    {doctorData.concat(doctorData).map((item, index) => (
+                    {doctorDataWithFunction.map((item, index) => (
                         <div className="DoctorSlider-Item" key={index} style={{ minWidth: `${itemWidth}px` }}>
                             <DoctorItem
                                 img={item.img}

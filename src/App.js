@@ -5,7 +5,7 @@ import Services from './pages/Home/Services';
 import Intro from './components/Intro/Intro';
 import Facility from './pages/Home/Facility';
 import Doctors from './pages/Home/DoctorPage';
-import TestComponent from './components/Modal/TestComponent';
+
 import ScrollTest from './components/Modal/UserComponent';
 import Test from './components/Modal/ServicesInformation/ServicesModal';
 import ModalTest from './components/Modal/UserComponent';
@@ -22,6 +22,7 @@ import FacilitiesManagementPage from './pages/Dashboard/FacilityManagement';
 import HeaderDefault from './components/Header/HeaderDefault';
 import SpecialistManagement from './pages/Dashboard/SpecialistManagement';
 import MedicalSpecial from './pages/Home/MedicalSpecialties';
+import TestComponent from './components/Modal/TestComponent';
 function App() {
     return (
         <>
@@ -35,7 +36,7 @@ function App() {
                 <Route path="/Dashboard/Facilities" element={<FacilitiesManagementPage />} />
                 <Route path="/Dashboard/Service" element={<ServiceManagementPage />} />
                 <Route path="/Dashboard/Specialist" element={<SpecialistManagement />} />
-                <Route path="/Test" element={<HeaderDefault />} />
+                <Route path="/Test" element={<TestComponent/>} />
                 <Route path="/MedicalSpecialties" element={<MedicalSpecial />} />
             </Routes>
         </>

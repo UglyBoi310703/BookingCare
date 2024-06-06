@@ -10,7 +10,6 @@ function Doctor({ doctor }) {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
     return (
         <>
             <AppointmentForm show={show} handleClose={handleClose} />
@@ -44,7 +43,7 @@ function Doctor({ doctor }) {
                             <MDBBtn onClick={handleShow} className="OrderDoctor">
                                 Đặt lịch khám
                             </MDBBtn>
-                            <DoctorInformationModal img={img} name={name} role={role} Description={Description()} />
+                            <DoctorInformationModal img={doctor.img} name={doctor.name} role={doctor.role} Description={Description()} />
                         </div>
                     </div>
                 </div>

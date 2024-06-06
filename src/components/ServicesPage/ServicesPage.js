@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { MDBCard, MDBCardBody, MDBCol, MDBListGroup, MDBCardGroup, MDBListGroupItem, MDBRow } from 'mdb-react-ui-kit';
-import ServicesData from './ServicesData';
+import servicesDataWithFunction from './ServicesDataJson';
 import ServicesItem from './ServicesItem/ServicesItem';
 import styles from './ServicesPage.scss';
 
@@ -31,11 +31,11 @@ export default function ServicesPage({ itemsPerPage }) {
 
     const endOffset = itemOffset + itemsPerPage;
 
-    const CurrentItems = ServicesData.slice(itemOffset, endOffset);
-    const pageCount = Math.ceil(ServicesData.length / itemsPerPage);
+    const CurrentItems = servicesDataWithFunction.slice(itemOffset, endOffset);
+    const pageCount = Math.ceil(servicesDataWithFunction.length / itemsPerPage);
 
     const handlePageClick = (event, value) => {
-        const newOffset = ((value - 1) * itemsPerPage) % ServicesData.length;
+        const newOffset = ((value - 1) * itemsPerPage) % servicesDataWithFunction.length;
         // const newOffset = (value - 1) * itemsPerPage;
         const Check = value * itemsPerPage;
         window.scrollTo(0, 0);
@@ -49,7 +49,7 @@ export default function ServicesPage({ itemsPerPage }) {
                 </h1>
             </div>
             <ServicesPaginationItems currentItems={CurrentItems} />
-            <Paginated itemsPerPage={itemsPerPage} Data={ServicesData} handlePageClick={handlePageClick} />
+            <Paginated itemsPerPage={itemsPerPage} Data={servicesDataWithFunction} handlePageClick={handlePageClick} />
         </div>
     );
 }

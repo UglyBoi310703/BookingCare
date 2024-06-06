@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { SmoothHorizontalScrolling } from '../../../utils';
-import ServicesData from '../../ServicesPage/ServicesData';
+import servicesDataWithFunction from '~/components/ServicesPage/ServicesDataJson';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import ServicesItem from '../../ServicesPage/ServicesItem/ServicesItem';
 import styles from './ServicesHomeTest.scss';
@@ -16,7 +16,7 @@ function ServicesHomeTest() {
     useEffect(() => {
         if (sliderRef.current) {
             // Cuộn đến phần giữa của danh sách để hỗ trợ cuộn vô hạn
-            sliderRef.current.scrollLeft = ServicesData.length * itemWidth;
+            sliderRef.current.scrollLeft = servicesDataWithFunction.length * itemWidth;
         }
     }, [itemWidth]);
 
@@ -43,17 +43,17 @@ function ServicesHomeTest() {
 
         // Xử lý cuộn vô hạn
         if (sliderRef.current.scrollLeft <= 0) {
-            sliderRef.current.scrollLeft = ServicesData.length * itemWidth;
-        } else if (sliderRef.current.scrollLeft >= (ServicesData.length * 2 - itemsToShow) * itemWidth) {
-            sliderRef.current.scrollLeft = ServicesData.length * itemWidth - itemWidth * itemsToShow;
+            sliderRef.current.scrollLeft = servicesDataWithFunction.length * itemWidth;
+        } else if (sliderRef.current.scrollLeft >= (servicesDataWithFunction.length * 2 - itemsToShow) * itemWidth) {
+            sliderRef.current.scrollLeft = servicesDataWithFunction.length * itemWidth - itemWidth * itemsToShow;
         }
     };
 
     const handleScrollRight = () => {
         SmoothHorizontalScrolling(sliderRef.current, 250, itemWidth * itemsToShow, sliderRef.current.scrollLeft, () => {
             // Xử lý cuộn vô hạn sau khi cuộn
-            if (sliderRef.current.scrollLeft >= (ServicesData.length * 2 - itemsToShow) * itemWidth) {
-                sliderRef.current.scrollLeft = ServicesData.length * itemWidth - itemWidth * itemsToShow;
+            if (sliderRef.current.scrollLeft >= (servicesDataWithFunction.length * 2 - itemsToShow) * itemWidth) {
+                sliderRef.current.scrollLeft = servicesDataWithFunction.length * itemWidth - itemWidth * itemsToShow;
             }
         });
     };
@@ -67,13 +67,13 @@ function ServicesHomeTest() {
             () => {
                 // Xử lý cuộn vô hạn sau khi cuộn
                 if (sliderRef.current.scrollLeft <= 0) {
-                    sliderRef.current.scrollLeft = ServicesData.length * itemWidth;
+                    sliderRef.current.scrollLeft = servicesDataWithFunction.length * itemWidth;
                 }
             },
         );
     };
 
-    return ServicesData.length > 0 ? (
+    return servicesDataWithFunction.length > 0 ? (
         <div className="ServicesHomeComponent">
             <div className="Services-title">
                 <h2>
@@ -98,7 +98,7 @@ function ServicesHomeTest() {
                         cursor: isDragging ? 'grabbing' : 'grab',
                     }}
                 >
-                    {ServicesData.concat(ServicesData).map((item, index) => (
+                    {servicesDataWithFunction.concat(servicesDataWithFunction).map((item, index) => (
                         <div className="ServicesSlider-Item" key={index} style={{ minWidth: `${itemWidth}px` }}>
                             <ServicesItem
                                 img={item.img}
