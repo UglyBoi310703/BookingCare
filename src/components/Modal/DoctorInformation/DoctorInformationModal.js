@@ -21,7 +21,7 @@ import {
     MDBTableBody,
 } from 'mdb-react-ui-kit';
 import styles from "./DoctorInformationModal.scss"
-
+import OrderDoctorModal from '../OrderDoctor/OrderDoctorModal';
 export default function DoctorInformationModal({ Description, name, img, role }) {
     const [basicModal, setBasicModal] = useState(false);
 
@@ -32,9 +32,9 @@ export default function DoctorInformationModal({ Description, name, img, role })
             <MDBBtn color='info' className="DoctorInfomationModal" onClick={toggleOpen}>
                 Thông tin
             </MDBBtn>
-            <MDBModal staticBackdrop className="Test" open={basicModal} onClose={() => setBasicModal(false)}>
+            <MDBModal staticBackdrop  open={basicModal} onClose={() => setBasicModal(false)}>
                 <MDBModalDialog size="xl">
-                    <MDBModalContent>
+                    <MDBModalContent className="DoctorInfomationModalContent">
                         <MDBModalHeader>
                             <MDBModalTitle>Thông tin bác sĩ</MDBModalTitle>
                             <MDBBtn className="btn-close" color="none" onClick={toggleOpen}></MDBBtn>
@@ -49,14 +49,14 @@ export default function DoctorInformationModal({ Description, name, img, role })
                                     <div className="Doctor-Item-Cotent-information">
                                         <MDBCardText>{role}</MDBCardText>
                                     </div>
-                                    <MDBBtn href="#">Đặt lịch khám</MDBBtn>
+                                    <OrderDoctorModal/>
                                 </MDBCardBody>
                             </MDBCard>
                             <div>{Description}</div>
                         </MDBModalBody>
 
                         <MDBModalFooter>
-                            <MDBBtn>Đặt lịch khám</MDBBtn>
+                            <OrderDoctorModal/>
                             <MDBBtn color="info" onClick={toggleOpen}>
                                 Đóng
                             </MDBBtn>

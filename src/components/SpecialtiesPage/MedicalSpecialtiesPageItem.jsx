@@ -19,11 +19,11 @@ export default function MedicalSpecialtiesPageItem({ name, img, content }) {
             <MDBRipple rippleTag="div" className="hover-zoom hover-overlay">
                 <MDBCardImage className="img-fluid" src={img} position="top" alt="..." />
             </MDBRipple>
-            <MDBCardBody className="Services-Item-Cotent">
+            <MDBCardBody className="MedicalSpecialtiesPageItem-Cotent">
                <h4>
                 {name}
                </h4>
-                <MDBCardText className="Services-Item-Cotent-Name">{content}</MDBCardText>
+                <MDBCardText className="MedicalSpecialtiesPageItem-Name">{content}</MDBCardText>
                 
             </MDBCardBody>
             <MDBCardFooter>

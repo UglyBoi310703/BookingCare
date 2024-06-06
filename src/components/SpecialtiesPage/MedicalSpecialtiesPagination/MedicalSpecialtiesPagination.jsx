@@ -22,7 +22,7 @@ import MedicalSpecialtiesPageItem from '../MedicalSpecialtiesPageItem';
 
 export default function MedicalSpecialtiesPagination({ currentItems }) {
     return (
-        <MDBRow className=" ServicesPage row-cols-1 row-cols-md-3 g-4">
+        <MDBRow className=" MedicalSpecialtiesPageList row-cols-1 row-cols-md-3 g-4">
             {currentItems &&
                 currentItems.map((item) => (
                     <MedicalSpecialtiesPageItem img={item.img} name={item.name} content={item.content} />

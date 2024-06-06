@@ -3,7 +3,6 @@ import { MDBCarousel, MDBCarouselItem } from 'mdb-react-ui-kit';
 import FacilitiesData from '../../FacilityPage/FacilityData';
 import FacilityItem from '../../FacilityPage/FacilityItem/FacilityItem';
 import Slider from 'react-slick';
-
 import styles from './FacilityHome.scss';
 
 export default function FacilityHome() {

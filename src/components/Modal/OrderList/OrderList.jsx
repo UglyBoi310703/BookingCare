@@ -14,7 +14,8 @@ import { Modal, Button, Form, Row, Col, FormGroup } from 'react-bootstrap';
 import OrderDoctorForm from '../../Form/Order/OrderDoctor';
 import OrderListDoctor from './OrderListDoctor/OrderListDoctor';
 import OrderListServices from './OrderListServices/OrderListServices';
-import OrderMedicalSpecialtiesList from './OrderMedicalSpecialtiesList/OrderMedicalSpecialtiesList';
+import OrderMedicalSpecialtiesList from './OrderListMedicalSpecialties/OrderMedicalSpecialtiesList';
+import styles from "./OrderList.scss"
 export default function OrderList({ Doctorname, Role }) {
     const [basicModal, setBasicModal] = useState(false);
     const [formDataArray, setFormDataArray] = useState([]);
@@ -65,7 +66,7 @@ export default function OrderList({ Doctorname, Role }) {
             {formDataArray.length > 0 ? (
                 formDataArray.map((formData, index) =>
                     formData.doctor ? (
-                        <div key={index}>
+                        <div className='OrderListItem' key={index}>
                             <div>Lịch khám cùng bác sĩ {formData.doctor}</div>
                             <div>{formData.specialty}</div>
                             <div>{formData.appointmentDate}</div>
@@ -115,7 +116,7 @@ export default function OrderList({ Doctorname, Role }) {
                             </div>
                         </div>
                     ) : formData.services ? (
-                        <div key={index}>
+                        <div className='OrderListItem' key={index}>
                             <div>{formData.services}</div>
                             {/* <div>{formData.specialty}</div> */}
                             <div>{formData.appointmentDate}</div>
@@ -165,7 +166,7 @@ export default function OrderList({ Doctorname, Role }) {
                             </div>
                         </div>
                     ) : (
-                        <div key={index}>
+                        <div className='OrderListItem' key={index}>
                             <div>Lịch khám chuyên khoa {formData.medicalSpecial}</div>
                             {/* <div>{formData.specialty}</div> */}
                             <div>{formData.appointmentDate}</div>

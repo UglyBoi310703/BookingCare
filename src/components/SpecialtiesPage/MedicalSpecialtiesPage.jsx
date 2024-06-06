@@ -23,7 +23,7 @@ import Paginated, { CurrentItems } from '../Pagination/Paginated';
 //         </MDBRow>
 //     );
 // }
-
+import styles from "./MedicalSpecialtiesPage.scss"
 export default function MedicalSpecialtiesPage({ itemsPerPage }) {
     const [itemOffset, setItemOffset] = useState(0);
 
@@ -40,10 +40,10 @@ export default function MedicalSpecialtiesPage({ itemsPerPage }) {
         setItemOffset(newOffset);
     };
     return (
-        <div className="Services">
-            <div className="ServicesTitle">
+        <div className="MedicalSpecialtiesPage">
+            <div className="MedicalSpecialtiesPage-Title">
                 <h1>
-                    Các gói khám sức khỏe tại <span>Medlatec</span>
+                    Các chuyên khoa y tế tại <span>Medlatec</span>
                 </h1>
             </div>
             <MedicalSpecialtiesPagination currentItems={CurrentItems} />

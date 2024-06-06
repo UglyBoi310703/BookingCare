@@ -1,3 +1,8 @@
+.DoctorInfomationModalContent{
+    button{
+        border-radius: 0px !important;
+    }
+}
 .DoctorInformationModal-Body{
     display: flex;
     .DoctorItem{
@@ -8,4 +13,5 @@
             padding: 60px !important;
         }
     }
+    
 }

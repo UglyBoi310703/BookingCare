@@ -6,7 +6,7 @@ function MedicalSpecial() {
     return (
         <>
             <HomeLayout>
-           
+                    <Intro url={"https://www.youtube.com/watch?v=hMpoHqKaWds"}/>
                 <MedicalSpecialtiesPage itemsPerPage={6} />
             </HomeLayout>
         </>
