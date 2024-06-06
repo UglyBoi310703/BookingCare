@@ -9,7 +9,6 @@ import axios from 'axios';
 
 import { v4 as uuidv4 } from 'uuid';
 import EditSpecialistModel from './EditSpecialistModel';
-import MedicalSpecialtiesPageData from '~/components/SpecialtiesPage/MedicalSpecialtiesPageData';
 
 const schema = yup.object({
     name: yup.string().required('tên là trường bắt buộc'),

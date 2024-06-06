@@ -58,7 +58,6 @@ function EditDoctorModel({ selectDoctor, setSelectDoctor, setDoctorData }) {
             data.academic_rank !== currentDoctor.academic_rank ||
             data.degree !== currentDoctor.degree ||
             data.img !== currentDoctor.img;
-        console.log(data.img !== currentDoctor.img);
 
         if (!isDataChanged) {
             Swal.fire({
