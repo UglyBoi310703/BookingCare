@@ -35,9 +35,7 @@ function EditSpecialistModel({ selectSpecialist, setSelectSpecialist, setSpecial
             const Specialist = selectSpecialist;
             setCurrentSpecialist(Specialist);
             setValue('name', Specialist.name);
-            setValue('role', Specialist.role);
-            setValue('academic_rank', Specialist.academic_rank);
-            setValue('degree', Specialist.degree);
+            setValue('content', Specialist.content);
             setValue('img', Specialist.img);
         }
     }, [selectSpecialist, setValue]);
@@ -52,9 +50,7 @@ function EditSpecialistModel({ selectSpecialist, setSelectSpecialist, setSpecial
     const handleSaveSpecialist = (data) => {
         const isDataChanged =
             data.name !== currentSpecialist.name ||
-            data.role !== currentSpecialist.role ||
-            data.academic_rank !== currentSpecialist.academic_rank ||
-            data.degree !== currentSpecialist.degree ||
+            data.content !== currentSpecialist.content ||
             data.img !== currentSpecialist.img;
 
         if (!isDataChanged) {
@@ -73,7 +69,7 @@ function EditSpecialistModel({ selectSpecialist, setSelectSpecialist, setSpecial
         }
         Swal.fire({
             title: 'Confirm remove Specialist',
-            text: `Bạn có chắc chắn muốn sửa thông tin bác sĩ: ${data.name}?`,
+            text: `Bạn có chắc chắn muốn sửa thông tin chuyên khoa: ${data.name}?`,
             showCancelButton: true,
             confirmButtonColor: '#d33',
         }).then((result) => {
@@ -95,7 +91,7 @@ function EditSpecialistModel({ selectSpecialist, setSelectSpecialist, setSpecial
                     SpecialistData.push(editSpecialist);
                 }
                 localStorage.setItem('SpecialistData', JSON.stringify(SpecialistData));
-                toast.success(`Thông tin bác sĩ ${data.name} đã được sửa thành công`);
+                toast.success(`Thông tin chuyên khoa ${data.name} đã được sửa thành công`);
                 setSelectSpecialist({});
                 window.location.reload();
             }
@@ -146,7 +142,7 @@ function EditSpecialistModel({ selectSpecialist, setSelectSpecialist, setSpecial
                                     <div className="row">
                                         <div className="col-md-4">
                                             <div className="form-group mb-2">
-                                                <label className="form-label">Tên bác sĩ</label>
+                                                <label className="form-label">Tên chuyên khoa</label>
                                                 <input
                                                     type="text"
                                                     className={`form-control form-control-sm ${
@@ -162,31 +158,12 @@ function EditSpecialistModel({ selectSpecialist, setSelectSpecialist, setSpecial
                                                 <textarea
                                                     type="text"
                                                     className={`form-control form-control-sm ${
-                                                        errors?.role?.message ? 'is-invalid' : ''
+                                                        errors?.content?.message ? 'is-invalid' : ''
                                                     }`}
-                                                    placeholder="Specialization"
-                                                    {...register('role')}
+                                                    placeholder="Nội dung"
+                                                    {...register('content')}
                                                 />
-                                                <span className="invalid-feedback">{errors?.role?.message}</span>
-                                            </div>
-                                            <div className="form-group mb-2">
-                                                <label className="form-label">Học hàm</label>
-                                                <select
-                                                    className={`form-select form-select-sm ${
-                                                        errors?.academic_rank?.message ? 'is-invalid' : ''
-                                                    }`}
-                                                    defaultValue={''}
-                                                    {...register('academic_rank')}
-                                                >
-                                                    <option value={''} disabled>
-                                                        Select Academic Rank
-                                                    </option>
-                                                    <option value={'Giáo sư'}>Giáo sư</option>
-                                                    <option value={'Phó giáo sư'}>Phó giáo sư</option>
-                                                </select>
-                                                <span className="invalid-feedback">
-                                                    {errors?.academic_rank?.message}
-                                                </span>
+                                                <span className="invalid-feedback">{errors?.content?.message}</span>
                                             </div>
                                         </div>
 
